@@ -54,9 +54,6 @@ export function Hero() {
         >
           <div className="edge w-full">
             <h1 className="display text-balance text-foreground">
-              <span className="block meta mb-5 text-[0.7rem] text-clay">
-                Bricks &amp; Bloom
-              </span>
               <span
                 className="block"
                 style={{
