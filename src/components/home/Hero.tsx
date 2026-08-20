@@ -44,7 +44,51 @@ export function Hero() {
           />
         </div>
 
-        <h1 className="sr-only">Bricks &amp; Bloom — architecture and landscape studio</h1>
+        {/* hero title — layered editorial lockup */}
+        <div
+          className="pointer-events-none absolute inset-0 flex items-center"
+          style={{
+            opacity: 1 - progress * 1.5,
+            transform: `translate3d(0, ${-typeShift * 0.35}px, 0)`,
+          }}
+        >
+          <div className="edge w-full">
+            <h1 className="display text-balance text-foreground">
+              <span className="block meta mb-5 text-[0.7rem] text-clay">
+                Bricks &amp; Bloom
+              </span>
+              <span
+                className="block"
+                style={{
+                  fontSize: "clamp(2.75rem, 11vw, 9.5rem)",
+                  transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
+                }}
+              >
+                Nature&rsquo;s
+              </span>
+              <span
+                className="block italic"
+                style={{
+                  fontSize: "clamp(2.25rem, 9vw, 8rem)",
+                  marginLeft: "clamp(1.5rem, 12vw, 14rem)",
+                  transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
+                }}
+              >
+                Beauty
+              </span>
+              <span
+                className="meta mt-6 block text-foreground/70"
+                style={{
+                  fontSize: "clamp(0.7rem, 1.1vw, 0.95rem)",
+                  letterSpacing: "0.42em",
+                  marginLeft: "clamp(0.25rem, 3vw, 3rem)",
+                }}
+              >
+                Delivered
+              </span>
+            </h1>
+          </div>
+        </div>
 
         {/* precise information, small against the monument */}
         <div
@@ -53,8 +97,9 @@ export function Hero() {
         >
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
             <p className="meta max-w-[22ch] text-foreground/80">
-              Architecture, landscape and the ground between them. New Delhi.
+              Architecture, landscape and the ground between them.
             </p>
+
             <p className="meta max-w-[26ch] text-right text-muted-foreground">
               Structure holds. Planting moves. We design the joint.
             </p>
