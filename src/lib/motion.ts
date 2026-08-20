@@ -1,33 +1,46 @@
 import { useEffect, useRef, useState } from "react";
 
-/** Marks an element with data-revealed once it enters the viewport. */
+const STEPS = Array.from({ length: 21 }, (_, i) => i / 20);
+
+/**
+ * Marks an element with data-revealed while it is in view, and clears the flag
+ * once it leaves — so the animation replays on every entry, scrolling up or
+ * down, and after a refresh mid-page.
+ */
 export function useReveal<T extends HTMLElement>(threshold = 0.2) {
   const ref = useRef<T | null>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced || typeof IntersectionObserver === "undefined") {
       el.setAttribute("data-revealed", "true");
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            el.setAttribute("data-revealed", "true");
-            io.unobserve(el);
-          }
-        }
-      },
-      { threshold, rootMargin: "0px 0px -8% 0px" },
-    );
+
+    const set = (on: boolean) => el.setAttribute("data-revealed", on ? "true" : "false");
+
+    const evaluate = (entry: IntersectionObserverEntry) => {
+      const elHeight = entry.boundingClientRect.height || el.offsetHeight || 1;
+      // Effective trigger distance: never ask for more than a fifth of the
+      // viewport, so tall sections still fire on small screens.
+      const need = Math.min(elHeight * threshold, window.innerHeight * 0.18, elHeight * 0.9);
+      set(entry.isIntersecting && entry.intersectionRect.height >= need);
+    };
+
+    const io = new IntersectionObserver((entries) => entries.forEach(evaluate), {
+      threshold: STEPS,
+      rootMargin: "0px 0px -6% 0px",
+    });
     io.observe(el);
     return () => io.disconnect();
   }, [threshold]);
 
   return ref;
 }
+
 
 /**
  * Scroll progress of an element through the viewport.
