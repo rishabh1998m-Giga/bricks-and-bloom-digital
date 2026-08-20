@@ -4,7 +4,7 @@ import { RevealScope, Line } from "@/components/site/Reveal";
 
 export function ContactCta() {
   return (
-    <section className="edge py-[18vh]" aria-label="Start a project">
+    <section className="edge section-y-lg" aria-label="Start a project">
       <RevealScope threshold={0.3}>
         <div className="rule-t pt-5">
           <p className="meta text-muted-foreground">
