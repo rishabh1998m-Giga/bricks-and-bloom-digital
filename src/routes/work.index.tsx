@@ -54,7 +54,7 @@ function WorkIndex() {
         </div>
       </RevealScope>
 
-      <div className="mt-16 grid gap-x-10 gap-y-24 md:grid-cols-2">
+      <div className="mx-auto mt-16 grid max-w-[86rem] gap-x-10 gap-y-24 md:grid-cols-2">
         {shown.map((p, i) => (
           <Link
             key={p.slug}

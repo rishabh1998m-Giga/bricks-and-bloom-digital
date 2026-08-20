@@ -193,7 +193,11 @@
 [data-revealed="true"].reveal-up,
 [data-revealed="true"].reveal-left,
 [data-revealed="true"].reveal-right,
-[data-revealed="true"].reveal-center {
+[data-revealed="true"].reveal-center,
+[data-revealed="true"] .reveal-up,
+[data-revealed="true"] .reveal-left,
+[data-revealed="true"] .reveal-right,
+[data-revealed="true"] .reveal-center {
   clip-path: inset(0 0 0 0);
   transform: scale(1);
 }
