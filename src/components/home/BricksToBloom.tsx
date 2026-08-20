@@ -64,7 +64,7 @@ export function BricksToBloom() {
                 <span
                   key={i}
                   aria-hidden
-                  className="absolute block bg-quarry"
+                  className="absolute block bg-brick"
                   style={{
                     left: `${(col + offsetRow) * w}%`,
                     top: `${row * h}%`,

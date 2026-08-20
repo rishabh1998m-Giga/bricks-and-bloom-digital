@@ -59,7 +59,6 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <span className="meta hidden text-muted-foreground lg:inline">Est. Delhi</span>
         </nav>
 
         <button

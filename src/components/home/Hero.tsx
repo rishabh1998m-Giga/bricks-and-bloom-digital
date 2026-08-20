@@ -44,30 +44,7 @@ export function Hero() {
           />
         </div>
 
-        {/* monumental wordmark, asymmetric and edge-bound */}
-        <div className="edge pointer-events-none absolute inset-0 flex flex-col justify-center">
-          <h1 className="sr-only">Bricks &amp; Bloom — architecture and landscape studio</h1>
-          <div aria-hidden className="relative">
-            <span
-              className="display block text-[clamp(3.5rem,17vw,15rem)] leading-[0.82]"
-              style={{ transform: `translate3d(${pointer.x * 8 - typeShift * 0.4}px, ${pointer.y * 5}px, 0)` }}
-            >
-              Bricks
-            </span>
-            <span
-              className="display block pl-[6vw] text-[clamp(2rem,7vw,6rem)] italic text-accent"
-              style={{ transform: `translate3d(${pointer.x * -12}px, ${pointer.y * 8 - progress * 20}px, 0)` }}
-            >
-              &amp;
-            </span>
-            <span
-              className="display block text-right text-[clamp(3.5rem,17vw,15rem)] italic leading-[0.82]"
-              style={{ transform: `translate3d(${pointer.x * -8 + typeShift * 0.5}px, ${pointer.y * -5}px, 0)` }}
-            >
-              Bloom
-            </span>
-          </div>
-        </div>
+        <h1 className="sr-only">Bricks &amp; Bloom — architecture and landscape studio</h1>
 
         {/* precise information, small against the monument */}
         <div
@@ -82,9 +59,6 @@ export function Hero() {
               Structure holds. Planting moves. We design the joint.
             </p>
           </div>
-          <p className="meta mt-6 text-accent">
-            Scroll — <span className="text-muted-foreground">enter the court</span>
-          </p>
         </div>
       </div>
     </section>
