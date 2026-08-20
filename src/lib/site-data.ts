@@ -25,6 +25,11 @@ export const studio = {
   ],
 };
 
+import m01 from "@/assets/method-01.jpg";
+import m02 from "@/assets/method-02.jpg";
+import m03 from "@/assets/method-03.jpg";
+import m04 from "@/assets/method-04.jpg";
+
 export const heroImage = hero;
 
 export type Category = "Architecture" | "Landscape" | "Interior";
@@ -186,12 +191,16 @@ export const approach = [
     index: "01",
     title: "Site first",
     text: "Every project begins with weeks on the ground: light, wind, water, existing trees, what the neighbours already built.",
+    image: m01,
+    alt: "Survey instrument set up on bare ground beside mature trees at golden hour",
   },
-  { index: "02", title: "Draw slowly", text: "Hand sections before software. The section is where architecture and landscape actually meet." },
-  { index: "03", title: "Build a piece", text: "Full-scale mock-ups of the one detail that carries the project." },
+  { index: "02", title: "Draw slowly", text: "Hand sections before software. The section is where architecture and landscape actually meet.", image: m02, alt: "Hand drawing an architectural section in pencil under a warm desk lamp" },
+  { index: "03", title: "Build a piece", text: "Full-scale mock-ups of the one detail that carries the project.", image: m03, alt: "Full-scale brick and concrete mock-up wall standing in a workshop" },
   {
     index: "04",
     title: "Leave it open",
     text: "We design for the state a place reaches in fifteen years, not for the photograph taken in its first week.",
+    image: m04,
+    alt: "Weathered brick wall overgrown with climbers and ornamental grasses",
   },
 ];
