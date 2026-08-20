@@ -8,7 +8,7 @@ export function MaterialSampler() {
   const current = materials[active] ?? materials[0]!;
 
   return (
-    <section className="edge py-[16vh]" aria-label="Material palette">
+    <section className="edge section-y" aria-label="Material palette">
       <RevealScope threshold={0.25}>
         <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
           <p className="meta text-muted-foreground">

@@ -13,7 +13,7 @@ export function FeaturedWork() {
 
   return (
     <section aria-label="Selected work">
-      <div className="edge pt-[14vh]">
+      <div className="edge section-t">
         <RevealScope threshold={0.4}>
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
             <p className="meta text-muted-foreground">

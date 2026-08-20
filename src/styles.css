@@ -52,6 +52,7 @@
 
 :root {
   --radius: 0px;
+  --shell-max: 110rem;
 
   --ink: oklch(0.17 0.008 62);
   --quarry: oklch(0.225 0.009 62);

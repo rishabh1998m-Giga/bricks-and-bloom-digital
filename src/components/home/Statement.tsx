@@ -6,7 +6,7 @@ import { Line, RevealScope } from "@/components/site/Reveal";
  */
 export function Statement() {
   return (
-    <section className="edge relative py-[18vh]">
+    <section className="edge relative section-y-lg">
       <RevealScope threshold={0.3}>
         <div className="grid gap-10 md:grid-cols-12">
           <p className="meta text-muted-foreground md:col-span-3">

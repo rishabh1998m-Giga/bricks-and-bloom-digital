@@ -26,7 +26,7 @@ function ContactPage() {
   const [discipline, setDiscipline] = useState(services[0]?.title ?? "");
 
   return (
-    <div className="edge pt-[26vh] pb-[14vh]">
+    <div className="edge pt-[clamp(8rem,26vh,16rem)] pb-[clamp(4.5rem,12vh,11rem)]">
       <RevealScope threshold={0.05}>
         <p className="meta text-muted-foreground">Enquiries</p>
         <h1 className="display mt-6 text-[clamp(3rem,12vw,10rem)]">

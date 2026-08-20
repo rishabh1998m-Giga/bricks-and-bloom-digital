@@ -29,7 +29,7 @@ function WorkIndex() {
   const shown = projects.filter((p) => filter === "All" || p.category === (filter as Category));
 
   return (
-    <div className="edge pt-[26vh] pb-[12vh]">
+    <div className="edge pt-[clamp(8rem,26vh,16rem)] pb-[clamp(4.5rem,12vh,11rem)]">
       <RevealScope threshold={0.1}>
         <p className="meta text-muted-foreground">Archive — {projects.length} projects</p>
         <h1 className="display mt-6 text-[clamp(3rem,13vw,11rem)]">

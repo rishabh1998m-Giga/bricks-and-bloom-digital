@@ -48,7 +48,7 @@ function ProjectDetail() {
 
   return (
     <article>
-      <header className="edge pt-[26vh]">
+      <header className="edge pt-[clamp(8rem,26vh,16rem)]">
         <RevealScope threshold={0.05}>
           <p className="meta text-muted-foreground">
             <span className="text-accent">{p.index}</span> — {p.discipline}
@@ -79,7 +79,7 @@ function ProjectDetail() {
         />
       </div>
 
-      <section className="edge py-[12vh]">
+      <section className="edge section-y">
         <RevealScope>
           <div className="grid gap-10 md:grid-cols-12">
             <p className="display text-[clamp(1.5rem,3.2vw,2.6rem)] italic text-accent md:col-span-6">{p.intro}</p>
@@ -110,7 +110,7 @@ function ProjectDetail() {
         ))}
       </section>
 
-      <section className="edge py-[14vh]" aria-label="Next projects">
+      <section className="edge section-y" aria-label="Next projects">
         <div className="rule-t pt-5">
           <p className="meta text-muted-foreground">Next</p>
         </div>

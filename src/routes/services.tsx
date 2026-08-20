@@ -26,7 +26,7 @@ export const Route = createFileRoute("/services")({
 
 function ServicesPage() {
   return (
-    <div className="pt-[26vh] pb-[10vh]">
+    <div className="pt-[clamp(8rem,26vh,16rem)] pb-[10vh]">
       <div className="edge">
         <RevealScope threshold={0.05}>
           <p className="meta text-muted-foreground">Capability</p>

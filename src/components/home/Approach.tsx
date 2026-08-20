@@ -4,7 +4,7 @@ import { RevealScope } from "@/components/site/Reveal";
 /** Four boards pinned to an asymmetric drafting grid. */
 export function Approach() {
   return (
-    <section className="edge py-[14vh]" aria-label="How we work">
+    <section className="edge section-y" aria-label="How we work">
       <RevealScope threshold={0.2}>
         <div className="rule-t pt-5">
           <p className="meta text-muted-foreground">
