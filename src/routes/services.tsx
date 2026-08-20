@@ -26,7 +26,7 @@ export const Route = createFileRoute("/services")({
 
 function ServicesPage() {
   return (
-    <div className="pt-[clamp(8rem,26vh,16rem)] pb-[10vh]">
+    <div className="pt-[clamp(8rem,26vh,16rem)] pb-[clamp(4rem,10vh,9rem)]">
       <div className="edge">
         <RevealScope threshold={0.05}>
           <p className="meta text-muted-foreground">Capability</p>
@@ -46,7 +46,7 @@ function ServicesPage() {
         {services.map((s, i) => (
           <section
             key={s.index}
-            className="edge rule-t py-[8vh]"
+            className="edge rule-t py-[clamp(3rem,8vh,7rem)]"
             aria-label={s.title}
           >
             <div className="grid gap-10 md:grid-cols-12">

@@ -44,7 +44,7 @@ export function FeaturedWork() {
             {projects.map((p) => (
               <ProjectCard key={p.slug} project={p} />
             ))}
-            <div className="flex w-[38vw] shrink-0 items-center">
+            <div className="flex w-[min(38vw,34rem)] shrink-0 items-center">
               <Link to="/work" className="display text-[clamp(2rem,5vw,4.5rem)] italic text-accent link-draw">
                 See all work →
               </Link>
@@ -71,7 +71,7 @@ function ProjectCard({ project: p }: { project: (typeof projects)[number] }) {
       to="/work/$slug"
       params={{ slug: p.slug }}
       data-cursor="Open project"
-      className="group block w-full shrink-0 md:w-[34vw]"
+      className="group block w-full shrink-0 md:w-[min(34vw,32rem)]"
     >
       <div className="flex items-baseline justify-between">
         <span className="meta text-accent">{p.index}</span>
