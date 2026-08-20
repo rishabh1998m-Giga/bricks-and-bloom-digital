@@ -18,7 +18,7 @@ const rand = (i: number, salt: number) => {
 export function BricksToBloom() {
   const { ref, progress } = usePinProgress<HTMLDivElement>();
   const t = clamp((progress - 0.08) / 0.78);
-  const green = materials[3].image;
+  const green = materials[3]?.image ?? "";
 
   return (
     <section ref={ref} className="relative h-[300svh]" aria-label="From bricks to bloom">
