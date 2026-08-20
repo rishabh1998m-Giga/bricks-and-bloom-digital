@@ -14,7 +14,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Services — Bricks & Bloom" },
       {
         property: "og:description",
-        content: "Architecture, landscape, interiors and design strategy from a New Delhi studio.",
+        content: "Architecture, landscape, interiors and design strategy from the studio.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://bricks-and-bloom-digital.lovable.app/services" },

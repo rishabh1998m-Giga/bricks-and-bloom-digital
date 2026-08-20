@@ -17,7 +17,7 @@ export const studio = {
   name: "Bricks & Bloom",
   email: "studio@bricksandbloom.in",
   phone: "+91 00000 00000",
-  location: "New Delhi, India",
+  location: "India",
   socials: [
     { label: "Instagram", href: "#" },
     { label: "LinkedIn", href: "#" },

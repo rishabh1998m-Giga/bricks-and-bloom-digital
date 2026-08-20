@@ -11,16 +11,16 @@ import { ContactCta } from "@/components/home/ContactCta";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bricks & Bloom — Architecture & Landscape Studio, New Delhi" },
+      { title: "Bricks & Bloom — Architecture & Landscape Studio" },
       {
         name: "description",
         content:
-          "Bricks & Bloom is an architecture and landscape studio in New Delhi designing built form and open ground with equal attention.",
+          "Bricks & Bloom is an architecture and landscape studio designing built form and open ground with equal attention.",
       },
       { property: "og:title", content: "Bricks & Bloom — Architecture & Landscape Studio" },
       {
         property: "og:description",
-        content: "Structure holds. Planting moves. We design the joint. Architecture and landscape from New Delhi.",
+        content: "Structure holds. Planting moves. We design the joint. Architecture and landscape, in balance.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://bricks-and-bloom-digital.lovable.app/" },
