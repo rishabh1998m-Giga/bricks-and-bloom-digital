@@ -141,8 +141,22 @@
 }
 
 @utility edge {
+  width: 100%;
+  max-width: var(--shell-max, 110rem);
+  margin-inline: auto;
   padding-left: clamp(1.25rem, 4vw, 4.5rem);
   padding-right: clamp(1.25rem, 4vw, 4.5rem);
+}
+
+/* vertical rhythm that stays sane from 320px to ultrawide */
+@utility section-y {
+  padding-block: clamp(4.5rem, 12vh, 11rem);
+}
+@utility section-y-lg {
+  padding-block: clamp(5.5rem, 16vh, 14rem);
+}
+@utility section-t {
+  padding-top: clamp(4.5rem, 12vh, 11rem);
 }
 
 /* clip-path reveal system: different directions per section */
