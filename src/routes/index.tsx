@@ -11,13 +11,13 @@ import { ContactCta } from "@/components/home/ContactCta";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bricks & Bloom — Architecture & Landscape Studio" },
+      { title: "Brick & Blooms — Architecture & Landscape Studio" },
       {
         name: "description",
         content:
-          "Bricks & Bloom is an architecture and landscape studio designing built form and open ground with equal attention.",
+          "Brick & Blooms is an architecture and landscape studio designing built form and open ground with equal attention.",
       },
-      { property: "og:title", content: "Bricks & Bloom — Architecture & Landscape Studio" },
+      { property: "og:title", content: "Brick & Blooms — Architecture & Landscape Studio" },
       {
         property: "og:description",
         content: "Structure holds. Planting moves. We design the joint. Architecture and landscape, in balance.",

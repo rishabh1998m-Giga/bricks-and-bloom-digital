@@ -32,7 +32,7 @@ export function Header() {
       }}
     >
       <div className="flex items-baseline justify-between gap-6">
-        <Link to="/" className="group flex items-baseline gap-3" aria-label="Bricks & Bloom, home">
+        <Link to="/" className="group flex items-baseline gap-3" aria-label="Brick & Blooms, home">
           <span
             className="display leading-none transition-[font-size] duration-700"
             style={{ fontSize: condensed ? "1.35rem" : "1.7rem" }}

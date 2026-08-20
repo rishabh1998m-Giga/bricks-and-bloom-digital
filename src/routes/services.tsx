@@ -5,13 +5,13 @@ import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Architecture, Landscape & Interiors | Bricks & Bloom" },
+      { title: "Services — Architecture, Landscape & Interiors | Brick & Blooms" },
       {
         name: "description",
         content:
           "Architecture, landscape, interiors and design strategy — from first site walk to final joint, resolved at full scale.",
       },
-      { property: "og:title", content: "Services — Bricks & Bloom" },
+      { property: "og:title", content: "Services — Brick & Blooms" },
       {
         property: "og:description",
         content: "Architecture, landscape, interiors and design strategy from the studio.",
@@ -68,7 +68,7 @@ function ServicesPage() {
               <div className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : "md:col-start-8"}`}>
                 <RevealImage
                   src={s.image}
-                  alt={`${s.title} work by Bricks & Bloom`}
+                  alt={`${s.title} work by Brick & Blooms`}
                   direction={i % 2 === 0 ? "right" : "left"}
                   width={1200}
                   height={1500}

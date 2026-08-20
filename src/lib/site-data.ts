@@ -9,12 +9,12 @@ import matTimber from "@/assets/mat-concrete.jpg";
 import matGreen from "@/assets/mat-green.jpg";
 
 /**
- * PLACEHOLDER CONTENT — replace with Bricks & Bloom's real project archive,
+ * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
  * photography and studio copy. Structure is stable; only values change.
  */
 
 export const studio = {
-  name: "Bricks & Bloom",
+  name: "Brick & Blooms",
   email: "studio@bricksandbloom.in",
   phone: "+91 00000 00000",
   location: "India",
