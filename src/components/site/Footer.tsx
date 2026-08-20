@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <p className="meta text-muted-foreground">Architecture &amp; Landscape</p>
           <p className="display mt-6 text-[clamp(2.75rem,11vw,9rem)]">
-            Bricks <span className="text-accent">&amp;</span> <span className="italic">Bloom</span>
+            Brick <span className="text-accent">&amp;</span> <span className="italic">Blooms</span>
           </p>
         </div>
 

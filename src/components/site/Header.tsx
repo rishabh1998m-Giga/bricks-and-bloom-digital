@@ -37,14 +37,14 @@ export function Header() {
             className="display leading-none transition-[font-size] duration-700"
             style={{ fontSize: condensed ? "1.35rem" : "1.7rem" }}
           >
-            Bricks
+            Brick
           </span>
           <span className="meta text-accent">&amp;</span>
           <span
             className="display leading-none italic transition-[font-size] duration-700"
             style={{ fontSize: condensed ? "1.35rem" : "1.7rem" }}
           >
-            Bloom
+            Blooms
           </span>
         </Link>
 
