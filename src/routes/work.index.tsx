@@ -10,7 +10,7 @@ export const Route = createFileRoute("/work/")({
       {
         name: "description",
         content:
-          "Selected architecture, landscape and interior projects by Bricks & Bloom across Delhi, Gujarat, Karnataka and Maharashtra.",
+          "Selected architecture, landscape and interior projects by Bricks & Bloom across Gujarat, Karnataka and Maharashtra.",
       },
       { property: "og:title", content: "Work — Bricks & Bloom" },
       { property: "og:description", content: "An archive of built form and open ground." },

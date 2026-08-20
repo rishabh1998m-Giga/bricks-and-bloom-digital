@@ -6,14 +6,14 @@ import { RevealScope, Line } from "@/components/site/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Bricks & Bloom, New Delhi" },
+      { title: "Contact — Bricks & Bloom" },
       {
         name: "description",
         content:
           "Start a conversation with Bricks & Bloom about an architecture, landscape or interior commission in India.",
       },
       { property: "og:title", content: "Contact — Bricks & Bloom" },
-      { property: "og:description", content: "Have a site? Let's walk it. Studio enquiries from New Delhi." },
+      { property: "og:description", content: "Have a site? Let's walk it. Studio enquiries welcome." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://bricks-and-bloom-digital.lovable.app/contact" },
     ],
