@@ -6,13 +6,13 @@ import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
-      { title: "Work — Bricks & Bloom Architecture & Landscape" },
+      { title: "Work — Brick & Blooms Architecture & Landscape" },
       {
         name: "description",
         content:
-          "Selected architecture, landscape and interior projects by Bricks & Bloom across Gujarat, Karnataka and Maharashtra.",
+          "Selected architecture, landscape and interior projects by Brick & Blooms across Gujarat, Karnataka and Maharashtra.",
       },
-      { property: "og:title", content: "Work — Bricks & Bloom" },
+      { property: "og:title", content: "Work — Brick & Blooms" },
       { property: "og:description", content: "An archive of built form and open ground." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://bricks-and-bloom-digital.lovable.app/work" },

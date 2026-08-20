@@ -10,15 +10,15 @@ export const Route = createFileRoute("/work/$slug")({
   },
   head: ({ params, loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Unavailable — Bricks & Bloom" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Unavailable — Brick & Blooms" }, { name: "robots", content: "noindex" }] };
     }
     const p = loaderData.project;
     const url = `https://bricks-and-bloom-digital.lovable.app/work/${params.slug}`;
     return {
       meta: [
-        { title: `${p.name} — Bricks & Bloom` },
+        { title: `${p.name} — Brick & Blooms` },
         { name: "description", content: p.intro },
-        { property: "og:title", content: `${p.name} — Bricks & Bloom` },
+        { property: "og:title", content: `${p.name} — Brick & Blooms` },
         { property: "og:description", content: p.intro },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
