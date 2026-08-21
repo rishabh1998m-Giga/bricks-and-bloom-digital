@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { studio } from "@/lib/site-data";
+import logo from "@/assets/brick-blooms-logo-light.png.asset.json";
 
 export function Footer() {
   return (
@@ -7,9 +8,15 @@ export function Footer() {
       <div className="grid gap-16 md:grid-cols-[1fr_auto]">
         <div>
           <p className="meta text-muted-foreground">Architecture &amp; Landscape</p>
-          <p className="display mt-6 text-[clamp(2.75rem,11vw,9rem)]">
-            Brick <span className="text-accent">&amp;</span> <span className="italic">Blooms</span>
-          </p>
+          <img
+            src={logo.url}
+            alt="Brick & Blooms — a new way of living"
+            width={1184}
+            height={571}
+            loading="lazy"
+            className="mt-6 h-auto w-[min(100%,28rem)]"
+          />
+        </div>
         </div>
 
         <div className="grid grid-cols-2 gap-x-12 gap-y-10 md:grid-cols-2 md:pt-16">

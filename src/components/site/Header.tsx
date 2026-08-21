@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/brick-blooms-logo-light.png.asset.json";
 
 const nav = [
   { to: "/work", label: "Work" },
