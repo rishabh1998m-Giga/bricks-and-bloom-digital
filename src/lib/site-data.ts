@@ -51,27 +51,29 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "aravalli-terraces",
+    slug: "legacy-brewing-company",
     index: "01",
-    name: "Aravalli Terraces",
-    location: "Gurugram, Haryana",
+    name: "Legacy Brewing Company",
+    location: "Bengaluru, Karnataka",
     year: "2024",
-    category: "Landscape",
-    discipline: "Landscape / Site Strategy",
-    image: p01,
+    category: "Architecture",
+    discipline: "Architecture / Landscape",
+    image: legacyMain.url,
     intro:
-      "A hillside re-graded into inhabitable ground — dry-stone retaining courses holding native grassland in place.",
+      "A brewery and courtyard built as one landscape — arched concrete, still water and planting that spills over every edge.",
     body: [
-      "The site arrived as an eroded slope with no level ground. Rather than cutting a plateau, we drew a sequence of terraces that follow the existing contour, each held by a hand-laid dry-stone wall built from stone recovered on site.",
-      "Planting is entirely native grassland and drought-tolerant scrub, selected so the terraces read as an extension of the ridge rather than a garden imposed upon it. Water is slowed, not drained: every step doubles as a check dam.",
+      "The brief asked for a brewhouse that could hold a crowd without feeling like one. The answer was to sink the ground floor behind a run of concrete arches and let a shallow water body wrap the whole plinth, so arrival happens across water rather than tarmac.",
+      "Above, weathering-steel screens carry cascading planters. The greenery is structural to the experience: it filters the western sun, cools the terraces, and softens the raw board-formed concrete as it matures season by season.",
     ],
-    materials: ["Local quartzite", "Lime mortar", "Native grasses"],
+    materials: ["Board-formed concrete", "Weathering steel", "Cascading planting"],
     gallery: [
-      { src: p01, caption: "Terrace sequence, looking north-west", span: "full" },
-      { src: matBrick, caption: "Stone coursing detail", span: "half" },
-      { src: matGreen, caption: "Grassland planting palette", span: "half" },
+      { src: legacy2.url, caption: "Arched plinth and reflecting water body", span: "full" },
+      { src: legacy3.url, caption: "Terrace seating under the planted edge", span: "half" },
+      { src: legacy4.url, caption: "Weathering-steel screen with climbers", span: "half" },
+      { src: legacy6.url, caption: "Entry court and fountains", span: "full" },
     ],
   },
+
   {
     slug: "jaali-pavilion",
     index: "02",
