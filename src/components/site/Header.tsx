@@ -35,7 +35,7 @@ export function Header() {
       <div className="flex items-center justify-between gap-6">
         <Link
           to="/"
-          className="group flex items-center rounded-[2px] bg-[#fdfaf6] px-3 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.7)] transition-[padding,height] duration-700 sm:px-4"
+          className="group flex items-center rounded-[3px] bg-[#fdfaf6] px-3 py-1.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.7)] transition-[padding,height] duration-700 sm:px-4 sm:py-2"
           aria-label="Brick & Blooms, home"
         >
           <img
