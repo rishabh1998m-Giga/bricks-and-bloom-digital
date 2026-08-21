@@ -17,7 +17,6 @@ export function Footer() {
             className="mt-6 h-auto w-[min(100%,28rem)]"
           />
         </div>
-        </div>
 
         <div className="grid grid-cols-2 gap-x-12 gap-y-10 md:grid-cols-2 md:pt-16">
           <div className="flex flex-col gap-3">
