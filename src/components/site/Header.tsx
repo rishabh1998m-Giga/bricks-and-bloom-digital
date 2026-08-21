@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/brick-blooms-logo-light.png.asset.json";
+import logo from "@/assets/brick-blooms-mark.png.asset.json";
 
 const nav = [
   { to: "/work", label: "Work" },
@@ -38,9 +38,9 @@ export function Header() {
             src={logo.url}
             alt="Brick & Blooms"
             width={1184}
-            height={571}
+            height={411}
             className="w-auto transition-[height] duration-700"
-            style={{ height: condensed ? "2.1rem" : "3rem" }}
+            style={{ height: condensed ? "2.6rem" : "3.6rem" }}
           />
         </Link>
 
