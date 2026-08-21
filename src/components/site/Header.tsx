@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/bb-logo.png.asset.json";
+import logo from "@/assets/bb-logo-alpha.png.asset.json";
 
 const nav = [
   { to: "/work", label: "Work" },
@@ -33,16 +33,12 @@ export function Header() {
       }}
     >
       <div className="flex items-center justify-between gap-6">
-        <Link
-          to="/"
-          className="group flex items-center rounded-[3px] bg-[#fdfaf6] px-3 py-1.5 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.7)] transition-[padding,height] duration-700 sm:px-4 sm:py-2"
-          aria-label="Brick & Blooms, home"
-        >
+        <Link to="/" className="group flex items-center" aria-label="Brick & Blooms, home">
           <img
             src={logo.url}
             alt="Brick & Blooms — a new way of living"
-            width={1208}
-            height={595}
+            width={1184}
+            height={571}
             className="w-auto transition-[height] duration-700"
             style={{ height: condensed ? "2.1rem" : "2.9rem" }}
           />
