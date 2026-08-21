@@ -32,20 +32,15 @@ export function Header() {
       }}
     >
       <div className="flex items-baseline justify-between gap-6">
-        <Link to="/" className="group flex items-baseline gap-3" aria-label="Brick & Blooms, home">
-          <span
-            className="display leading-none transition-[font-size] duration-700"
-            style={{ fontSize: condensed ? "1.35rem" : "1.7rem" }}
-          >
-            Brick
-          </span>
-          <span className="meta text-accent">&amp;</span>
-          <span
-            className="display leading-none italic transition-[font-size] duration-700"
-            style={{ fontSize: condensed ? "1.35rem" : "1.7rem" }}
-          >
-            Blooms
-          </span>
+        <Link to="/" className="group flex items-center" aria-label="Brick & Blooms, home">
+          <img
+            src={logo.url}
+            alt="Brick & Blooms"
+            width={1184}
+            height={571}
+            className="w-auto transition-[height] duration-700"
+            style={{ height: condensed ? "2.1rem" : "3rem" }}
+          />
         </Link>
 
         <nav className="hidden items-baseline gap-8 sm:flex lg:gap-12">
