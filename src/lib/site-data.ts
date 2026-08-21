@@ -164,7 +164,7 @@ export const services = [
     detail:
       "Landscape as structure rather than decoration — grading, water movement and native planting designed to mature over decades.",
     capabilities: ["Grading & contour design", "Native planting schemes", "Water & stormwater strategy", "Long-term maintenance plans"],
-    image: p01,
+    image: legacyMain.url,
   },
   {
     index: "03",
