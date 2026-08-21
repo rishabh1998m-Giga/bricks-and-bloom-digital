@@ -48,12 +48,12 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-baseline gap-10 md:flex">
+        <nav className="hidden items-baseline gap-8 sm:flex lg:gap-12">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="meta link-draw text-foreground/75 transition-colors hover:text-foreground"
+              className="meta link-draw text-[0.82rem] tracking-[0.14em] text-foreground transition-colors hover:text-accent sm:text-[0.875rem]"
               data-active={pathname.startsWith(item.to) ? "true" : "false"}
             >
               {item.label}
@@ -64,7 +64,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="meta text-foreground md:hidden"
+          className="meta text-[0.82rem] tracking-[0.14em] text-foreground sm:hidden"
           aria-expanded={open}
         >
           {open ? "Close" : "Menu"}
@@ -72,7 +72,7 @@ export function Header() {
       </div>
 
       <div
-        className="overflow-hidden md:hidden"
+        className="overflow-hidden sm:hidden"
         style={{
           maxHeight: open ? "18rem" : 0,
           transition: "max-height .7s cubic-bezier(.16,1,.3,1)",
