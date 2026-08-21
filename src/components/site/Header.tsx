@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import mark from "@/assets/bb-mark.png.asset.json";
+import logo from "@/assets/bb-logo.png.asset.json";
 
 const nav = [
   { to: "/work", label: "Work" },
