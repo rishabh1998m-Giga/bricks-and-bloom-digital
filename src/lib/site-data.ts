@@ -7,6 +7,11 @@ import matBrick from "@/assets/mat-brick.jpg";
 import matConcrete from "@/assets/mat-stone.jpg";
 import matTimber from "@/assets/mat-concrete.jpg";
 import matGreen from "@/assets/mat-green.jpg";
+import legacyMain from "@/assets/legacy-main.png.asset.json";
+import legacy2 from "@/assets/legacy-2.webp.asset.json";
+import legacy3 from "@/assets/legacy-3.webp.asset.json";
+import legacy4 from "@/assets/legacy-4.webp.asset.json";
+import legacy6 from "@/assets/legacy-6.webp.asset.json";
 
 /**
  * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
