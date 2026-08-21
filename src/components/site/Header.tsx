@@ -72,7 +72,7 @@ export function Header() {
       </div>
 
       <div
-        className="overflow-hidden md:hidden"
+        className="overflow-hidden sm:hidden"
         style={{
           maxHeight: open ? "18rem" : 0,
           transition: "max-height .7s cubic-bezier(.16,1,.3,1)",
