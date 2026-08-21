@@ -33,37 +33,21 @@ export function Header() {
       }}
     >
       <div className="flex items-center justify-between gap-6">
-        <Link to="/" className="group flex items-center gap-3 sm:gap-4" aria-label="Brick & Blooms, home">
+        <Link
+          to="/"
+          className="group flex items-center rounded-[2px] bg-[#fdfaf6] px-3 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.7)] transition-[padding,height] duration-700 sm:px-4"
+          aria-label="Brick & Blooms, home"
+        >
           <img
-            src={mark.url}
-            alt=""
-            aria-hidden="true"
-            width={504}
-            height={454}
-            className="w-auto shrink-0 transition-[height] duration-700"
-            style={{ height: condensed ? "1.9rem" : "2.5rem" }}
+            src={logo.url}
+            alt="Brick & Blooms — a new way of living"
+            width={1208}
+            height={595}
+            className="w-auto transition-[height] duration-700"
+            style={{ height: condensed ? "2.1rem" : "2.9rem" }}
           />
-          <span className="flex flex-col leading-none">
-            <span
-              className="display whitespace-nowrap leading-[0.95] text-foreground transition-[font-size] duration-700"
-              style={{ fontSize: condensed ? "1.15rem" : "1.4rem", letterSpacing: "0.06em" }}
-            >
-              Brick &amp; Blooms
-            </span>
-            <span
-              className="meta overflow-hidden text-accent transition-all duration-700"
-              style={{
-                fontSize: "0.55rem",
-                letterSpacing: "0.28em",
-                maxHeight: condensed ? 0 : "1rem",
-                opacity: condensed ? 0 : 1,
-                marginTop: condensed ? 0 : "0.3rem",
-              }}
-            >
-              A new way of living
-            </span>
-          </span>
         </Link>
+
 
         <nav className="hidden items-baseline gap-8 sm:flex lg:gap-12">
           {nav.map((item) => (
