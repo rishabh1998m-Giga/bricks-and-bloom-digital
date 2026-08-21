@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/brick-blooms-mark.png.asset.json";
+import mark from "@/assets/bb-mark.png.asset.json";
 
 const nav = [
   { to: "/work", label: "Work" },
@@ -32,16 +32,37 @@ export function Header() {
         backdropFilter: condensed ? "blur(6px)" : "none",
       }}
     >
-      <div className="flex items-baseline justify-between gap-6">
-        <Link to="/" className="group flex items-center" aria-label="Brick & Blooms, home">
+      <div className="flex items-center justify-between gap-6">
+        <Link to="/" className="group flex items-center gap-3 sm:gap-4" aria-label="Brick & Blooms, home">
           <img
-            src={logo.url}
-            alt="Brick & Blooms"
-            width={1184}
-            height={411}
-            className="w-auto transition-[height] duration-700"
-            style={{ height: condensed ? "2.6rem" : "3.6rem" }}
+            src={mark.url}
+            alt=""
+            aria-hidden="true"
+            width={504}
+            height={454}
+            className="w-auto shrink-0 transition-[height] duration-700"
+            style={{ height: condensed ? "1.9rem" : "2.5rem" }}
           />
+          <span className="flex flex-col leading-none">
+            <span
+              className="display whitespace-nowrap leading-[0.95] text-foreground transition-[font-size] duration-700"
+              style={{ fontSize: condensed ? "1.15rem" : "1.4rem", letterSpacing: "0.06em" }}
+            >
+              Brick &amp; Blooms
+            </span>
+            <span
+              className="meta overflow-hidden text-accent transition-all duration-700"
+              style={{
+                fontSize: "0.55rem",
+                letterSpacing: "0.28em",
+                maxHeight: condensed ? 0 : "1rem",
+                opacity: condensed ? 0 : 1,
+                marginTop: condensed ? 0 : "0.3rem",
+              }}
+            >
+              A new way of living
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-baseline gap-8 sm:flex lg:gap-12">
