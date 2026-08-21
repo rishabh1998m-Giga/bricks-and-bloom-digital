@@ -40,7 +40,7 @@ export function Header() {
             width={1184}
             height={571}
             className="w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] transition-[height] duration-700"
-            style={{ height: condensed ? "3.4rem" : "4.8rem" }}
+            style={{ height: condensed ? "3.1rem" : "4.3rem" }}
           />
         </Link>
 
