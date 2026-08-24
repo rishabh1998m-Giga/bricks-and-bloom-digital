@@ -19,6 +19,11 @@ import emb4 from "@/assets/embassy-4.jpg.asset.json";
 import emb5 from "@/assets/embassy-5.jpg.asset.json";
 import emb6 from "@/assets/embassy-6.jpg.asset.json";
 import emb7 from "@/assets/embassy-7.jpg.asset.json";
+import kav1 from "@/assets/kavita-2-2.webp.asset.json";
+import kav2 from "@/assets/kavita-3-2.webp.asset.json";
+import kav3 from "@/assets/kavita-4-2.webp.asset.json";
+import kav4 from "@/assets/kavita-7.webp.asset.json";
+import kav5 from "@/assets/kavita-10.webp.asset.json";
 
 /**
  * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
@@ -134,25 +139,26 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "roof-meadow",
+    slug: "kavita",
     index: "04",
-    name: "Roof Meadow",
-    location: "Mumbai, Maharashtra",
+    name: "Kavita",
+    location: "Bengaluru, Karnataka",
     year: "2022",
     category: "Landscape",
     discipline: "Landscape / Interior",
-    image: p04,
+    image: kav1.url,
     intro:
-      "A stone paving grid interrupted by planted bands — a meadow negotiated with a structural slab.",
+      "A private courtyard garden of gravel, turf-jointed stone and dense tropical planting, tuned to read as well at night as at noon.",
     body: [
-      "Load limits set the geometry. Planting occurs only where the slab is strongest, producing bands of grass that alternate with kota paving in a strict 1:2 rhythm.",
-      "The result is neither terrace nor garden but a measured field, softened seasonally as the grasses shift from green to bleached gold.",
+      "The house wrapped a leftover side yard. We re-grounded it: a field of rose gravel meets stepping stone laid into turf, so every route through the garden is felt underfoot before it is seen.",
+      "Planting does the enclosure — banana, philodendron and fern layered against the boundary walls — while a stone-clad porch and arched openings anchor the composition. Concealed lighting turns the same garden into a warm, quiet room after dark.",
     ],
-    materials: ["Kota stone", "Ornamental grasses", "Weathering steel"],
+    materials: ["Rose gravel & stone", "Turf-jointed paving", "Layered tropical planting"],
     gallery: [
-      { src: p04, caption: "Paving and planting rhythm", span: "full" },
-      { src: matGreen, caption: "Grass bands in late season", span: "half" },
-      { src: matConcrete, caption: "Parapet detail", span: "half" },
+      { src: kav2.url, caption: "Stepping stones set into turf", span: "full" },
+      { src: kav3.url, caption: "Bench beneath the wrought-iron screens", span: "half" },
+      { src: kav4.url, caption: "Stone-clad porch and gravel walk", span: "half" },
+      { src: kav5.url, caption: "The courtyard after dark", span: "full" },
     ],
   },
 ];
