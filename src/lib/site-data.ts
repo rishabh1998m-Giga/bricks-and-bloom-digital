@@ -1,4 +1,4 @@
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero-legacy.webp.asset.json";
 import p01 from "@/assets/project-01.jpg";
 import p02 from "@/assets/project-02.jpg";
 import p03 from "@/assets/project-03.jpg";
@@ -47,7 +47,7 @@ import m02 from "@/assets/method-02.jpg";
 import m03 from "@/assets/method-03.jpg";
 import m04 from "@/assets/method-04.jpg";
 
-export const heroImage = hero;
+export const heroImage = hero.url;
 
 export type Category = "Architecture" | "Landscape" | "Interior";
 
