@@ -12,6 +12,13 @@ import legacy2 from "@/assets/legacy-2.webp.asset.json";
 import legacy3 from "@/assets/legacy-3.webp.asset.json";
 import legacy4 from "@/assets/legacy-4.webp.asset.json";
 import legacy6 from "@/assets/legacy-6.webp.asset.json";
+import emb1 from "@/assets/embassy-1.jpg.asset.json";
+import emb2 from "@/assets/embassy-2.jpg.asset.json";
+import emb3 from "@/assets/embassy-3.jpg.asset.json";
+import emb4 from "@/assets/embassy-4.jpg.asset.json";
+import emb5 from "@/assets/embassy-5.jpg.asset.json";
+import emb6 from "@/assets/embassy-6.jpg.asset.json";
+import emb7 from "@/assets/embassy-7.jpg.asset.json";
 
 /**
  * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
@@ -80,25 +87,28 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "jaali-pavilion",
+    slug: "embassy",
     index: "02",
-    name: "Jaali Pavilion",
-    location: "Ahmedabad, Gujarat",
+    name: "Embassy",
+    location: "Bengaluru, Karnataka",
     year: "2023",
-    category: "Architecture",
-    discipline: "Architecture / Fabrication",
-    image: p02,
+    category: "Landscape",
+    discipline: "Landscape / Interior",
+    image: emb1.url,
     intro:
-      "A perforated brick screen turning direct western light into a slow-moving field of shadow.",
+      "A narrow city terrace rebuilt as a green room — stone-and-turf paving, layered planting and a laser-cut screen lit from behind.",
     body: [
-      "The pavilion is a single room defined by two jaali walls. The screen module was developed over eleven physical prototypes until the porosity read as solid from outside and dissolved from within.",
-      "Shadow is the primary material. Across the day the floor pattern travels the full length of the room, marking time without a single mechanical element.",
+      "The site was a leftover strip of deck between a tower wall and its boundary. Rather than furnish it, we re-grounded it: a stone grid interleaved with turf runs the full length, drawing the eye to a shaded lounge at the far end.",
+      "Evening is the design condition. Concealed uplights wash the planting, and a perforated corten screen behind the water bowl turns the boundary into the brightest surface on the terrace.",
     ],
-    materials: ["Wire-cut brick", "Grey kota floor", "Mild steel frame"],
+    materials: ["Kota and stone paving", "Corten screen", "Layered tropical planting"],
     gallery: [
-      { src: p02, caption: "Interior, midday", span: "full" },
-      { src: matBrick, caption: "Screen module prototype", span: "half" },
-      { src: matTimber, caption: "Timber shuttering study", span: "half" },
+      { src: emb2.url, caption: "The stone-and-turf walk at dusk", span: "full" },
+      { src: emb3.url, caption: "Lounge under the lit pergola", span: "half" },
+      { src: emb7.url, caption: "Backlit corten screen and water bowl", span: "half" },
+      { src: emb4.url, caption: "Deck and bench beneath the frame", span: "full" },
+      { src: emb5.url, caption: "Seating against the planted edge", span: "half" },
+      { src: emb6.url, caption: "Paving rhythm and planters", span: "half" },
     ],
   },
   {
