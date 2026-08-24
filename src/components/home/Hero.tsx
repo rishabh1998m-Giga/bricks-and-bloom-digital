@@ -64,7 +64,7 @@ export function Hero() {
               <span
                 className="block"
                 style={{
-                  fontSize: "clamp(2.75rem, 11vw, 9.5rem)",
+                  fontSize: "clamp(2.25rem, 9vw, 8rem)",
                   transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
                 }}
               >
@@ -73,7 +73,7 @@ export function Hero() {
               <span
                 className="block italic"
                 style={{
-                  fontSize: "clamp(2.25rem, 9vw, 8rem)",
+                  fontSize: "clamp(1.9rem, 7.5vw, 6.5rem)",
                   marginLeft: "clamp(1.5rem, 12vw, 14rem)",
                   transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
                 }}
