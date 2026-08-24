@@ -25,7 +25,7 @@ export function Hero() {
         >
           <img
             src={heroImage}
-            alt="Courtyard house at dusk: board-formed concrete meeting hand-laid brick around a still water channel"
+            alt="Concrete arcade over a still water channel, planted terraces spilling greenery above"
             width={1920}
             height={1200}
             fetchPriority="high"
@@ -39,7 +39,14 @@ export function Hero() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, color-mix(in oklab, var(--ink) 55%, transparent) 0%, transparent 35%, color-mix(in oklab, var(--ink) 70%, transparent) 100%)",
+                "linear-gradient(to bottom, color-mix(in oklab, var(--ink) 62%, transparent) 0%, color-mix(in oklab, var(--ink) 30%, transparent) 42%, color-mix(in oklab, var(--ink) 82%, transparent) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, color-mix(in oklab, var(--ink) 72%, transparent) 0%, color-mix(in oklab, var(--ink) 34%, transparent) 46%, transparent 78%)",
             }}
           />
         </div>
@@ -53,7 +60,7 @@ export function Hero() {
           }}
         >
           <div className="edge w-full">
-            <h1 className="display text-balance text-foreground">
+            <h1 className="display text-balance text-foreground [text-shadow:0_2px_28px_color-mix(in_oklab,var(--ink)_75%,transparent)]">
               <span
                 className="block"
                 style={{
@@ -74,7 +81,7 @@ export function Hero() {
                 Beauty
               </span>
               <span
-                className="meta mt-6 block text-foreground/70"
+                className="meta mt-6 block text-foreground/85"
                 style={{
                   fontSize: "clamp(0.7rem, 1.1vw, 0.95rem)",
                   letterSpacing: "0.42em",
@@ -93,11 +100,11 @@ export function Hero() {
           style={{ opacity: 1 - progress * 1.6 }}
         >
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
-            <p className="meta max-w-[22ch] text-foreground/80">
+            <p className="meta max-w-[22ch] text-foreground/90">
               Architecture, landscape and the ground between them.
             </p>
 
-            <p className="meta max-w-[26ch] text-right text-muted-foreground">
+            <p className="meta max-w-[26ch] text-right text-foreground/75">
               Structure holds. Planting moves. We design the joint.
             </p>
           </div>
