@@ -68,7 +68,7 @@ export function Hero() {
                   transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
                 }}
               >
-                Nature&rsquo;s
+                New Way
               </span>
               <span
                 className="block italic"
@@ -78,17 +78,7 @@ export function Hero() {
                   transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
                 }}
               >
-                Beauty
-              </span>
-              <span
-                className="meta mt-6 block text-foreground/85"
-                style={{
-                  fontSize: "clamp(0.7rem, 1.1vw, 0.95rem)",
-                  letterSpacing: "0.42em",
-                  marginLeft: "clamp(0.25rem, 3vw, 3rem)",
-                }}
-              >
-                Delivered
+                of Living
               </span>
             </h1>
           </div>
