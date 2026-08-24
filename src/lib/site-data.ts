@@ -19,6 +19,11 @@ import emb4 from "@/assets/embassy-4.jpg.asset.json";
 import emb5 from "@/assets/embassy-5.jpg.asset.json";
 import emb6 from "@/assets/embassy-6.jpg.asset.json";
 import emb7 from "@/assets/embassy-7.jpg.asset.json";
+import kav1 from "@/assets/kavita-2-2.webp.asset.json";
+import kav2 from "@/assets/kavita-3-2.webp.asset.json";
+import kav3 from "@/assets/kavita-4-2.webp.asset.json";
+import kav4 from "@/assets/kavita-7.webp.asset.json";
+import kav5 from "@/assets/kavita-10.webp.asset.json";
 
 /**
  * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
