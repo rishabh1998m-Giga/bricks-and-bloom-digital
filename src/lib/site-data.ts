@@ -12,6 +12,13 @@ import legacy2 from "@/assets/legacy-2.webp.asset.json";
 import legacy3 from "@/assets/legacy-3.webp.asset.json";
 import legacy4 from "@/assets/legacy-4.webp.asset.json";
 import legacy6 from "@/assets/legacy-6.webp.asset.json";
+import emb1 from "@/assets/embassy-1.jpg.asset.json";
+import emb2 from "@/assets/embassy-2.jpg.asset.json";
+import emb3 from "@/assets/embassy-3.jpg.asset.json";
+import emb4 from "@/assets/embassy-4.jpg.asset.json";
+import emb5 from "@/assets/embassy-5.jpg.asset.json";
+import emb6 from "@/assets/embassy-6.jpg.asset.json";
+import emb7 from "@/assets/embassy-7.jpg.asset.json";
 
 /**
  * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
