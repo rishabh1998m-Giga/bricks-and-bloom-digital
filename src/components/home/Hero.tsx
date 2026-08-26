@@ -1,3 +1,6 @@
+import { Link } from "@tanstack/react-router";
+
+import { Button } from "@/components/ui/button";
 import { heroImage } from "@/lib/site-data";
 import { usePinProgress, usePointerField } from "@/lib/motion";
 
@@ -81,6 +84,21 @@ export function Hero() {
                 of Living
               </span>
             </h1>
+          </div>
+        </div>
+
+        {/* primary CTAs — placed below the title lockup */}
+        <div
+          className="edge pointer-events-auto absolute inset-x-0 top-1/2 flex items-center"
+          style={{ marginTop: "clamp(5.5rem, 15vh, 9rem)" }}
+        >
+          <div className="flex flex-wrap items-center gap-4">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/work">Our Work</Link>
+            </Button>
+            <Button asChild variant="default" size="lg">
+              <Link to="/contact">Book Appointment</Link>
+            </Button>
           </div>
         </div>
 
