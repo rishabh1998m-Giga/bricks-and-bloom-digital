@@ -19,7 +19,7 @@ export function MaterialSampler() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-12">
+        <div className="mt-7 grid gap-x-12 gap-y-7 md:mt-10 md:gap-y-10 md:grid-cols-12">
           <div className="md:col-span-7">
             {materials.map((m, i) => (
               <button
