@@ -71,7 +71,7 @@ export function MaterialSampler() {
           </div>
         </div>
 
-        <h2 className="display mt-14 text-[clamp(1.9rem,5vw,4.5rem)]">
+        <h2 className="display mt-9 text-[clamp(2.15rem,5vw,4.5rem)] leading-[0.98] md:mt-14 md:leading-[0.86]">
           <Line delay={0} drift={-40}>
             Nothing applied.
           </Line>
