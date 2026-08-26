@@ -15,7 +15,7 @@ export function HowWeWork() {
     const el = sectionRef.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => setInView(e.isIntersecting),
+      (entries) => setInView(!!entries[0]?.isIntersecting),
       { threshold: 0.25 },
     );
     io.observe(el);
@@ -48,7 +48,7 @@ export function HowWeWork() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active, paused, inView]);
 
-  const step = howWeWork[active];
+  const step = howWeWork[active]!;
 
   const onKey = (e: React.KeyboardEvent) => {
     if (e.key === "ArrowDown" || e.key === "ArrowRight") {
