@@ -36,7 +36,7 @@ export function BricksToBloom() {
   return (
     <section
       ref={ref}
-      className="relative h-[200svh] md:h-[260svh]"
+      className="relative h-[175svh] md:h-[260svh]"
       aria-label="From bricks to bloom"
     >
       <div className="sticky top-0 flex h-svh flex-col justify-center overflow-hidden">
