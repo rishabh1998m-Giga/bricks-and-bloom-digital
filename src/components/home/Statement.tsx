@@ -29,7 +29,7 @@ export function Statement() {
           </h2>
 
           <div className="md:col-span-3" />
-          <div className="fade-in mt-2 grid gap-x-10 gap-y-6 md:col-span-9 md:grid-cols-2" style={{ transitionDelay: "560ms" }}>
+          <div className="fade-in grid gap-x-10 gap-y-4 md:col-span-9 md:mt-2 md:gap-y-6 md:grid-cols-2" style={{ transitionDelay: "560ms" }}>
             <p className="body-copy max-w-[46ch] text-muted-foreground">
               The studio works across built form and open ground at the same scale of attention. A wall and a
               planting bed are drawn in the same section, on the same sheet, in the same week.
