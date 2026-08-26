@@ -130,9 +130,9 @@
 
 @utility meta {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
+  font-size: clamp(0.75rem, 0.71rem + 0.14vw, 0.8125rem);
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.4;
 }
@@ -151,13 +151,20 @@
 
 /* vertical rhythm that stays sane from 320px to ultrawide */
 @utility section-y {
-  padding-block: clamp(4.5rem, 12vh, 11rem);
+  padding-block: clamp(3.5rem, 8.5vh, 7.5rem);
 }
 @utility section-y-lg {
-  padding-block: clamp(5.5rem, 16vh, 14rem);
+  padding-block: clamp(4.25rem, 10.5vh, 9rem);
 }
 @utility section-t {
-  padding-top: clamp(4.5rem, 12vh, 11rem);
+  padding-top: clamp(3.5rem, 8.5vh, 7.5rem);
+}
+
+/* running text: one notch larger than text-sm, editorial measure */
+@utility body-copy {
+  font-size: clamp(0.9375rem, 0.89rem + 0.24vw, 1.0625rem);
+  line-height: 1.72;
+  letter-spacing: -0.005em;
 }
 
 /* clip-path reveal system: different directions per section */

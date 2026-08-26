@@ -46,7 +46,7 @@ export function FeaturedWork() {
               Full archive ({projects.length})
             </Link>
           </div>
-          <h2 className="display mt-10 text-[clamp(2.5rem,7vw,6.5rem)]">
+          <h2 className="display mt-8 text-[clamp(2.2rem,5.8vw,5.25rem)]">
             <Line delay={0} drift={-60}>
               Four sites,
             </Line>
@@ -69,7 +69,7 @@ export function FeaturedWork() {
               <ProjectCard key={p.slug} project={p} />
             ))}
             <div className="flex w-[min(30vw,26rem)] shrink-0 items-center">
-              <Link to="/work" className="display text-[clamp(2rem,5vw,4.5rem)] italic text-accent link-draw">
+              <Link to="/work" className="display text-[clamp(1.9rem,4.2vw,3.75rem)] italic text-accent link-draw">
                 See all work →
               </Link>
             </div>
@@ -114,7 +114,7 @@ function ProjectCard({ project: p }: { project: (typeof projects)[number] }) {
         <h3 className="display text-[clamp(1.75rem,3vw,2.75rem)]">{p.name}</h3>
         <span className="meta shrink-0 text-muted-foreground">{p.category}</span>
       </div>
-      <p className="mt-3 max-w-[38ch] text-sm leading-relaxed text-muted-foreground">{p.intro}</p>
+      <p className="body-copy mt-3 max-w-[40ch] text-muted-foreground">{p.intro}</p>
     </Link>
   );
 }

@@ -19,7 +19,7 @@ export function MaterialSampler() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-12 md:grid-cols-12">
+        <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-12">
           <div className="md:col-span-7">
             {materials.map((m, i) => (
               <button
@@ -28,11 +28,11 @@ export function MaterialSampler() {
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
                 onClick={() => setActive(i)}
-                className="group flex w-full items-baseline justify-between gap-6 border-b border-border py-6 text-left transition-colors"
+                className="group flex w-full items-baseline justify-between gap-6 border-b border-border py-5 text-left transition-colors"
                 data-cursor={m.note}
               >
                 <span
-                  className="display text-[clamp(2.25rem,6vw,5rem)] transition-[opacity,transform] duration-700"
+                  className="display text-[clamp(1.9rem,4.6vw,3.75rem)] transition-[opacity,transform] duration-700"
                   style={{
                     opacity: active === i ? 1 : 0.42,
                     transform: active === i ? "translateX(0.75rem)" : "none",
@@ -71,7 +71,7 @@ export function MaterialSampler() {
           </div>
         </div>
 
-        <h2 className="display mt-20 text-[clamp(2rem,6vw,5.5rem)]">
+        <h2 className="display mt-14 text-[clamp(1.9rem,5vw,4.5rem)]">
           <Line delay={0} drift={-40}>
             Nothing applied.
           </Line>
