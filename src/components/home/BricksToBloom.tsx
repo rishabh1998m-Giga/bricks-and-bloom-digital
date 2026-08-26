@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 import { usePinProgress, clamp } from "@/lib/motion";
 import { materials } from "@/lib/site-data";
 
-const COLS = 8;
-const ROWS = 5;
-const CELLS = Array.from({ length: COLS * ROWS }, (_, i) => i);
+/** Phones get a shorter, wider bond so bricks stay brick-shaped. */
+function useBond() {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const on = () => setMobile(mq.matches);
+    on();
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
+  const cols = mobile ? 4 : 8;
+  const rows = mobile ? 6 : 5;
+  return { cols, rows, cells: Array.from({ length: cols * rows }, (_, i) => i) };
+}
 
 // deterministic pseudo-random per cell — stable across SSR and client
 const rand = (i: number, salt: number) => {
