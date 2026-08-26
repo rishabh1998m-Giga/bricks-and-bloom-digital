@@ -347,34 +347,45 @@ export const howWeWork = [
   {
     index: "01",
     title: "CONSULT",
+    caption: "Listening on site",
+    tags: ["Site visit", "Brief", "Context study"],
     description:
       "We listen. We visit your site, understand your requirements, lifestyle, and vision. Every great landscape starts with a conversation.",
   },
   {
     index: "02",
     title: "DESIGN & PROPOSE",
+    caption: "Drawing the vision",
+    tags: ["3D visuals", "Material palette", "Transparent estimate"],
     description:
       "Our team of landscape architects translates your vision into a bespoke design. We present detailed 3D visuals, material selections, and a transparent estimate proposal — fully customized for you.",
   },
   {
     index: "03",
     title: "APPROVE",
+    caption: "Clarity before ground breaks",
+    tags: ["Sign-off", "No hidden costs", "Timeline"],
     description:
       "Once you love the design, you sign off on the proposal. No hidden costs, no confusion. Just clarity to begin.",
   },
   {
     index: "04",
     title: "EXECUTE",
+    caption: "Turnkey build",
+    tags: ["Hardscape", "Softscape", "Lighting & irrigation"],
     description:
       "Our turnkey execution team takes over. From hardscape to softscape, lighting to irrigation — we manage everything end-to-end, on time, with precision.",
   },
   {
     index: "05",
     title: "MAINTAIN",
+    caption: "Growing with time",
+    tags: ["Seasonal care", "Plant health", "Long-term"],
     description:
       "We don't just build, we nurture. Our maintenance team ensures your landscape grows more beautiful with time.",
   },
 ];
+
 
 export const approach = [
   {
