@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { heroImage, materials } from "@/lib/site-data";
+import { materials } from "@/lib/site-data";
+import { BloomScene } from "@/components/site/BloomScene";
 import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
@@ -37,29 +38,35 @@ const concrete = materials.find((m) => m.name === "Concrete")!;
 
 function AboutPage() {
   return (
-    <div className="pb-[clamp(4rem,10vh,9rem)]">
-      {/* 01 — Opening manifesto */}
-      <section className="relative flex min-h-[92svh] items-end overflow-hidden" aria-label="Our story">
-        <img
-          src={heroImage}
-          alt="Arched concrete architecture with cascading greenery reflected in still water"
-          className="absolute inset-0 h-full w-full object-cover"
-          fetchPriority="high"
-          decoding="async"
-        />
+    <div className="pb-[clamp(3rem,7vh,6rem)]">
+      {/* 01 — Opening manifesto over the living sculpture */}
+      <section
+        className="relative flex min-h-[92svh] items-end overflow-hidden"
+        aria-label="Our story"
+      >
+        {/* 3D centrepiece: a breathing brick wall with rising blooms */}
+        <BloomScene className="absolute inset-0" />
+        {/* vignette + bottom scrim keep the typography legible */}
         <div
-          className="absolute inset-0"
+          className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, color-mix(in oklab, var(--ink) 92%, transparent) 0%, color-mix(in oklab, var(--ink) 45%, transparent) 45%, color-mix(in oklab, var(--ink) 25%, transparent) 100%)",
+              "radial-gradient(120% 90% at 50% 38%, transparent 40%, color-mix(in oklab, var(--ink) 55%, transparent) 100%)",
           }}
         />
-        <div className="edge relative pb-[clamp(3rem,8vh,6rem)] pt-[clamp(9rem,26vh,16rem)]">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, color-mix(in oklab, var(--ink) 88%, transparent) 0%, transparent 38%)",
+          }}
+        />
+        <div className="edge relative w-full pb-[clamp(2.5rem,6vh,4.5rem)] pt-[clamp(8rem,22vh,13rem)]">
           <RevealScope threshold={0.05}>
             <p className="meta text-muted-foreground">
               <span className="text-accent">Our Story</span> — Est. six years ago
             </p>
-            <h1 className="display mt-8 max-w-[16ch] text-[clamp(2.5rem,8vw,7.25rem)] leading-[1.02]">
+            <h1 className="display mt-5 max-w-[16ch] text-[clamp(2.5rem,8vw,7.25rem)] leading-[1.02]">
               <Line delay={0} drift={-60}>
                 We don&rsquo;t just design
               </Line>
