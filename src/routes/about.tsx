@@ -43,25 +43,20 @@ function AboutPage() {
         className="relative flex min-h-[92svh] items-end overflow-hidden"
         aria-label="Our story"
       >
-        {/* Hero photograph behind the manifesto */}
-        <img
-          src={heroImage}
-          alt="Lush landscape architecture by Brick & Blooms"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        {/* vignette + bottom scrim keep the typography legible */}
+        {/* Interactive brick lattice — reacts to the pointer, no imagery */}
+        <BrickField />
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 50% 38%, transparent 40%, color-mix(in oklab, var(--ink) 55%, transparent) 100%)",
+              "radial-gradient(115% 85% at 50% 40%, transparent 35%, color-mix(in oklab, var(--ink) 70%, transparent) 100%)",
           }}
         />
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, color-mix(in oklab, var(--ink) 88%, transparent) 0%, transparent 38%)",
+              "linear-gradient(to top, color-mix(in oklab, var(--ink) 82%, transparent) 0%, transparent 45%)",
           }}
         />
         <div className="edge relative w-full pb-[clamp(2.5rem,6vh,4.5rem)] pt-[clamp(8rem,22vh,13rem)]">
