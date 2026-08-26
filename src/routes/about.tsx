@@ -38,7 +38,7 @@ const concrete = materials.find((m) => m.name === "Concrete")!;
 function AboutPage() {
   return (
     <div className="pb-[clamp(3rem,7vh,6rem)]">
-      {/* 01 — Opening manifesto over the living sculpture */}
+      {/* 01 — Opening manifesto */}
       <section
         className="relative flex min-h-[92svh] items-end overflow-hidden"
         aria-label="Our story"
