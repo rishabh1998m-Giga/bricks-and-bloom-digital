@@ -31,6 +31,7 @@ export function BricksToBloom() {
   const { ref, progress } = usePinProgress<HTMLDivElement>();
   const t = clamp((progress - 0.08) / 0.78);
   const green = materials[3]?.image ?? "";
+  const { cols: COLS, rows: ROWS, cells: CELLS } = useBond();
 
   return (
     <section
