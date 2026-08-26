@@ -145,7 +145,7 @@ export function HowWeWork() {
           </div>
 
           {/* Detail panel */}
-          <div className="relative min-h-[19rem] overflow-hidden rounded-2xl border border-border/60 bg-card/60 p-7 backdrop-blur-sm md:min-h-[22rem] md:p-10">
+          <div className="relative min-h-[17.5rem] overflow-hidden rounded-2xl border border-border/60 bg-card/60 p-6 pb-12 backdrop-blur-sm md:min-h-[22rem] md:p-10 md:pb-14">
             {/* oversized ghost numeral */}
             <span
               aria-hidden="true"
