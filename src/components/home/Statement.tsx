@@ -8,12 +8,12 @@ export function Statement() {
   return (
     <section className="edge relative section-y-lg">
       <RevealScope threshold={0.3}>
-        <div className="grid gap-10 md:grid-cols-12">
+        <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
           <p className="meta text-muted-foreground md:col-span-3">
             <span className="text-accent">01</span> — Position
           </p>
 
-          <h2 className="display text-[clamp(2.5rem,8.5vw,8rem)] md:col-span-9">
+          <h2 className="display text-[clamp(2.2rem,6.4vw,5.75rem)] md:col-span-9">
             <Line delay={0} drift={-90}>
               We design
             </Line>
@@ -29,12 +29,12 @@ export function Statement() {
           </h2>
 
           <div className="md:col-span-3" />
-          <div className="fade-in grid gap-10 md:col-span-9 md:grid-cols-2" style={{ transitionDelay: "560ms" }}>
-            <p className="max-w-[46ch] text-sm leading-relaxed text-muted-foreground">
+          <div className="fade-in mt-2 grid gap-x-10 gap-y-6 md:col-span-9 md:grid-cols-2" style={{ transitionDelay: "560ms" }}>
+            <p className="body-copy max-w-[46ch] text-muted-foreground">
               The studio works across built form and open ground at the same scale of attention. A wall and a
               planting bed are drawn in the same section, on the same sheet, in the same week.
             </p>
-            <p className="max-w-[46ch] text-sm leading-relaxed text-muted-foreground">
+            <p className="body-copy max-w-[46ch] text-muted-foreground">
               Our work is deliberately slow: local material, few gestures, and detailing resolved at full size
               before anything is built. We design for the fifteenth year, not the first photograph.
             </p>

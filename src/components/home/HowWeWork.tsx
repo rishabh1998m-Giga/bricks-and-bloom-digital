@@ -78,9 +78,9 @@ export function HowWeWork() {
           </p>
         </div>
 
-        <header className="mt-10 mb-12 md:mt-14 md:mb-16">
-          <h2 className="display text-[clamp(2.6rem,7vw,5.6rem)]">How We Work</h2>
-          <p className="mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:text-lg">
+        <header className="mt-8 mb-10 md:mt-10 md:mb-12">
+          <h2 className="display text-[clamp(2.2rem,5.4vw,4.4rem)]">How We Work</h2>
+          <p className="body-copy mt-4 max-w-[52ch] text-muted-foreground md:text-[1.15rem]">
             A Seamless Journey From Vision To Reality
           </p>
         </header>
@@ -162,10 +162,10 @@ export function HowWeWork() {
               style={{ animation: "hww-in 600ms cubic-bezier(0.22,1,0.36,1) both" }}
             >
               <p className="meta text-xs text-accent md:text-sm">{step.caption}</p>
-              <h3 className="display mt-3 text-[clamp(2rem,4.4vw,3.2rem)] leading-[1.02] tracking-[-0.025em]">
+              <h3 className="display mt-3 text-[clamp(1.9rem,3.8vw,2.9rem)] leading-[1.02] tracking-[-0.025em]">
                 {step.title}
               </h3>
-              <p className="mt-5 max-w-[54ch] text-sm leading-[1.8] text-muted-foreground md:text-base">
+              <p className="body-copy mt-5 max-w-[54ch] text-muted-foreground">
                 {step.description}
               </p>
 

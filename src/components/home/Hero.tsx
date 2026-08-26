@@ -17,7 +17,7 @@ export function Hero() {
   const typeShift = progress * 100;
 
   return (
-    <section ref={ref} className="relative h-[190svh]" aria-label="Brick & Blooms">
+    <section ref={ref} className="relative h-[170svh]" aria-label="Brick & Blooms">
       <div className="sticky top-0 h-svh overflow-hidden">
         <div
           className="absolute inset-0"
@@ -67,7 +67,7 @@ export function Hero() {
               <span
                 className="block"
                 style={{
-                  fontSize: "clamp(2.25rem, 9vw, 8rem)",
+                  fontSize: "clamp(2rem, 7vw, 5.75rem)",
                   transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
                 }}
               >
@@ -76,8 +76,8 @@ export function Hero() {
               <span
                 className="block italic"
                 style={{
-                  fontSize: "clamp(1.9rem, 7.5vw, 6.5rem)",
-                  marginLeft: "clamp(1.5rem, 12vw, 14rem)",
+                  fontSize: "clamp(1.7rem, 5.9vw, 4.9rem)",
+                  marginLeft: "clamp(1.25rem, 9vw, 9rem)",
                   transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
                 }}
               >
@@ -101,11 +101,11 @@ export function Hero() {
             </Button>
           </div>
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
-            <p className="meta max-w-[22ch] text-foreground/90">
+            <p className="meta max-w-[30ch] text-foreground/90">
               Architecture, landscape and the ground between them.
             </p>
 
-            <p className="meta max-w-[26ch] text-right text-foreground/75">
+            <p className="meta max-w-[30ch] text-right text-foreground/75">
               Structure holds. Planting moves. We design the joint.
             </p>
           </div>

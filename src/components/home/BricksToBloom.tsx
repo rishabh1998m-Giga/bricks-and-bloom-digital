@@ -21,7 +21,7 @@ export function BricksToBloom() {
   const green = materials[3]?.image ?? "";
 
   return (
-    <section ref={ref} className="relative h-[300svh]" aria-label="From bricks to bloom">
+    <section ref={ref} className="relative h-[260svh]" aria-label="From bricks to bloom">
       <div className="sticky top-0 flex h-svh flex-col justify-center overflow-hidden">
         <div className="edge">
           <div className="flex items-baseline justify-between">
@@ -83,13 +83,13 @@ export function BricksToBloom() {
           {/* the two words trade places as the field dissolves */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <span
-              className="display absolute text-[clamp(3rem,13vw,11rem)] tracking-tight"
+              className="display absolute text-[clamp(2.5rem,10vw,8.5rem)] tracking-tight"
               style={{ opacity: 1 - clamp(t * 1.8), transform: `translateY(${-t * 40}px)` }}
             >
               BRICKS
             </span>
             <span
-              className="display absolute text-[clamp(3rem,13vw,11rem)] italic"
+              className="display absolute text-[clamp(2.5rem,10vw,8.5rem)] italic"
               style={{
                 opacity: clamp((t - 0.5) * 2.4),
                 transform: `translateY(${(1 - t) * 40}px)`,
