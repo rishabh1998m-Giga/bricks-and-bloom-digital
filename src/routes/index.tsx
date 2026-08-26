@@ -38,7 +38,7 @@ function Index() {
       <BricksToBloom />
       <FeaturedWork />
       <MaterialSampler />
-      <Approach />
+      <HowWeWork />
       <ContactCta />
     </>
   );
