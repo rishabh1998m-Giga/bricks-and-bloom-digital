@@ -130,7 +130,7 @@ function AboutPage() {
           </p>
         </RevealScope>
 
-        <div className="mt-[clamp(2.5rem,6vh,4.5rem)] grid gap-8 md:grid-cols-2">
+        <div className="mt-[clamp(1.75rem,4.5vh,3.25rem)] grid gap-8 md:grid-cols-2">
           <figure>
             <RevealImage
               src={greenery.image}
@@ -145,7 +145,7 @@ function AboutPage() {
               <span className="meta text-accent">The art</span>
             </figcaption>
           </figure>
-          <figure className="md:mt-[clamp(3rem,8vh,6rem)]">
+          <figure className="md:mt-[clamp(2.25rem,6vh,4.5rem)]">
             <RevealImage
               src={concrete.image}
               alt="Board-formed concrete and cut stone surfaces"
@@ -163,26 +163,26 @@ function AboutPage() {
       </section>
 
       {/* 04 — Who we build for */}
-      <section className="edge section-y" aria-labelledby="about-sectors">
+      <section className="edge py-[clamp(3rem,8vh,6.5rem)]" aria-labelledby="about-sectors">
         <RevealScope threshold={0.2}>
-          <div className="rule-t pt-5">
+          <div className="rule-t pt-4">
             <p className="meta text-muted-foreground">
               <span className="text-accent">03</span> — Who we build for
             </p>
           </div>
           <h2
             id="about-sectors"
-            className="display mt-12 text-[clamp(2rem,5.5vw,4.5rem)]"
+            className="display mt-7 text-[clamp(2rem,5.5vw,4.5rem)]"
           >
             We curate exterior <span className="italic text-accent">environments</span> for
           </h2>
         </RevealScope>
 
-        <ul className="mt-[clamp(2.5rem,6vh,4.5rem)]">
+        <ul className="mt-[clamp(1.75rem,4.5vh,3.25rem)]">
           {sectors.map((s) => (
             <li key={s.index}>
               <RevealScope threshold={0.35}>
-                <div className="rule-t group flex flex-wrap items-baseline gap-x-8 gap-y-1 py-7 transition-colors duration-500 hover:bg-[color-mix(in_oklab,var(--accent)_6%,transparent)] md:py-9">
+                <div className="rule-t group flex flex-wrap items-baseline gap-x-8 gap-y-1 py-5 transition-colors duration-500 hover:bg-[color-mix(in_oklab,var(--accent)_6%,transparent)] md:py-6">
                   <span className="meta w-10 text-accent">{s.index}</span>
                   <h3 className="display text-[clamp(1.75rem,4.5vw,3.5rem)] transition-transform duration-500 group-hover:translate-x-3">
                     {s.title}
