@@ -107,7 +107,7 @@ export function HowWeWork() {
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => select(i)}
                   onMouseEnter={() => select(i)}
-                  className="group relative w-full border-t border-border/60 py-5 text-left last:border-b md:py-6"
+                  className="group relative w-full border-t border-border/60 py-4 text-left last:border-b md:py-6"
                 >
                   {/* progress rail */}
                   <span
