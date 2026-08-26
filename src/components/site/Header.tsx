@@ -34,17 +34,13 @@ export function Header() {
       }}
     >
       <div className="flex items-center justify-between gap-6">
-        <Link
-          to="/"
-          className="group flex items-center bg-bone p-2 sm:p-[0.65rem] rounded-sm shadow-[0_4px_20px_-6px_rgba(0,0,0,0.35)] transition-[padding,box-shadow] duration-700"
-          aria-label="Brick & Blooms, home"
-        >
+        <Link to="/" className="group flex items-center" aria-label="Brick & Blooms, home">
           <img
             src={logo.url}
             alt="Brick & Blooms — a new way of living"
             width={1184}
             height={571}
-            className="w-auto transition-[height] duration-700"
+            className="w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] transition-[height] duration-700"
             style={{ height: condensed ? "3rem" : "4rem" }}
           />
         </Link>
