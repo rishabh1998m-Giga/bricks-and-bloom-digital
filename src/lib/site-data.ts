@@ -343,6 +343,39 @@ export const materials = [
   { name: "Greenery", note: "Native, unclipped", origin: "Regional nurseries", image: matGreen },
 ];
 
+export const howWeWork = [
+  {
+    index: "01",
+    title: "CONSULT",
+    description:
+      "We listen. We visit your site, understand your requirements, lifestyle, and vision. Every great landscape starts with a conversation.",
+  },
+  {
+    index: "02",
+    title: "DESIGN & PROPOSE",
+    description:
+      "Our team of landscape architects translates your vision into a bespoke design. We present detailed 3D visuals, material selections, and a transparent estimate proposal — fully customized for you.",
+  },
+  {
+    index: "03",
+    title: "APPROVE",
+    description:
+      "Once you love the design, you sign off on the proposal. No hidden costs, no confusion. Just clarity to begin.",
+  },
+  {
+    index: "04",
+    title: "EXECUTE",
+    description:
+      "Our turnkey execution team takes over. From hardscape to softscape, lighting to irrigation — we manage everything end-to-end, on time, with precision.",
+  },
+  {
+    index: "05",
+    title: "MAINTAIN",
+    description:
+      "We don't just build, we nurture. Our maintenance team ensures your landscape grows more beautiful with time.",
+  },
+];
+
 export const approach = [
   {
     index: "01",
