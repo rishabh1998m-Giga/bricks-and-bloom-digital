@@ -21,7 +21,11 @@ export function BricksToBloom() {
   const green = materials[3]?.image ?? "";
 
   return (
-    <section ref={ref} className="relative h-[260svh]" aria-label="From bricks to bloom">
+    <section
+      ref={ref}
+      className="relative h-[200svh] md:h-[260svh]"
+      aria-label="From bricks to bloom"
+    >
       <div className="sticky top-0 flex h-svh flex-col justify-center overflow-hidden">
         <div className="edge">
           <div className="flex items-baseline justify-between">
