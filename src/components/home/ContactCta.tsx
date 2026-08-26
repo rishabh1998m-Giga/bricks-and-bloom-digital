@@ -6,7 +6,7 @@ export function ContactCta() {
   return (
     <section className="edge section-y-lg" aria-label="Start a project">
       <RevealScope threshold={0.3}>
-        <h2 className="display text-[clamp(2.4rem,8vw,7rem)]">
+        <h2 className="display text-[clamp(2.6rem,8vw,7rem)] leading-[0.95] md:leading-[0.86]">
           <Line delay={0} drift={-70}>
             Have a site?
           </Line>
