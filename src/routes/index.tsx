@@ -5,7 +5,7 @@ import { Statement } from "@/components/home/Statement";
 import { BricksToBloom } from "@/components/home/BricksToBloom";
 import { FeaturedWork } from "@/components/home/FeaturedWork";
 import { MaterialSampler } from "@/components/home/MaterialSampler";
-import { Approach } from "@/components/home/Approach";
+import { HowWeWork } from "@/components/home/HowWeWork";
 import { ContactCta } from "@/components/home/ContactCta";
 
 export const Route = createFileRoute("/")({
@@ -38,7 +38,7 @@ function Index() {
       <BricksToBloom />
       <FeaturedWork />
       <MaterialSampler />
-      <Approach />
+      <HowWeWork />
       <ContactCta />
     </>
   );
