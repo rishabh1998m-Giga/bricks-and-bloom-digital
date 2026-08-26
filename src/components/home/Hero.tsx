@@ -87,12 +87,12 @@ export function Hero() {
           </div>
         </div>
 
-        {/* primary CTAs — placed below the title lockup */}
+        {/* precise information, small against the monument */}
         <div
-          className="edge pointer-events-auto absolute inset-x-0 top-1/2 flex items-center"
-          style={{ marginTop: "clamp(5.5rem, 15vh, 9rem)" }}
+          className="edge absolute inset-x-0 bottom-0 pb-8"
+          style={{ opacity: 1 - progress * 1.6 }}
         >
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 pb-5">
             <Button asChild variant="outline" size="lg">
               <Link to="/work">Our Work</Link>
             </Button>
@@ -100,13 +100,6 @@ export function Hero() {
               <Link to="/contact">Book Appointment</Link>
             </Button>
           </div>
-        </div>
-
-        {/* precise information, small against the monument */}
-        <div
-          className="edge absolute inset-x-0 bottom-0 pb-8"
-          style={{ opacity: 1 - progress * 1.6 }}
-        >
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
             <p className="meta max-w-[22ch] text-foreground/90">
               Architecture, landscape and the ground between them.
