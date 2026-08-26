@@ -28,7 +28,7 @@ export function MaterialSampler() {
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
                 onClick={() => setActive(i)}
-                className="group flex w-full items-baseline justify-between gap-6 border-b border-border py-5 text-left transition-colors"
+                className="group flex w-full items-baseline justify-between gap-6 border-b border-border py-4 text-left transition-colors md:py-5"
                 data-cursor={m.note}
               >
                 <span
