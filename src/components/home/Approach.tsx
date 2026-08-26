@@ -12,17 +12,12 @@ export function Approach() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-x-10 gap-y-16 md:grid-cols-12">
+        <div className="mt-8 grid gap-x-10 gap-y-10 md:mt-14 md:gap-y-16 md:grid-cols-12">
           {approach.map((a, i) => (
             <article
               key={a.index}
-              className="fade-in md:col-span-5"
-              style={{
-                transitionDelay: `${i * 120}ms`,
-                gridColumnStart: undefined,
-                marginTop: i % 2 === 1 ? "4rem" : undefined,
-                marginLeft: i % 2 === 1 ? "auto" : undefined,
-              }}
+              className={`fade-in md:col-span-5 ${i % 2 === 1 ? "md:mt-16 md:ml-auto" : ""}`}
+              style={{ transitionDelay: `${i * 120}ms` }}
             >
               <div className="overflow-hidden">
                 <img
