@@ -76,6 +76,7 @@ export function BrickField({ className = "" }: { className?: string }) {
 
       for (let i = 0; i < cells.length; i++) {
         const cell = cells[i];
+        if (!cell) continue;
         const r = Math.floor(i / (cols + 1));
         const c = i % (cols + 1);
         const x = (r % 2 ? -cw / 2 : 0) + c * cw + cw / 2;
