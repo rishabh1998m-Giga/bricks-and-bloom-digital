@@ -17,7 +17,7 @@ export function Hero() {
   const typeShift = progress * 100;
 
   return (
-    <section ref={ref} className="relative h-[170svh]" aria-label="Brick & Blooms">
+    <section ref={ref} className="relative h-[145svh] md:h-[170svh]" aria-label="Brick & Blooms">
       <div className="sticky top-0 h-svh overflow-hidden">
         <div
           className="absolute inset-0"
