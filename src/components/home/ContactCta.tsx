@@ -6,12 +6,6 @@ export function ContactCta() {
   return (
     <section className="edge section-y-lg" aria-label="Start a project">
       <RevealScope threshold={0.3}>
-        <div className="rule-t pt-5">
-          <p className="meta text-muted-foreground">
-            <span className="text-accent">06</span> — Commission
-          </p>
-        </div>
-
         <h2 className="display mt-12 text-[clamp(2.75rem,11vw,10rem)]">
           <Line delay={0} drift={-70}>
             Have a site?
