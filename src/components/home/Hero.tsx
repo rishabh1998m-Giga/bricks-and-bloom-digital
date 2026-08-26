@@ -101,11 +101,11 @@ export function Hero() {
             </Button>
           </div>
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
-            <p className="meta max-w-[22ch] text-foreground/90">
+            <p className="meta max-w-[30ch] text-foreground/90">
               Architecture, landscape and the ground between them.
             </p>
 
-            <p className="meta max-w-[26ch] text-right text-foreground/75">
+            <p className="meta max-w-[30ch] text-right text-foreground/75">
               Structure holds. Planting moves. We design the joint.
             </p>
           </div>
