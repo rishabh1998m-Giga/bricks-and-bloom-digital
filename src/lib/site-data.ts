@@ -24,6 +24,21 @@ import kav2 from "@/assets/kavita-3-2.webp.asset.json";
 import kav3 from "@/assets/kavita-4-2.webp.asset.json";
 import kav4 from "@/assets/kavita-7.webp.asset.json";
 import kav5 from "@/assets/kavita-10.webp.asset.json";
+import svcTerrace from "@/assets/svc-terrace-garden.jpg.asset.json";
+import svcVertical from "@/assets/svc-vertical-garden.jpg.asset.json";
+import svcVilla from "@/assets/svc-villa-landscaping.jpg.asset.json";
+import svcPergola from "@/assets/svc-pergola.jpg.asset.json";
+import svcLuxury from "@/assets/svc-luxury-landscapes.jpg.asset.json";
+import svcPools from "@/assets/svc-swimming-pools.jpg.asset.json";
+import svcWater from "@/assets/svc-fountains-ponds.jpg.asset.json";
+import svcCommercial from "@/assets/svc-commercial-landscaping.jpg.asset.json";
+import svcIrrigation from "@/assets/svc-irrigation.jpg.asset.json";
+import svcSoftscape from "@/assets/svc-softscape.jpg.asset.json";
+import svcHardscape from "@/assets/svc-hardscape.jpg.asset.json";
+import svcMoss from "@/assets/svc-moss-wall.jpg.asset.json";
+import svcMaintenance from "@/assets/svc-garden-maintenance.jpg.asset.json";
+import svcOffice from "@/assets/svc-office-plants.jpg.asset.json";
+import svcPlanters from "@/assets/svc-frp-planters.jpg.asset.json";
 
 /**
  * PLACEHOLDER CONTENT — replace with Brick & Blooms's real project archive,
@@ -163,44 +178,163 @@ export const projects: Project[] = [
   },
 ];
 
-export const services = [
+export type ServiceItem = {
+  index: string;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+};
+
+export type ServiceGroup = {
+  key: string;
+  title: string;
+  lead: string;
+  items: ServiceItem[];
+};
+
+export const serviceGroups: ServiceGroup[] = [
   {
-    index: "01",
-    title: "Architecture",
-    lead: "Built form, from first site walk to final joint.",
-    detail:
-      "Houses, pavilions and small institutional work developed through drawing, physical models and full-scale material mock-ups.",
-    capabilities: ["Feasibility & site strategy", "Concept to construction drawings", "Detail & fabrication design", "Site supervision"],
-    image: p02,
+    key: "design-execution",
+    title: "Design & Execution",
+    lead: "Drawn, detailed and built by the same hands.",
+    items: [
+      {
+        index: "01",
+        title: "Terrace Garden",
+        description:
+          "Rooftops and balconies rebuilt as usable ground — load, drainage and soil depth resolved first.\nPlanting chosen to hold its shape through the hottest months.",
+        image: svcTerrace.url,
+        alt: "Rooftop terrace garden with raised planters and warm paving",
+      },
+      {
+        index: "02",
+        title: "Vertical Garden",
+        description:
+          "Living walls engineered around irrigation, drainage and light before a single plant is set.\nSpecies layered so the wall reads dense from the first week.",
+        image: svcVertical.url,
+        alt: "Dense living wall of ferns and tropical foliage on a concrete facade",
+      },
+      {
+        index: "03",
+        title: "Villa Landscaping",
+        description:
+          "Private grounds designed as one continuous ground plane from gate to threshold.\nLawn, path and canopy tuned to how the house is actually used.",
+        image: svcVilla.url,
+        alt: "Villa garden with stepping-stone path, lawn and palms at golden hour",
+      },
+      {
+        index: "04",
+        title: "Pergola & Fabrication",
+        description:
+          "Shade structures, screens and bespoke metalwork detailed for weather and time.\nFabricated in our own workshop and set on site by our team.",
+        image: svcPergola.url,
+        alt: "Timber pergola casting shadow patterns over a stone deck with climbers",
+      },
+      {
+        index: "05",
+        title: "Luxury Landscapes",
+        description:
+          "Large private estates where every level, edge and sightline is drawn.\nMaterials specified to age well rather than photograph well.",
+        image: svcLuxury.url,
+        alt: "Luxury landscaped courtyard with sculpted planting and stone terraces",
+      },
+      {
+        index: "06",
+        title: "Swimming Pools",
+        description:
+          "Pools set into the landscape rather than dropped onto it — coping, deck and planting as one detail.\nFiltration and lighting planned with the structure.",
+        image: svcPools.url,
+        alt: "Still dark-lined swimming pool beside a stone villa terrace",
+      },
+      {
+        index: "07",
+        title: "Water Fountains & Ponds",
+        description:
+          "Moving and still water designed for sound, reflection and cooling.\nPumps, liners and aquatic planting balanced for low maintenance.",
+        image: svcWater.url,
+        alt: "Stone fountain and lily pond in a shaded garden courtyard",
+      },
+      {
+        index: "08",
+        title: "Commercial Landscaping",
+        description:
+          "Campuses, hotels and workplaces where the landscape carries heavy daily use.\nDetailed for durability, phasing and long service life.",
+        image: svcCommercial.url,
+        alt: "Corporate campus plaza with structured planting beds and stone paving",
+      },
+      {
+        index: "09",
+        title: "Landscape Irrigation",
+        description:
+          "Drip and sprinkler systems zoned to soil, aspect and plant type.\nAutomated controls that cut water use without stressing the garden.",
+        image: svcIrrigation.url,
+        alt: "Drip irrigation line and sprinkler head among mulch and groundcover",
+      },
+      {
+        index: "10",
+        title: "Softscape",
+        description:
+          "Soil, turf, shrubs and trees — the living half of the drawing.\nPlanting palettes built from species that belong to the site.",
+        image: svcSoftscape.url,
+        alt: "Layered planting of ornamental grasses, ferns and flowering shrubs",
+      },
+      {
+        index: "11",
+        title: "Hardscape",
+        description:
+          "Paving, steps, walls and edges cut and laid to a set-out drawing.\nStone, concrete and gravel chosen for grip, wear and warmth.",
+        image: svcHardscape.url,
+        alt: "Stone paving, steps and a low retaining wall meeting gravel and planting",
+      },
+      {
+        index: "12",
+        title: "Moss Wall",
+        description:
+          "Preserved moss panels that bring texture and quiet indoors with no irrigation.\nCut to the wall, framed or edge-to-edge.",
+        image: svcMoss.url,
+        alt: "Preserved moss wall panel mounted on a warm interior wall",
+      },
+    ],
   },
   {
-    index: "02",
-    title: "Landscape",
-    lead: "Ground, water, planting and time.",
-    detail:
-      "Landscape as structure rather than decoration — grading, water movement and native planting designed to mature over decades.",
-    capabilities: ["Grading & contour design", "Native planting schemes", "Water & stormwater strategy", "Long-term maintenance plans"],
-    image: legacyMain.url,
-  },
-  {
-    index: "03",
-    title: "Interior / Spatial",
-    lead: "The inside of the same idea.",
-    detail:
-      "Interiors resolved in the same material logic as the building: no applied finishes, no borrowed language.",
-    capabilities: ["Spatial planning", "Bespoke joinery", "Material & light studies", "Furniture curation"],
-    image: p03,
-  },
-  {
-    index: "04",
-    title: "Design + Strategy",
-    lead: "Before the drawing, the argument.",
-    detail:
-      "Briefing, masterplanning and design advisory for clients deciding what should be built at all.",
-    capabilities: ["Brief development", "Masterplanning", "Design review & advisory", "Identity & publication"],
-    image: p04,
+    key: "maintenance",
+    title: "Maintenance",
+    lead: "The years after handover, held to the same standard.",
+    items: [
+      {
+        index: "01",
+        title: "Garden Maintenance",
+        description:
+          "Scheduled pruning, feeding, pest control and seasonal replanting.\nThe same team that built the garden keeps it.",
+        image: svcMaintenance.url,
+        alt: "Garden tools resting beside a clipped hedge and mown lawn",
+      },
+      {
+        index: "02",
+        title: "Office Plant Rental",
+        description:
+          "Curated indoor planting supplied, placed and rotated on contract.\nWatering and replacement handled entirely by us.",
+        image: svcOffice.url,
+        alt: "Modern office lobby with large potted indoor plants in daylight",
+      },
+      {
+        index: "03",
+        title: "FRP Planters",
+        description:
+          "Lightweight fibreglass planters in bespoke sizes, finishes and colours.\nBuilt for terraces and rooftops where weight matters.",
+        image: svcPlanters.url,
+        alt: "Row of large fibreglass planters in terracotta and stone finishes",
+      },
+    ],
   },
 ];
+
+/** Flat list of service names, used by the contact form discipline picker. */
+export const services = serviceGroups.flatMap((g) =>
+  g.items.map((item) => ({ title: item.title, group: g.title })),
+);
+
 
 export const materials = [
   { name: "Brick", note: "Wire-cut, hand-laid", origin: "Local kilns", image: matBrick },
