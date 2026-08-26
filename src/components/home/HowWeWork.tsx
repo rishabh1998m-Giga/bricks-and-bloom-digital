@@ -78,14 +78,16 @@ export function HowWeWork() {
           </p>
         </div>
 
-        <header className="mt-8 mb-10 md:mt-10 md:mb-12">
-          <h2 className="display text-[clamp(2.2rem,5.4vw,4.4rem)]">How We Work</h2>
-          <p className="body-copy mt-4 max-w-[52ch] text-muted-foreground md:text-[1.15rem]">
+        <header className="mt-6 mb-7 md:mt-10 md:mb-12">
+          <h2 className="display text-[clamp(2.45rem,5.4vw,4.4rem)] leading-[0.98] md:leading-[0.86]">
+            How We Work
+          </h2>
+          <p className="body-copy mt-3 max-w-[52ch] text-muted-foreground md:mt-4 md:text-[1.15rem]">
             A Seamless Journey From Vision To Reality
           </p>
         </header>
 
-        <div className="fade-in grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
+        <div className="fade-in grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
           {/* Step selector */}
           <div
             role="tablist"
