@@ -13,7 +13,7 @@ export function Statement() {
             <span className="text-accent">01</span> — Position
           </p>
 
-          <h2 className="display text-[clamp(2.2rem,6.4vw,5.75rem)] md:col-span-9">
+          <h2 className="display text-[clamp(2.45rem,6.4vw,5.75rem)] leading-[0.95] md:leading-[0.86] md:col-span-9">
             <Line delay={0} drift={-90}>
               We design
             </Line>
