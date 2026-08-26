@@ -234,7 +234,7 @@ export function BloomScene({ className }: { className?: string }) {
 
       const io = new IntersectionObserver(
         ([entry]) => {
-          visible = entry.isIntersecting;
+          visible = entry?.isIntersecting ?? true;
           if (visible && !raf && !reduced && !disposed) raf = requestAnimationFrame(frame);
         },
         { threshold: 0.02 },
@@ -246,7 +246,7 @@ export function BloomScene({ className }: { className?: string }) {
         clock.getElapsedTime();
         group.rotation.y = 0.35;
         for (let k = 0; k < COUNT; k++) {
-          const bp = bricks[k];
+          const bp = bricks[k]!;
           dummy.position.set(
             Math.sin(bp.angle) * RADIUS,
             bp.y,
