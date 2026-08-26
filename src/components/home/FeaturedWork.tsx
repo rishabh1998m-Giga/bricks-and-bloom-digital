@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { projects } from "@/lib/site-data";
 import { usePinProgress, clamp } from "@/lib/motion";
@@ -9,7 +10,29 @@ import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
  */
 export function FeaturedWork() {
   const { ref, progress } = usePinProgress<HTMLDivElement>();
-  const shift = clamp(progress) * 100;
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  // Exact horizontal distance the rail must travel so the last panel lands
+  // flush with the right edge — no empty run-out before the next section.
+  const [travel, setTravel] = useState(0);
+
+  useEffect(() => {
+    const measure = () => {
+      const el = trackRef.current;
+      if (!el) return;
+      setTravel(Math.max(0, el.scrollWidth - window.innerWidth));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    const t = window.setTimeout(measure, 400);
+    return () => {
+      window.removeEventListener("resize", measure);
+      window.clearTimeout(t);
+    };
+  }, []);
+
+  const shift = clamp(progress) * travel;
+  // Pin only as long as there is horizontal distance left to cover.
+  const pinHeight = travel > 0 ? `calc(100svh + ${Math.round(travel)}px)` : "100svh";
 
   return (
     <section aria-label="Selected work">
@@ -35,16 +58,17 @@ export function FeaturedWork() {
       </div>
 
       {/* desktop: pinned horizontal run */}
-      <div ref={ref} className="relative hidden h-[320svh] md:block">
+      <div ref={ref} className="relative hidden md:block" style={{ height: pinHeight }}>
         <div className="sticky top-0 flex h-svh items-center overflow-hidden">
           <div
-            className="flex gap-[6vw] pl-[clamp(1.25rem,4vw,4.5rem)] will-change-transform"
-            style={{ transform: `translate3d(-${shift * 1.08}%, 0, 0)` }}
+            ref={trackRef}
+            className="flex w-max gap-[6vw] px-[clamp(1.25rem,4vw,4.5rem)] will-change-transform"
+            style={{ transform: `translate3d(-${shift}px, 0, 0)` }}
           >
             {projects.map((p) => (
               <ProjectCard key={p.slug} project={p} />
             ))}
-            <div className="flex w-[min(38vw,34rem)] shrink-0 items-center">
+            <div className="flex w-[min(30vw,26rem)] shrink-0 items-center">
               <Link to="/work" className="display text-[clamp(2rem,5vw,4.5rem)] italic text-accent link-draw">
                 See all work →
               </Link>
