@@ -41,6 +41,7 @@ function Index() {
       <MaterialSampler />
       <HowWeWork />
       <ContactCta />
+      <MapLocation />
     </>
   );
 }

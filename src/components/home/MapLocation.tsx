@@ -1,6 +1,6 @@
 import { ClientOnly } from "@tanstack/react-router";
 
-const MAP_API_KEY = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY;
+const MAP_API_KEY = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"];
 const PLACE_ID = "ChIJU56mPgAVrjsRqHRfirgaLP8";
 
 export function MapLocation() {
