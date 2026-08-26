@@ -76,6 +76,10 @@ function AboutPage() {
                 a new way of living.
               </Line>
             </h1>
+            <p className="meta mt-7 flex items-center gap-3 text-muted-foreground">
+              <span className="inline-block h-px w-10 bg-accent" />
+              Move your cursor across the wall — every brick finds its bloom
+            </p>
           </RevealScope>
         </div>
       </section>
