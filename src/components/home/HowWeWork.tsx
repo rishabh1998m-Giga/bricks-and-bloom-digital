@@ -163,19 +163,19 @@ export function HowWeWork() {
               className="relative"
               style={{ animation: "hww-in 600ms cubic-bezier(0.22,1,0.36,1) both" }}
             >
-              <p className="meta text-xs text-accent md:text-sm">{step.caption}</p>
-              <h3 className="display mt-3 text-[clamp(1.9rem,3.8vw,2.9rem)] leading-[1.02] tracking-[-0.025em]">
+              <p className="meta text-accent">{step.caption}</p>
+              <h3 className="display mt-2.5 text-[clamp(2rem,3.8vw,2.9rem)] leading-[1.02] tracking-[-0.025em]">
                 {step.title}
               </h3>
-              <p className="body-copy mt-5 max-w-[54ch] text-muted-foreground">
+              <p className="body-copy mt-3.5 max-w-[54ch] text-muted-foreground md:mt-5">
                 {step.description}
               </p>
 
-              <ul className="mt-7 flex flex-wrap gap-2">
+              <ul className="mt-5 flex flex-wrap gap-2 md:mt-7">
                 {step.tags.map((t) => (
                   <li
                     key={t}
-                    className="meta rounded-full border border-border/70 px-3.5 py-1.5 text-[0.68rem] text-muted-foreground transition-colors duration-300 hover:border-accent/50 hover:text-foreground"
+                    className="meta rounded-full border border-border/70 px-3 py-1.5 text-[0.7rem] text-muted-foreground transition-colors duration-300 hover:border-accent/50 hover:text-foreground"
                   >
                     {t}
                   </li>
@@ -183,7 +183,7 @@ export function HowWeWork() {
               </ul>
             </div>
 
-            <div className="absolute inset-x-7 bottom-6 flex items-center gap-3 md:inset-x-10">
+            <div className="absolute inset-x-6 bottom-5 flex items-center gap-3 md:inset-x-10 md:bottom-6">
               {howWeWork.map((s, i) => (
                 <button
                   key={s.index}
