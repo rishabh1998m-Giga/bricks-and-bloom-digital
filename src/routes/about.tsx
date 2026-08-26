@@ -82,25 +82,25 @@ function AboutPage() {
       </section>
 
       {/* 02 — Six years chapter */}
-      <section className="edge section-y" aria-labelledby="about-six-years">
+      <section className="edge py-[clamp(3rem,8vh,6.5rem)]" aria-labelledby="about-six-years">
         <RevealScope threshold={0.2}>
-          <div className="rule-t pt-5">
+          <div className="rule-t pt-4">
             <p className="meta text-muted-foreground">
               <span className="text-accent">01</span> — The practice
             </p>
           </div>
           <h2
             id="about-six-years"
-            className="display mt-12 max-w-[26ch] text-[clamp(1.75rem,4.2vw,3.75rem)] leading-[1.15]"
+            className="display mt-7 max-w-[26ch] text-[clamp(1.75rem,4.2vw,3.75rem)] leading-[1.15]"
           >
             For the last six years, we have been redefining exterior spaces through bespoke Landscape
             Architecture and Turnkey Execution.
           </h2>
         </RevealScope>
 
-        <RevealScope threshold={0.3} className="mt-[clamp(3.5rem,10vh,8rem)]">
+        <RevealScope threshold={0.3} className="mt-[clamp(2.25rem,6vh,4.5rem)]">
           <p className="meta text-muted-foreground">Every space deserves</p>
-          <p className="display mt-8 text-[clamp(2.25rem,7vw,6rem)] leading-[1.05]">
+          <p className="display mt-5 text-[clamp(2.25rem,7vw,6rem)] leading-[1.05]">
             <Line delay={0} drift={-50}>
               A custom story.
             </Line>
@@ -115,14 +115,14 @@ function AboutPage() {
       </section>
 
       {/* 03 — Softscape / Hardscape duality */}
-      <section className="edge section-y" aria-labelledby="about-duality">
+      <section className="edge py-[clamp(3rem,8vh,6.5rem)]" aria-labelledby="about-duality">
         <RevealScope threshold={0.2}>
-          <div className="rule-t pt-5">
+          <div className="rule-t pt-4">
             <p className="meta text-muted-foreground">
               <span className="text-accent">02</span> — One partner, both crafts
             </p>
           </div>
-          <p className="mt-12 max-w-[52ch] text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="mt-7 max-w-[52ch] text-sm leading-relaxed text-muted-foreground md:text-base">
             From concept to completion, we are your single-window partner for transforming outdoor
             visions into enduring realities. Our expertise blends the art of Softscape with the
             strength of Hardscape, creating balanced, breathing exteriors that are timeless,
