@@ -8,7 +8,7 @@ export function Statement() {
   return (
     <section className="edge relative section-y-lg">
       <RevealScope threshold={0.3}>
-        <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
+        <div className="grid gap-x-10 gap-y-5 md:grid-cols-12 md:gap-y-8">
           <p className="meta text-muted-foreground md:col-span-3">
             <span className="text-accent">01</span> — Position
           </p>
