@@ -8,7 +8,7 @@ export function MapLocation() {
 
   return (
     <section aria-label="Studio location" className="w-full">
-      <ClientOnly fallback={<div className="h-[50vh] w-full bg-muted animate-pulse" aria-hidden />}>
+      <ClientOnly fallback={<div className="h-[38vh] w-full bg-muted animate-pulse md:h-[55vh]" aria-hidden />}>
         <iframe
           title="Brick & Blooms studio location"
           src={embedUrl}
@@ -18,7 +18,7 @@ export function MapLocation() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="h-[50vh] w-full bg-muted md:h-[55vh] lg:h-[60vh]"
+          className="h-[38vh] w-full bg-muted sm:h-[46vh] md:h-[55vh] lg:h-[60vh]"
         />
       </ClientOnly>
     </section>

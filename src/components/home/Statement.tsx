@@ -8,12 +8,12 @@ export function Statement() {
   return (
     <section className="edge relative section-y-lg">
       <RevealScope threshold={0.3}>
-        <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
+        <div className="grid gap-x-10 gap-y-5 md:grid-cols-12 md:gap-y-8">
           <p className="meta text-muted-foreground md:col-span-3">
             <span className="text-accent">01</span> — Position
           </p>
 
-          <h2 className="display text-[clamp(2.2rem,6.4vw,5.75rem)] md:col-span-9">
+          <h2 className="display text-[clamp(2.45rem,6.4vw,5.75rem)] leading-[0.95] md:leading-[0.86] md:col-span-9">
             <Line delay={0} drift={-90}>
               We design
             </Line>
@@ -29,7 +29,7 @@ export function Statement() {
           </h2>
 
           <div className="md:col-span-3" />
-          <div className="fade-in mt-2 grid gap-x-10 gap-y-6 md:col-span-9 md:grid-cols-2" style={{ transitionDelay: "560ms" }}>
+          <div className="fade-in grid gap-x-10 gap-y-4 md:col-span-9 md:mt-2 md:gap-y-6 md:grid-cols-2" style={{ transitionDelay: "560ms" }}>
             <p className="body-copy max-w-[46ch] text-muted-foreground">
               The studio works across built form and open ground at the same scale of attention. A wall and a
               planting bed are drawn in the same section, on the same sheet, in the same week.

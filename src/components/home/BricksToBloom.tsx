@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 import { usePinProgress, clamp } from "@/lib/motion";
 import { materials } from "@/lib/site-data";
 
-const COLS = 8;
-const ROWS = 5;
-const CELLS = Array.from({ length: COLS * ROWS }, (_, i) => i);
+/** Phones get a shorter, wider bond so bricks stay brick-shaped. */
+function useBond() {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const on = () => setMobile(mq.matches);
+    on();
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
+  const cols = mobile ? 4 : 8;
+  const rows = mobile ? 6 : 5;
+  return { cols, rows, cells: Array.from({ length: cols * rows }, (_, i) => i) };
+}
 
 // deterministic pseudo-random per cell — stable across SSR and client
 const rand = (i: number, salt: number) => {
@@ -19,9 +31,14 @@ export function BricksToBloom() {
   const { ref, progress } = usePinProgress<HTMLDivElement>();
   const t = clamp((progress - 0.08) / 0.78);
   const green = materials[3]?.image ?? "";
+  const { cols: COLS, rows: ROWS, cells: CELLS } = useBond();
 
   return (
-    <section ref={ref} className="relative h-[260svh]" aria-label="From bricks to bloom">
+    <section
+      ref={ref}
+      className="relative h-[175svh] md:h-[260svh]"
+      aria-label="From bricks to bloom"
+    >
       <div className="sticky top-0 flex h-svh flex-col justify-center overflow-hidden">
         <div className="edge">
           <div className="flex items-baseline justify-between">
@@ -32,7 +49,7 @@ export function BricksToBloom() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-8 aspect-[16/9] w-full max-w-[1500px] px-[clamp(1rem,4vw,4.5rem)]">
+        <div className="relative mx-auto mt-6 aspect-[4/5] w-full max-w-[1500px] px-[clamp(1rem,4vw,4.5rem)] sm:mt-8 sm:aspect-[16/9]">
           {/* landscape revealed behind the dissolving bond */}
           <img
             src={green}
@@ -47,7 +64,7 @@ export function BricksToBloom() {
           />
 
           <div className="absolute inset-x-[clamp(1rem,4vw,4.5rem)] inset-y-0">
-            {CELLS.map((i) => {
+            {CELLS.map((i: number) => {
               const col = i % COLS;
               const row = Math.floor(i / COLS);
               const offsetRow = row % 2 === 1 ? 0.5 : 0; // running bond
@@ -102,10 +119,12 @@ export function BricksToBloom() {
           </div>
         </div>
 
-        <div className="edge mt-8">
-          <div className="rule-t flex flex-wrap justify-between gap-6 pt-4">
+        <div className="edge mt-6 sm:mt-8">
+          <div className="rule-t flex flex-wrap justify-between gap-x-6 gap-y-1.5 pt-4">
             <span className="meta text-muted-foreground">Bond → dispersal → ground cover</span>
-            <span className="meta text-muted-foreground">Masonry module 8 × 5, running bond</span>
+            <span className="meta text-muted-foreground">
+              Masonry module {COLS} × {ROWS}, running bond
+            </span>
           </div>
         </div>
       </div>

@@ -78,14 +78,16 @@ export function HowWeWork() {
           </p>
         </div>
 
-        <header className="mt-8 mb-10 md:mt-10 md:mb-12">
-          <h2 className="display text-[clamp(2.2rem,5.4vw,4.4rem)]">How We Work</h2>
-          <p className="body-copy mt-4 max-w-[52ch] text-muted-foreground md:text-[1.15rem]">
+        <header className="mt-6 mb-7 md:mt-10 md:mb-12">
+          <h2 className="display text-[clamp(2.45rem,5.4vw,4.4rem)] leading-[0.98] md:leading-[0.86]">
+            How We Work
+          </h2>
+          <p className="body-copy mt-3 max-w-[52ch] text-muted-foreground md:mt-4 md:text-[1.15rem]">
             A Seamless Journey From Vision To Reality
           </p>
         </header>
 
-        <div className="fade-in grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
+        <div className="fade-in grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
           {/* Step selector */}
           <div
             role="tablist"
@@ -105,7 +107,7 @@ export function HowWeWork() {
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => select(i)}
                   onMouseEnter={() => select(i)}
-                  className="group relative w-full border-t border-border/60 py-5 text-left last:border-b md:py-6"
+                  className="group relative w-full border-t border-border/60 py-4 text-left last:border-b md:py-6"
                 >
                   {/* progress rail */}
                   <span
@@ -143,7 +145,7 @@ export function HowWeWork() {
           </div>
 
           {/* Detail panel */}
-          <div className="relative min-h-[19rem] overflow-hidden rounded-2xl border border-border/60 bg-card/60 p-7 backdrop-blur-sm md:min-h-[22rem] md:p-10">
+          <div className="relative min-h-[17.5rem] overflow-hidden rounded-2xl border border-border/60 bg-card/60 p-6 pb-12 backdrop-blur-sm md:min-h-[22rem] md:p-10 md:pb-14">
             {/* oversized ghost numeral */}
             <span
               aria-hidden="true"
@@ -161,19 +163,19 @@ export function HowWeWork() {
               className="relative"
               style={{ animation: "hww-in 600ms cubic-bezier(0.22,1,0.36,1) both" }}
             >
-              <p className="meta text-xs text-accent md:text-sm">{step.caption}</p>
-              <h3 className="display mt-3 text-[clamp(1.9rem,3.8vw,2.9rem)] leading-[1.02] tracking-[-0.025em]">
+              <p className="meta text-accent">{step.caption}</p>
+              <h3 className="display mt-2.5 text-[clamp(2rem,3.8vw,2.9rem)] leading-[1.02] tracking-[-0.025em]">
                 {step.title}
               </h3>
-              <p className="body-copy mt-5 max-w-[54ch] text-muted-foreground">
+              <p className="body-copy mt-3.5 max-w-[54ch] text-muted-foreground md:mt-5">
                 {step.description}
               </p>
 
-              <ul className="mt-7 flex flex-wrap gap-2">
+              <ul className="mt-5 flex flex-wrap gap-2 md:mt-7">
                 {step.tags.map((t) => (
                   <li
                     key={t}
-                    className="meta rounded-full border border-border/70 px-3.5 py-1.5 text-[0.68rem] text-muted-foreground transition-colors duration-300 hover:border-accent/50 hover:text-foreground"
+                    className="meta rounded-full border border-border/70 px-3 py-1.5 text-[0.7rem] text-muted-foreground transition-colors duration-300 hover:border-accent/50 hover:text-foreground"
                   >
                     {t}
                   </li>
@@ -181,7 +183,7 @@ export function HowWeWork() {
               </ul>
             </div>
 
-            <div className="absolute inset-x-7 bottom-6 flex items-center gap-3 md:inset-x-10">
+            <div className="absolute inset-x-6 bottom-5 flex items-center gap-3 md:inset-x-10 md:bottom-6">
               {howWeWork.map((s, i) => (
                 <button
                   key={s.index}

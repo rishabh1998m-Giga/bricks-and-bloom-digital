@@ -46,7 +46,7 @@ export function FeaturedWork() {
               Full archive ({projects.length})
             </Link>
           </div>
-          <h2 className="display mt-8 text-[clamp(2.2rem,5.8vw,5.25rem)]">
+          <h2 className="display mt-6 text-[clamp(2.45rem,5.8vw,5.25rem)] leading-[0.95] md:mt-8 md:leading-[0.86]">
             <Line delay={0} drift={-60}>
               Four sites,
             </Line>
@@ -78,7 +78,7 @@ export function FeaturedWork() {
       </div>
 
       {/* touch: swipe rail */}
-      <div className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-[clamp(1.25rem,4vw,4.5rem)] pb-6 md:hidden">
+      <div className="no-scrollbar mt-7 flex snap-x snap-mandatory gap-5 overflow-x-auto px-[clamp(1.25rem,4vw,4.5rem)] pb-4 md:hidden">
         {projects.map((p) => (
           <div key={p.slug} className="w-[78vw] shrink-0 snap-start">
             <ProjectCard project={p} />
@@ -110,11 +110,11 @@ function ProjectCard({ project: p }: { project: (typeof projects)[number] }) {
         className="mt-4 aspect-[4/5]"
         imgClassName="transition-transform duration-[1.4s] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"
       />
-      <div className="rule-t mt-5 flex items-baseline justify-between gap-4 pt-4">
-        <h3 className="display text-[clamp(1.75rem,3vw,2.75rem)]">{p.name}</h3>
+      <div className="rule-t mt-4 flex flex-col gap-1.5 pt-3.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+        <h3 className="display text-[clamp(1.65rem,3vw,2.75rem)] leading-[1.02]">{p.name}</h3>
         <span className="meta shrink-0 text-muted-foreground">{p.category}</span>
       </div>
-      <p className="body-copy mt-3 max-w-[40ch] text-muted-foreground">{p.intro}</p>
+      <p className="body-copy mt-2.5 max-w-[40ch] text-muted-foreground">{p.intro}</p>
     </Link>
   );
 }
