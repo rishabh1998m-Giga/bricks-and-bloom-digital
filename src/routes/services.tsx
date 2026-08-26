@@ -1,20 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { services } from "@/lib/site-data";
+import { serviceGroups } from "@/lib/site-data";
 import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Architecture, Landscape & Interiors | Brick & Blooms" },
+      { title: "Services — Landscape Design, Execution & Maintenance | Brick & Blooms" },
       {
         name: "description",
         content:
-          "Architecture, landscape, interiors and design strategy — from first site walk to final joint, resolved at full scale.",
+          "Terrace and vertical gardens, villa landscaping, pergolas, pools, water features, softscape, hardscape, moss walls — plus garden maintenance, office plant rental and FRP planters.",
       },
       { property: "og:title", content: "Services — Brick & Blooms" },
       {
         property: "og:description",
-        content: "Architecture, landscape, interiors and design strategy from the studio.",
+        content:
+          "Landscape design and execution, from terrace gardens to swimming pools — and the maintenance that keeps them.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://bricks-and-bloom-digital.lovable.app/services" },
@@ -36,51 +37,52 @@ function ServicesPage() {
             </Line>
           </h1>
           <p className="mt-10 max-w-[52ch] text-sm leading-relaxed text-muted-foreground">
-            Four disciplines, one drawing set. Projects are led by the same pair of hands from brief to handover,
-            with landscape and building resolved in a single section.
+            Two halves of the same practice — design and execution on one side, long-term care on the other.
+            Every scope is drawn, built and maintained by the same team.
           </p>
         </RevealScope>
       </div>
 
-      <div className="mt-24 flex flex-col">
-        {services.map((s, i) => (
-          <section
-            key={s.index}
-            className="edge rule-t py-[clamp(3rem,8vh,7rem)]"
-            aria-label={s.title}
-          >
-            <div className="grid gap-10 md:grid-cols-12">
-              <div className={`md:col-span-6 ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <div className="flex items-baseline gap-6">
-                  <span className="meta text-accent">{s.index}</span>
-                  <h2 className="display text-[clamp(2.25rem,6.5vw,5.5rem)]">{s.title}</h2>
-                </div>
-                <p className="display mt-6 text-[clamp(1.25rem,2.4vw,2rem)] italic text-accent">{s.lead}</p>
-                <p className="mt-6 max-w-[46ch] text-sm leading-relaxed text-muted-foreground">{s.detail}</p>
-                <ul className="mt-10 flex flex-col">
-                  {s.capabilities.map((c) => (
-                    <li key={c} className="meta border-t border-border py-4 text-muted-foreground">
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : "md:col-start-8"}`}>
+      {serviceGroups.map((group) => (
+        <section
+          key={group.key}
+          className="edge rule-t mt-[clamp(3.5rem,9vh,7rem)] pt-[clamp(2rem,5vh,4rem)]"
+          aria-labelledby={`group-${group.key}`}
+        >
+          <RevealScope threshold={0.05}>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-10 gap-y-3">
+              <h2 id={`group-${group.key}`} className="display text-[clamp(2rem,5.5vw,4.25rem)]">
+                {group.title}
+              </h2>
+              <p className="display text-[clamp(1rem,1.8vw,1.5rem)] italic text-accent">{group.lead}</p>
+            </div>
+          </RevealScope>
+
+          <ul className="mt-[clamp(2rem,5vh,3.5rem)] grid gap-x-8 gap-y-[clamp(2.5rem,6vh,4.5rem)] sm:grid-cols-2 lg:grid-cols-3">
+            {group.items.map((item, i) => (
+              <li key={item.title} className="flex flex-col">
                 <RevealImage
-                  src={s.image}
-                  alt={`${s.title} work by Brick & Blooms`}
-                  direction={i % 2 === 0 ? "right" : "left"}
+                  src={item.image}
+                  alt={item.alt}
+                  direction={i % 3 === 1 ? "left" : i % 3 === 2 ? "right" : "up"}
                   width={1200}
                   height={1500}
                   className="aspect-[4/5]"
                 />
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
+                <div className="mt-5 flex items-baseline gap-4">
+                  <span className="meta text-accent">{item.index}</span>
+                  <h3 className="display text-[clamp(1.35rem,2.4vw,1.9rem)]">{item.title}</h3>
+                </div>
+                <p className="mt-3 max-w-[38ch] whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
-      <div className="edge rule-t pt-12">
+      <div className="edge rule-t mt-[clamp(3.5rem,9vh,7rem)] pt-12">
         <Link to="/contact" className="display link-draw text-[clamp(1.75rem,5vw,4rem)] italic">
           Discuss a project →
         </Link>
