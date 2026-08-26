@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/bb-logo-alpha.png.asset.json";
+import logo from "@/assets/bb-logo-full.png.asset.json";
 
 const nav = [
   { to: "/work", label: "Work" },
@@ -41,7 +41,7 @@ export function Header() {
             width={1184}
             height={571}
             className="w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] transition-[height] duration-700"
-            style={{ height: condensed ? "3.1rem" : "4.3rem" }}
+            style={{ height: condensed ? "3rem" : "4rem" }}
           />
         </Link>
 
