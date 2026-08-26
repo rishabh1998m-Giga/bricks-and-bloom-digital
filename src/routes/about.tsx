@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { materials } from "@/lib/site-data";
-import { BloomScene } from "@/components/site/BloomScene";
+import { materials, heroImage } from "@/lib/site-data";
 import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
@@ -39,13 +38,17 @@ const concrete = materials.find((m) => m.name === "Concrete")!;
 function AboutPage() {
   return (
     <div className="pb-[clamp(3rem,7vh,6rem)]">
-      {/* 01 — Opening manifesto over the living sculpture */}
+      {/* 01 — Opening manifesto */}
       <section
         className="relative flex min-h-[92svh] items-end overflow-hidden"
         aria-label="Our story"
       >
-        {/* 3D centrepiece: a breathing brick wall with rising blooms */}
-        <BloomScene className="absolute inset-0" />
+        {/* Hero photograph behind the manifesto */}
+        <img
+          src={heroImage}
+          alt="Lush landscape architecture by Brick & Blooms"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         {/* vignette + bottom scrim keep the typography legible */}
         <div
           className="pointer-events-none absolute inset-0"
