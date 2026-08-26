@@ -41,7 +41,7 @@ export function Footer() {
             <a href={`mailto:${studio.email}`} className="link-draw text-sm">
               {studio.email}
             </a>
-            <a href={`tel:${studio.phone.replace(/\s/g, "")}`} className="link-draw text-sm">
+            <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer" className="link-draw text-sm">
               {studio.phone}
             </a>
             <span className="text-sm text-muted-foreground">{studio.location}</span>
