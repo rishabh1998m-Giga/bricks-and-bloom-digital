@@ -64,7 +64,7 @@ export function BricksToBloom() {
           />
 
           <div className="absolute inset-x-[clamp(1rem,4vw,4.5rem)] inset-y-0">
-            {CELLS.map((i) => {
+            {CELLS.map((i: number) => {
               const col = i % COLS;
               const row = Math.floor(i / COLS);
               const offsetRow = row % 2 === 1 ? 0.5 : 0; // running bond
