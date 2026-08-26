@@ -75,7 +75,7 @@ function AboutPage() {
       </section>
 
       {/* 02 — Six years chapter */}
-      <section className="edge section-y-lg" aria-labelledby="about-six-years">
+      <section className="edge section-y" aria-labelledby="about-six-years">
         <RevealScope threshold={0.2}>
           <div className="rule-t pt-5">
             <p className="meta text-muted-foreground">
@@ -108,7 +108,7 @@ function AboutPage() {
       </section>
 
       {/* 03 — Softscape / Hardscape duality */}
-      <section className="edge section-y-lg" aria-labelledby="about-duality">
+      <section className="edge section-y" aria-labelledby="about-duality">
         <RevealScope threshold={0.2}>
           <div className="rule-t pt-5">
             <p className="meta text-muted-foreground">
@@ -156,7 +156,7 @@ function AboutPage() {
       </section>
 
       {/* 04 — Who we build for */}
-      <section className="edge section-y-lg" aria-labelledby="about-sectors">
+      <section className="edge section-y" aria-labelledby="about-sectors">
         <RevealScope threshold={0.2}>
           <div className="rule-t pt-5">
             <p className="meta text-muted-foreground">
@@ -189,7 +189,7 @@ function AboutPage() {
       </section>
 
       {/* 05 — Motto */}
-      <section className="edge section-y-lg" aria-labelledby="about-motto">
+      <section className="edge section-y" aria-labelledby="about-motto">
         <RevealScope threshold={0.25}>
           <div className="rule-t pt-5">
             <p className="meta text-muted-foreground">
