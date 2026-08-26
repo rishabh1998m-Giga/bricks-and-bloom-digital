@@ -196,16 +196,16 @@ function AboutPage() {
       </section>
 
       {/* 05 — Motto */}
-      <section className="edge section-y" aria-labelledby="about-motto">
+      <section className="edge py-[clamp(3rem,8vh,6.5rem)]" aria-labelledby="about-motto">
         <RevealScope threshold={0.25}>
-          <div className="rule-t pt-5">
+          <div className="rule-t pt-4">
             <p className="meta text-muted-foreground">
               <span className="text-accent">04</span> — Our motto
             </p>
           </div>
           <h2
             id="about-motto"
-            className="display mt-12 text-[clamp(2.75rem,10vw,9rem)] leading-[1.02]"
+            className="display mt-7 text-[clamp(2.75rem,10vw,9rem)] leading-[1.02]"
           >
             <Line delay={0} drift={-60}>
               Creating a
@@ -214,11 +214,11 @@ function AboutPage() {
               New Way of Living.
             </Line>
           </h2>
-          <p className="mt-[clamp(2.5rem,6vh,4rem)] max-w-[54ch] text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="mt-[clamp(1.75rem,4.5vh,3rem)] max-w-[54ch] text-sm leading-relaxed text-muted-foreground md:text-base">
             With unique design thinking, meticulous project management, and flawless execution, we
             build not just landscapes, but lifestyles.
           </p>
-          <p className="display mt-[clamp(3rem,8vh,5.5rem)] max-w-[20ch] text-[clamp(1.5rem,3.4vw,2.75rem)] italic leading-snug">
+          <p className="display mt-[clamp(2.25rem,6vh,4rem)] max-w-[20ch] text-[clamp(1.5rem,3.4vw,2.75rem)] italic leading-snug">
             Brick &amp; Blooms — where every brick finds its{" "}
             <span className="text-accent">bloom.</span>
           </p>
@@ -226,7 +226,7 @@ function AboutPage() {
       </section>
 
       {/* 06 — CTA */}
-      <div className="edge rule-t pt-12">
+      <div className="edge rule-t pt-9">
         <RevealScope threshold={0.3}>
           <div className="flex flex-wrap items-end justify-between gap-8">
             <Link
