@@ -17,7 +17,7 @@ export function Hero() {
   const typeShift = progress * 100;
 
   return (
-    <section ref={ref} className="relative h-[170svh]" aria-label="Brick & Blooms">
+    <section ref={ref} className="relative h-[145svh] md:h-[170svh]" aria-label="Brick & Blooms">
       <div className="sticky top-0 h-svh overflow-hidden">
         <div
           className="absolute inset-0"
@@ -56,18 +56,23 @@ export function Hero() {
 
         {/* hero title — layered editorial lockup */}
         <div
-          className="pointer-events-none absolute inset-0 flex items-center"
+          className="pointer-events-none absolute inset-0 flex items-end pb-[17.5rem] sm:pb-[15rem] md:items-center md:pb-0"
           style={{
             opacity: 1 - progress * 1.5,
             transform: `translate3d(0, ${-typeShift * 0.35}px, 0)`,
           }}
         >
           <div className="edge w-full">
+            <p className="meta mb-4 flex items-center gap-3 text-foreground/70 md:mb-6">
+              <span className="inline-block h-px w-8 bg-accent" />
+              Landscape &amp; architecture studio
+            </p>
             <h1 className="display text-balance text-foreground [text-shadow:0_2px_28px_color-mix(in_oklab,var(--ink)_75%,transparent)]">
               <span
                 className="block"
                 style={{
-                  fontSize: "clamp(2rem, 7vw, 5.75rem)",
+                  fontSize: "clamp(2.75rem, 8vw + 1rem, 5.75rem)",
+                  lineHeight: 1.02,
                   transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
                 }}
               >
@@ -76,8 +81,9 @@ export function Hero() {
               <span
                 className="block italic"
                 style={{
-                  fontSize: "clamp(1.7rem, 5.9vw, 4.9rem)",
-                  marginLeft: "clamp(1.25rem, 9vw, 9rem)",
+                  fontSize: "clamp(2.25rem, 6.6vw + 0.9rem, 4.9rem)",
+                  lineHeight: 1.05,
+                  marginLeft: "clamp(1rem, 9vw, 9rem)",
                   transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
                 }}
               >
@@ -89,23 +95,23 @@ export function Hero() {
 
         {/* precise information, small against the monument */}
         <div
-          className="edge absolute inset-x-0 bottom-0 pb-8"
+          className="edge absolute inset-x-0 bottom-0 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:pb-8"
           style={{ opacity: 1 - progress * 1.6 }}
         >
-          <div className="flex flex-wrap items-center gap-4 pb-5">
-            <Button asChild variant="outline" size="lg">
+          <div className="grid grid-cols-2 gap-3 pb-4 sm:flex sm:flex-wrap sm:items-center sm:gap-4 sm:pb-5">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <Link to="/work">Our Work</Link>
             </Button>
-            <Button asChild variant="default" size="lg">
+            <Button asChild variant="default" size="lg" className="w-full sm:w-auto">
               <Link to="/contact">Book Appointment</Link>
             </Button>
           </div>
-          <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
-            <p className="meta max-w-[30ch] text-foreground/90">
+          <div className="rule-t flex flex-wrap items-end justify-between gap-x-6 gap-y-2 pt-4 sm:pt-5">
+            <p className="meta max-w-[34ch] text-foreground/90">
               Architecture, landscape and the ground between them.
             </p>
 
-            <p className="meta max-w-[30ch] text-right text-foreground/75">
+            <p className="meta hidden max-w-[30ch] text-right text-foreground/75 md:block">
               Structure holds. Planting moves. We design the joint.
             </p>
           </div>
