@@ -7,6 +7,7 @@ import { FeaturedWork } from "@/components/home/FeaturedWork";
 import { MaterialSampler } from "@/components/home/MaterialSampler";
 import { HowWeWork } from "@/components/home/HowWeWork";
 import { ContactCta } from "@/components/home/ContactCta";
+import { MapLocation } from "@/components/home/MapLocation";
 
 export const Route = createFileRoute("/")({
   head: () => ({
