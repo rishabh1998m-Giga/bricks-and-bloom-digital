@@ -36,7 +36,7 @@ export function BricksToBloom() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-8 aspect-[16/9] w-full max-w-[1500px] px-[clamp(1rem,4vw,4.5rem)]">
+        <div className="relative mx-auto mt-6 aspect-[4/5] w-full max-w-[1500px] px-[clamp(1rem,4vw,4.5rem)] sm:mt-8 sm:aspect-[16/9]">
           {/* landscape revealed behind the dissolving bond */}
           <img
             src={green}
