@@ -122,7 +122,9 @@ export function BricksToBloom() {
         <div className="edge mt-6 sm:mt-8">
           <div className="rule-t flex flex-wrap justify-between gap-x-6 gap-y-1.5 pt-4">
             <span className="meta text-muted-foreground">Bond → dispersal → ground cover</span>
-            <span className="meta text-muted-foreground">Masonry module 8 × 5, running bond</span>
+            <span className="meta text-muted-foreground">
+              Masonry module {COLS} × {ROWS}, running bond
+            </span>
           </div>
         </div>
       </div>
