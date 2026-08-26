@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { materials, heroImage } from "@/lib/site-data";
+import { materials } from "@/lib/site-data";
 import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
+import { BrickField } from "@/components/site/BrickField";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
