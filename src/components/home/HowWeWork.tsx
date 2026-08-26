@@ -42,7 +42,7 @@ export function HowWeWork() {
                     <span className="h-px flex-1 bg-border/60 md:hidden" aria-hidden="true" />
                   </div>
 
-                  <div className="rounded-2xl border border-border/60 bg-surface/40 p-6 shadow-sm backdrop-blur-sm transition-colors duration-500 hover:border-accent/30 hover:bg-surface md:p-8">
+                  <div className="rounded-2xl border border-border/60 bg-card/50 p-6 shadow-sm backdrop-blur-sm transition-colors duration-500 hover:border-accent/30 hover:bg-card md:p-8">
                     <h3 className="display text-[clamp(1.45rem,3.25vw,2.35rem)] leading-tight tracking-[-0.02em]">
                       {step.title}
                     </h3>
