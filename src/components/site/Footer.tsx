@@ -29,6 +29,9 @@ export function Footer() {
             <Link to="/services" className="link-draw text-sm">
               Services
             </Link>
+            <Link to="/about" className="link-draw text-sm">
+              About
+            </Link>
             <Link to="/contact" className="link-draw text-sm">
               Contact
             </Link>
