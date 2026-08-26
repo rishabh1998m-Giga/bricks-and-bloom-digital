@@ -46,7 +46,7 @@ export function FeaturedWork() {
               Full archive ({projects.length})
             </Link>
           </div>
-          <h2 className="display mt-8 text-[clamp(2.2rem,5.8vw,5.25rem)]">
+          <h2 className="display mt-6 text-[clamp(2.45rem,5.8vw,5.25rem)] leading-[0.95] md:mt-8 md:leading-[0.86]">
             <Line delay={0} drift={-60}>
               Four sites,
             </Line>
