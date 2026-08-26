@@ -5,6 +5,7 @@ import logo from "@/assets/bb-logo-alpha.png.asset.json";
 const nav = [
   { to: "/work", label: "Work" },
   { to: "/services", label: "Services" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
