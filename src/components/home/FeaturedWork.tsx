@@ -78,7 +78,7 @@ export function FeaturedWork() {
       </div>
 
       {/* touch: swipe rail */}
-      <div className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-[clamp(1.25rem,4vw,4.5rem)] pb-6 md:hidden">
+      <div className="no-scrollbar mt-7 flex snap-x snap-mandatory gap-5 overflow-x-auto px-[clamp(1.25rem,4vw,4.5rem)] pb-4 md:hidden">
         {projects.map((p) => (
           <div key={p.slug} className="w-[78vw] shrink-0 snap-start">
             <ProjectCard project={p} />
