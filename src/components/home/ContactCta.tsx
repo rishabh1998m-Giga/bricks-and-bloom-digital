@@ -15,11 +15,11 @@ export function ContactCta() {
           </Line>
         </h2>
 
-        <div className="mt-12 flex flex-wrap items-end justify-between gap-8">
+        <div className="mt-7 flex flex-wrap items-end justify-between gap-6 md:mt-12 md:gap-8">
           <Link
             to="/contact"
             data-cursor="Write to us"
-            className="display link-draw text-[clamp(1.4rem,2.8vw,2.4rem)] italic"
+            className="display link-draw text-[clamp(1.5rem,2.8vw,2.4rem)] italic"
           >
             Start a conversation →
           </Link>
