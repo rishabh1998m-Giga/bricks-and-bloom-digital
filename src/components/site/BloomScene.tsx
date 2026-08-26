@@ -204,7 +204,7 @@ export function BloomScene({ className }: { className?: string }) {
         group.rotation.x = curY * 0.14 + Math.sin(t * 0.11) * 0.03;
 
         for (let k = 0; k < COUNT; k++) {
-          const bp = bricks[k];
+          const bp = bricks[k]!;
           const breathe = Math.sin(t * bp.speed + bp.phase) * 0.075;
           const r = RADIUS + breathe;
           dummy.position.set(
@@ -218,14 +218,15 @@ export function BloomScene({ className }: { className?: string }) {
         }
         wall.instanceMatrix.needsUpdate = true;
 
-        const arr = pGeo.attributes.position.array as Float32Array;
+        const posAttr = pGeo.getAttribute("position");
+        const arr = posAttr.array as Float32Array;
         for (let p = 0; p < P_COUNT; p++) {
-          let y = arr[p * 3 + 1] + pSpeed[p] * 0.016;
+          let y = arr[p * 3 + 1]! + pSpeed[p]! * 0.016;
           if (y > 7) y = -7;
           arr[p * 3 + 1] = y;
-          arr[p * 3] += Math.sin(t * 0.6 + pSway[p]) * 0.0035;
+          arr[p * 3] = arr[p * 3]! + Math.sin(t * 0.6 + pSway[p]!) * 0.0035;
         }
-        pGeo.attributes.position.needsUpdate = true;
+        posAttr.needsUpdate = true;
 
         renderer.render(scene, camera);
         if (visible && !disposed) raf = requestAnimationFrame(frame);
