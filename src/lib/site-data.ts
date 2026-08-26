@@ -47,9 +47,9 @@ import svcPlanters from "@/assets/svc-frp-planters.jpg.asset.json";
 
 export const studio = {
   name: "Brick & Blooms",
-  email: "studio@bricksandbloom.in",
-  phone: "+91 00000 00000",
-  location: "India",
+  email: "Hello@brickandblooms.com",
+  phone: "76768 40060",
+  location: "Bengaluru, India",
   socials: [
     { label: "Instagram", href: "#" },
     { label: "LinkedIn", href: "#" },
