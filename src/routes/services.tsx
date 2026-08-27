@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { serviceGroups } from "@/lib/site-data";
-import { RevealImage, RevealScope, Line } from "@/components/site/Reveal";
+import { serviceGroups, type ServiceItem } from "@/lib/site-data";
+import { RevealScope, Line } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -25,6 +25,36 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
+function ServiceRow({ item }: { item: ServiceItem }) {
+  return (
+    <li>
+      <details className="group border-t border-border/60 [&_summary::-webkit-details-marker]:hidden">
+        <summary className="flex cursor-pointer list-none items-baseline gap-5 py-[clamp(1.25rem,3vh,2.25rem)] transition-colors duration-500 hover:bg-accent/[0.04] sm:gap-10">
+          <span className="meta w-8 shrink-0 text-muted-foreground transition-colors duration-500 group-open:text-accent group-hover:text-accent">
+            {item.index}
+          </span>
+          <h3 className="display flex-1 text-[clamp(1.6rem,4.2vw,3.25rem)] leading-[1.05] transition-all duration-500 group-open:italic group-open:text-accent group-hover:translate-x-2 group-hover:italic group-hover:text-accent">
+            {item.title}
+          </h3>
+          <span
+            aria-hidden
+            className="display shrink-0 text-[clamp(1.5rem,3vw,2.5rem)] leading-none text-muted-foreground transition-transform duration-500 group-open:rotate-45 group-open:text-accent group-hover:rotate-45 group-hover:text-accent"
+          >
+            +
+          </span>
+        </summary>
+        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-open:grid-rows-[1fr]">
+          <div className="overflow-hidden">
+            <p className="body-copy max-w-[58ch] pb-[clamp(1.5rem,3.5vh,2.5rem)] pl-[3.25rem] text-muted-foreground sm:pl-[4.5rem]">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      </details>
+    </li>
+  );
+}
+
 function ServicesPage() {
   return (
     <div className="pt-[clamp(8rem,26vh,16rem)] pb-[clamp(4rem,10vh,9rem)]">
@@ -36,17 +66,18 @@ function ServicesPage() {
               Services
             </Line>
           </h1>
-          <p className="mt-10 max-w-[52ch] text-sm leading-relaxed text-muted-foreground">
+          <p className="body-copy mt-10 max-w-[52ch] text-muted-foreground">
             Two halves of the same practice — design and execution on one side, long-term care on the other.
             Every scope is drawn, built and maintained by the same team.
           </p>
+          <p className="meta mt-6 text-accent">Select a scope to read more</p>
         </RevealScope>
       </div>
 
       {serviceGroups.map((group) => (
         <section
           key={group.key}
-          className="edge rule-t mt-[clamp(3.5rem,9vh,7rem)] pt-[clamp(2rem,5vh,4rem)]"
+          className="edge rule-t mt-[clamp(3rem,8vh,6rem)] pt-[clamp(1.75rem,4.5vh,3.5rem)]"
           aria-labelledby={`group-${group.key}`}
         >
           <RevealScope threshold={0.05}>
@@ -58,31 +89,15 @@ function ServicesPage() {
             </div>
           </RevealScope>
 
-          <ul className="mt-[clamp(2rem,5vh,3.5rem)] grid gap-x-8 gap-y-[clamp(2.5rem,6vh,4.5rem)] sm:grid-cols-2 lg:grid-cols-3">
-            {group.items.map((item, i) => (
-              <li key={item.title} className="flex flex-col">
-                <RevealImage
-                  src={item.image}
-                  alt={item.alt}
-                  direction={i % 3 === 1 ? "left" : i % 3 === 2 ? "right" : "up"}
-                  width={1200}
-                  height={1500}
-                  className="aspect-[4/5]"
-                />
-                <div className="mt-5 flex items-baseline gap-4">
-                  <span className="meta text-accent">{item.index}</span>
-                  <h3 className="display text-[clamp(1.35rem,2.4vw,1.9rem)]">{item.title}</h3>
-                </div>
-                <p className="mt-3 max-w-[38ch] whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
-                  {item.description}
-                </p>
-              </li>
+          <ul className="mt-[clamp(1.75rem,4.5vh,3rem)] border-b border-border/60">
+            {group.items.map((item) => (
+              <ServiceRow key={item.title} item={item} />
             ))}
           </ul>
         </section>
       ))}
 
-      <div className="edge rule-t mt-[clamp(3.5rem,9vh,7rem)] pt-12">
+      <div className="edge rule-t mt-[clamp(3rem,8vh,6rem)] pt-12">
         <Link to="/contact" className="display link-draw text-[clamp(1.75rem,5vw,4rem)] italic">
           Discuss a project →
         </Link>
