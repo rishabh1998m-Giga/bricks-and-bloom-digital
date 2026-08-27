@@ -107,7 +107,7 @@ function ServicesPage() {
             Two halves of the same practice — design and execution on one side, long-term care on the other.
             Every scope is drawn, built and maintained by the same team.
           </p>
-          <p className="meta mt-6 text-accent">Select a scope to read more</p>
+          <p className="meta mt-6 text-accent">Glide over a scope — it opens itself</p>
         </RevealScope>
       </div>
 
