@@ -9,9 +9,7 @@ export function Statement() {
     <section className="edge relative section-y-lg">
       <RevealScope threshold={0.3}>
         <div className="grid gap-x-10 gap-y-5 md:grid-cols-12 md:gap-y-8">
-          <p className="meta text-muted-foreground md:col-span-3">
-            <span className="text-accent">01</span> — Position
-          </p>
+          <p className="meta text-muted-foreground md:col-span-3">Position</p>
 
           <h2 className="display text-[clamp(2.45rem,6.4vw,5.75rem)] leading-[0.95] md:leading-[0.86] md:col-span-9">
             <Line delay={0} drift={-90}>

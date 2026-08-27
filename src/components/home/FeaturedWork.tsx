@@ -39,9 +39,7 @@ export function FeaturedWork() {
       <div className="edge section-t">
         <RevealScope threshold={0.4}>
           <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
-            <p className="meta text-muted-foreground">
-              <span className="text-accent">03</span> — Selected work
-            </p>
+            <p className="meta text-muted-foreground">Selected work</p>
             <Link to="/work" className="meta link-draw">
               Full archive ({projects.length})
             </Link>

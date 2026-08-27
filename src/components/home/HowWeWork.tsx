@@ -73,9 +73,7 @@ export function HowWeWork() {
     >
       <RevealScope threshold={0.12}>
         <div className="rule-t pt-5">
-          <p className="meta text-muted-foreground">
-            <span className="text-accent">05</span> — How We Work
-          </p>
+          <p className="meta text-muted-foreground">How We Work</p>
         </div>
 
         <header className="mt-6 mb-7 md:mt-10 md:mb-12">
