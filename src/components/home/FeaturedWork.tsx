@@ -46,10 +46,10 @@ export function FeaturedWork() {
           </div>
           <h2 className="display mt-6 text-[clamp(2.45rem,5.8vw,5.25rem)] leading-[0.95] md:mt-8 md:leading-[0.86]">
             <Line delay={0} drift={-60}>
-              Four sites,
+              Built to last,
             </Line>
             <Line delay={120} drift={50} className="italic text-accent">
-              four arguments.
+              designed to grow.
             </Line>
           </h2>
         </RevealScope>
