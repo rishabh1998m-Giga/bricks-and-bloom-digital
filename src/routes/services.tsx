@@ -26,31 +26,67 @@ export const Route = createFileRoute("/services")({
 });
 
 function ServiceRow({ item }: { item: ServiceItem }) {
+  const [open, setOpen] = useState(false);
   return (
-    <li>
-      <details className="group border-t border-border/60 [&_summary::-webkit-details-marker]:hidden">
-        <summary className="flex cursor-pointer list-none items-baseline gap-5 py-[clamp(1.25rem,3vh,2.25rem)] transition-colors duration-500 hover:bg-accent/[0.04] sm:gap-10">
-          <span className="meta w-8 shrink-0 text-muted-foreground transition-colors duration-500 group-open:text-accent group-hover:text-accent">
-            {item.index}
-          </span>
-          <h3 className="display flex-1 text-[clamp(1.6rem,4.2vw,3.25rem)] leading-[1.05] transition-all duration-500 group-open:italic group-open:text-accent group-hover:translate-x-2 group-hover:italic group-hover:text-accent">
-            {item.title}
-          </h3>
-          <span
-            aria-hidden
-            className="display shrink-0 text-[clamp(1.5rem,3vw,2.5rem)] leading-none text-muted-foreground transition-transform duration-500 group-open:rotate-45 group-open:text-accent group-hover:rotate-45 group-hover:text-accent"
+    <li
+      className="group relative border-t border-border/60"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      {/* accent rail that grows when active */}
+      <span
+        aria-hidden
+        className={`absolute left-0 top-0 h-full w-[3px] origin-top bg-accent transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          open ? "scale-y-100" : "scale-y-0"
+        }`}
+      />
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+        onFocus={() => setOpen(true)}
+        className={`flex w-full cursor-pointer items-baseline gap-5 py-[clamp(1.25rem,3vh,2.25rem)] text-left transition-all duration-500 sm:gap-10 ${
+          open ? "pl-5 sm:pl-8" : "pl-0"
+        }`}
+      >
+        <span
+          className={`meta w-8 shrink-0 transition-colors duration-500 ${
+            open ? "text-accent" : "text-muted-foreground"
+          }`}
+        >
+          {item.index}
+        </span>
+        <h3
+          className={`display flex-1 text-[clamp(1.6rem,4.2vw,3.25rem)] leading-[1.05] transition-all duration-500 ${
+            open ? "translate-x-2 italic text-accent" : ""
+          }`}
+        >
+          {item.title}
+        </h3>
+        <span
+          aria-hidden
+          className={`display shrink-0 text-[clamp(1.5rem,3vw,2.5rem)] leading-none transition-all duration-500 ${
+            open ? "rotate-45 text-accent" : "text-muted-foreground"
+          }`}
+        >
+          +
+        </span>
+      </button>
+      <div
+        className={`grid transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p
+            className={`body-copy max-w-[58ch] pb-[clamp(1.5rem,3.5vh,2.5rem)] pl-5 text-muted-foreground transition-all delay-100 duration-500 sm:pl-[5.5rem] ${
+              open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
+            }`}
           >
-            +
-          </span>
-        </summary>
-        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-open:grid-rows-[1fr]">
-          <div className="overflow-hidden">
-            <p className="body-copy max-w-[58ch] pb-[clamp(1.5rem,3.5vh,2.5rem)] pl-[3.25rem] text-muted-foreground sm:pl-[4.5rem]">
-              {item.description}
-            </p>
-          </div>
+            {item.description}
+          </p>
         </div>
-      </details>
+      </div>
     </li>
   );
 }
