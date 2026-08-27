@@ -4,7 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { Statement } from "@/components/home/Statement";
 
 import { FeaturedWork } from "@/components/home/FeaturedWork";
-import { MaterialSampler } from "@/components/home/MaterialSampler";
+
 import { HowWeWork } from "@/components/home/HowWeWork";
 import { ContactCta } from "@/components/home/ContactCta";
 import { MapLocation } from "@/components/home/MapLocation";
@@ -37,7 +37,6 @@ function Index() {
       <Hero />
       <Statement />
       <FeaturedWork />
-      <MaterialSampler />
       <HowWeWork />
       <ContactCta />
       <MapLocation />
