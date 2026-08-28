@@ -27,11 +27,7 @@ export function Statement() {
           </h2>
 
           <div className="md:col-span-3" />
-          <div className="fade-in md:col-span-9 md:mt-2" style={{ transitionDelay: "560ms" }}>
-            <p className="body-copy max-w-[46ch] text-muted-foreground">
-              Architecture and landscape, resolved as one continuous idea.
-            </p>
-          </div>
+          <div className="fade-in md:col-span-9 md:mt-2" aria-hidden="true" style={{ transitionDelay: "560ms" }} />
         </div>
       </RevealScope>
     </section>
