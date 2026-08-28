@@ -186,6 +186,29 @@ export const projects: Project[] = [
       { src: kav5.url, caption: "The courtyard after dark", span: "full" },
     ],
   },
+  {
+    slug: "planted-thresholds",
+    index: "05",
+    name: "Planted Thresholds",
+    location: "Bengaluru, Karnataka",
+    year: "2025",
+    category: "Landscape",
+    discipline: "Landscape / Interior",
+    image: pl1.url,
+    intro:
+      "Balconies, entrances and lobbies planted in bespoke vessels — a green threshold layered across every edge of the house.",
+    body: [
+      "The work here is scale and vessel. Steel trough planters run the length of the upper deck, holding areca, heliconia and fern dense enough to screen the neighbouring roofline while keeping the sky open above the rail.",
+      "Indoors the same logic continues in single objects: a hammered bronze bowl of bird's-nest fern at the stair, a matte black urn against travertine, carved terracotta pots at the glazed edge. Each vessel is chosen for the wall it stands against, so planting reads as part of the architecture rather than décor.",
+    ],
+    materials: ["Steel trough planters", "Carved terracotta & bronze vessels", "Tropical foliage"],
+    gallery: [
+      { src: pl2.url, caption: "Bird of paradise against the glass balustrade", span: "full" },
+      { src: pl3.url, caption: "Carved terracotta pots at the glazed edge", span: "half" },
+      { src: pl4.url, caption: "Matte black urn on travertine", span: "half" },
+      { src: pl5.url, caption: "Bronze bowl and fern at the stair", span: "full" },
+    ],
+  },
 ];
 
 export type ServiceItem = {
