@@ -44,11 +44,12 @@ function ContactPage() {
             const form = e.currentTarget;
             const data = new FormData(form);
             const subject = `Enquiry — ${discipline}`;
-            const body = `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nSite: ${data.get("site")}\n\n${data.get("message")}`;
+            const body = `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nSite: ${data.get("site")}\n\n${data.get("message")}`;
             window.location.href = `mailto:${studio.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           }}
         >
           <Field name="name" label="Name" required />
+          <Field name="phone" label="Phone" type="tel" />
           <Field name="email" label="Email" type="email" required />
           <Field name="site" label="Where is the site?" />
 
