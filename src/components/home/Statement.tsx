@@ -9,17 +9,17 @@ export function Statement() {
     <section className="edge relative section-y-lg">
       <RevealScope threshold={0.3}>
         <div className="grid gap-x-10 gap-y-5 md:grid-cols-12 md:gap-y-8">
-          <p className="meta text-muted-foreground md:col-span-3">Position</p>
+          <div className="md:col-span-3" />
 
           <h2 className="display text-[clamp(2.45rem,6.4vw,5.75rem)] leading-[0.95] md:leading-[0.86] md:col-span-9">
             <Line delay={0} drift={-90}>
-              We design
+              We design{" "}
             </Line>
             <Line delay={110} drift={70}>
-              spaces where
+              spaces where{" "}
             </Line>
             <Line delay={220} drift={-50}>
-              architecture
+              architecture{" "}
             </Line>
             <Line delay={330} drift={40} className="italic text-accent">
               meets landscape.
