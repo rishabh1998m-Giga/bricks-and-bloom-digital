@@ -28,6 +28,11 @@ import ctn1 from "@/assets/DSC00078.webp.asset.json";
 import ctn2 from "@/assets/DSC00080.webp.asset.json";
 import ctn3 from "@/assets/DSC00098.webp.asset.json";
 import ctn4 from "@/assets/DSC00138.webp.asset.json";
+import pl1 from "@/assets/planters-34.jpeg.asset.json";
+import pl2 from "@/assets/planters-35.jpeg.asset.json";
+import pl3 from "@/assets/planters-37.jpeg.asset.json";
+import pl4 from "@/assets/planters-38.jpeg.asset.json";
+import pl5 from "@/assets/planters-36.jpeg.asset.json";
 import svcTerrace from "@/assets/svc-terrace-garden.jpg.asset.json";
 import svcVertical from "@/assets/svc-vertical-garden.jpg.asset.json";
 import svcVilla from "@/assets/svc-villa-landscaping.jpg.asset.json";
@@ -179,6 +184,29 @@ export const projects: Project[] = [
       { src: kav3.url, caption: "Bench beneath the wrought-iron screens", span: "half" },
       { src: kav4.url, caption: "Stone-clad porch and gravel walk", span: "half" },
       { src: kav5.url, caption: "The courtyard after dark", span: "full" },
+    ],
+  },
+  {
+    slug: "planted-thresholds",
+    index: "05",
+    name: "Planted Thresholds",
+    location: "Bengaluru, Karnataka",
+    year: "2025",
+    category: "Landscape",
+    discipline: "Landscape / Interior",
+    image: pl1.url,
+    intro:
+      "Balconies, entrances and lobbies planted in bespoke vessels — a green threshold layered across every edge of the house.",
+    body: [
+      "The work here is scale and vessel. Steel trough planters run the length of the upper deck, holding areca, heliconia and fern dense enough to screen the neighbouring roofline while keeping the sky open above the rail.",
+      "Indoors the same logic continues in single objects: a hammered bronze bowl of bird's-nest fern at the stair, a matte black urn against travertine, carved terracotta pots at the glazed edge. Each vessel is chosen for the wall it stands against, so planting reads as part of the architecture rather than décor.",
+    ],
+    materials: ["Steel trough planters", "Carved terracotta & bronze vessels", "Tropical foliage"],
+    gallery: [
+      { src: pl2.url, caption: "Bird of paradise against the glass balustrade", span: "full" },
+      { src: pl3.url, caption: "Carved terracotta pots at the glazed edge", span: "half" },
+      { src: pl4.url, caption: "Matte black urn on travertine", span: "half" },
+      { src: pl5.url, caption: "Bronze bowl and fern at the stair", span: "full" },
     ],
   },
 ];
