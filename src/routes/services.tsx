@@ -265,7 +265,7 @@ function ServicesPage() {
 
           <ul className="focus-dim mt-[clamp(1.25rem,3vh,2rem)] border-b border-border/40">
             {group.items.map((item) => (
-              <ServiceRow key={item.title} item={item} onHover={setActive} />
+              <ServiceRow key={item.title} item={item} onHover={handleHover} />
             ))}
           </ul>
         </section>
