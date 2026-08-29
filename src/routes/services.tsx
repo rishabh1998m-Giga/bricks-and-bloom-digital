@@ -211,6 +211,10 @@ function ServicesPage() {
   const [active, setActive] = useState<{ item: ServiceItem; rect: DOMRect } | null>(null);
   const pointer = usePointerField();
 
+  const handleHover = (item: ServiceItem | null, rect?: DOMRect) => {
+    setActive(item && rect ? { item, rect } : null);
+  };
+
   return (
     <div className="relative min-h-screen pt-[clamp(7rem,22vh,14rem)] pb-[clamp(4rem,10vh,9rem)]">
       <BlueprintField />
