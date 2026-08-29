@@ -52,7 +52,7 @@ function BlueprintField() {
 }
 
 /** Cursor-aware spotlight that washes over the service list on fine pointers. */
-function ServiceSpotlight({ children }: { children: React.ReactNode }) {
+function ServiceSpotlight({ children }: { children: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const [spot, setSpot] = useState({ x: 0, y: 0, active: false });
 
