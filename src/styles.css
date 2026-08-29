@@ -291,6 +291,63 @@
   background-size: 25% 25%;
 }
 
+/* blueprint grid for services page — finer, slower drift */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, var(--foreground) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--foreground) 1px, transparent 1px);
+  background-size: 6rem 6rem;
+  opacity: 0.35;
+}
+@media (width < 48rem) {
+  .blueprint-grid {
+    background-size: 3.5rem 3.5rem;
+  }
+}
+
+/* focus dim: when a parent is hovered, all children dim except the active one */
+.focus-dim:has(.focus-dim-child:hover) .focus-dim-child:not(:hover),
+.focus-dim:has(.focus-dim-child:focus-visible) .focus-dim-child:not(:focus-visible) {
+  opacity: 0.32;
+}
+.focus-dim .focus-dim-child {
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* service row subtle lift on hover */
+.service-row {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-row:hover,
+.service-row:focus-within {
+  transform: translateX(4px);
+}
+
+/* cursor-following service detail card */
+.service-cursor-card {
+  box-shadow:
+    0 24px 60px -18px color-mix(in oklab, var(--ink) 55%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--accent) 12%, transparent);
+}
+
+/* shimmer animation for group connector */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+.animate-shimmer {
+  animation: shimmer 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* magnetic link/button pull */
+.magnetic {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .no-scrollbar {
   scrollbar-width: none;
 }
