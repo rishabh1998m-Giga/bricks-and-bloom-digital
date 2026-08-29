@@ -6,28 +6,19 @@ import { Line, RevealScope } from "@/components/site/Reveal";
  */
 export function Statement() {
   return (
-    <section className="edge relative section-y-lg">
+    <section className="edge relative section-y">
       <RevealScope threshold={0.3}>
-        <div className="grid gap-x-10 gap-y-5 md:grid-cols-12 md:gap-y-8">
-          <div className="md:col-span-3" />
+        <div className="grid gap-y-1 md:grid-cols-12 md:gap-y-2">
+          <div className="hidden md:block md:col-span-1" />
 
-          <h2 className="display text-[clamp(2.45rem,6.4vw,5.75rem)] leading-[0.95] md:leading-[0.86] md:col-span-9">
-            <Line delay={0} drift={-90}>
-              We design{" "}
+          <h2 className="display text-[clamp(2rem,5.2vw,4.25rem)] leading-[0.98] md:leading-[0.92] md:col-span-11">
+            <Line delay={0} drift={-60}>
+              We design spaces where architecture{" "}
             </Line>
-            <Line delay={110} drift={70}>
-              spaces where{" "}
-            </Line>
-            <Line delay={220} drift={-50}>
-              architecture{" "}
-            </Line>
-            <Line delay={330} drift={40} className="italic text-accent">
+            <Line delay={120} drift={45} className="italic text-accent">
               meets landscape.
             </Line>
           </h2>
-
-          <div className="md:col-span-3" />
-          <div className="fade-in md:col-span-9 md:mt-2" aria-hidden="true" style={{ transitionDelay: "560ms" }} />
         </div>
       </RevealScope>
     </section>
