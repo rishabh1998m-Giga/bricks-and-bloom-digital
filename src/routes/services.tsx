@@ -237,7 +237,7 @@ function ServicesPage() {
             <span className="meta text-accent">Bengaluru & beyond</span>
           </div>
 
-          <h1 className="display mt-8 text-[clamp(3.5rem,14vw,12rem)] leading-[0.85]">
+          <h1 className="display mt-8 text-[clamp(2.75rem,12vw,12rem)] leading-[0.85] sm:text-[clamp(3.5rem,13vw,12rem)]">
             <Line delay={0} drift={-60}>
               Services
             </Line>
