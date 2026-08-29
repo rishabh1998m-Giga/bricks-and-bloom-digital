@@ -255,7 +255,7 @@ function ServicesPage() {
         </RevealScope>
       </div>
 
-      <ServiceCursorCard active={active} pointer={pointer} />
+      <ServiceCursorCard active={active?.item || null} pointer={pointer} />
 
       {serviceGroups.map((group, i) => (
         <section
