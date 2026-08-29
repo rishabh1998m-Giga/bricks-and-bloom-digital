@@ -139,54 +139,65 @@ function ServiceCursorCard({
   active,
   pointer,
 }: {
-  active: { item: ServiceItem; rect: DOMRect } | null;
+  active: ServiceItem | null;
   pointer: { x: number; y: number };
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!active) return;
-    const rect = active.rect;
-    const cardWidth = cardRef.current?.offsetWidth || 320;
-    const cardHeight = cardRef.current?.offsetHeight || 160;
-
-    // Position card to the right of the row, vertically centered on the row
-    let x = rect.right + 20;
-    let y = rect.top + rect.height / 2 - cardHeight / 2;
-
-    // Keep within viewport
-    if (x + cardWidth > window.innerWidth - 24) {
-      x = rect.left - cardWidth - 20;
+    if (!active) {
+      setVisible(false);
+      return;
     }
-    if (y < 24) y = 24;
-    if (y + cardHeight > window.innerHeight - 24) {
-      y = window.innerHeight - cardHeight - 24;
+
+    const cardWidth = cardRef.current?.offsetWidth || 360;
+    const cardHeight = cardRef.current?.offsetHeight || 180;
+    const padding = 28;
+
+    // Convert normalized pointer [-1,1] to viewport pixels
+    const px = (pointer.x + 1) / 2 * window.innerWidth;
+    const py = (pointer.y + 1) / 2 * window.innerHeight;
+
+    // Position to the bottom-right of the cursor, flip if needed
+    let x = px + 24;
+    let y = py + 24;
+
+    if (x + cardWidth > window.innerWidth - padding) {
+      x = px - cardWidth - 24;
     }
+    if (y + cardHeight > window.innerHeight - padding) {
+      y = py - cardHeight - 24;
+    }
+    if (x < padding) x = padding;
+    if (y < padding) y = padding;
 
     setPos({ x, y });
-  }, [active]);
+    setVisible(true);
+  }, [active, pointer]);
 
   if (!active) return null;
 
   return (
     <div
       ref={cardRef}
-      className="service-cursor-card pointer-events-none fixed z-[80] hidden w-[min(28rem,38vw)] border border-border/60 bg-card/95 p-6 backdrop-blur-md lg:block"
+      className="service-cursor-card pointer-events-none fixed z-[80] hidden w-[min(26rem,34vw)] border border-border/60 bg-card/95 p-6 backdrop-blur-md lg:block"
       style={{
         left: pos.x,
         top: pos.y,
-        opacity: active ? 1 : 0,
-        transform: `translate(${pointer.x * 8}px, ${pointer.y * 8}px)`,
-        transition: "opacity 0.35s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1), left 0.4s ease, top 0.4s ease",
+        opacity: visible ? 1 : 0,
+        transform: `translate(${pointer.x * 6}px, ${pointer.y * 6}px)`,
+        transition:
+          "opacity 0.35s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1), left 0.25s ease-out, top 0.25s ease-out",
       }}
     >
-      <p className="meta text-accent">{active.item.index}</p>
-      <h4 className="display mt-2 text-[clamp(1.5rem,2.2vw,2rem)] italic">
-        {active.item.title}
+      <p className="meta text-accent">{active.index}</p>
+      <h4 className="display mt-2 text-[clamp(1.4rem,2vw,1.85rem)] italic">
+        {active.title}
       </h4>
       <p className="body-copy mt-4 text-card-foreground/80">
-        {active.item.description}
+        {active.description}
       </p>
     </div>
   );
