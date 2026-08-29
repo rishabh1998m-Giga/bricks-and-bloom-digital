@@ -50,6 +50,49 @@ function BlueprintField() {
   );
 }
 
+/** Cursor-aware spotlight that washes over the service list on fine pointers. */
+function ServiceSpotlight({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [spot, setSpot] = useState({ x: 0, y: 0, active: false });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !window.matchMedia("(pointer: fine)").matches) return;
+
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      setSpot({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+        active: true,
+      });
+    };
+
+    const onLeave = () => setSpot((s) => ({ ...s, active: false }));
+
+    el.addEventListener("mousemove", onMove, { passive: true });
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-700"
+        style={{
+          opacity: spot.active ? 1 : 0,
+          background: `radial-gradient(34rem circle at ${spot.x}px ${spot.y}px, color-mix(in oklab, var(--accent) 18%, transparent), transparent 60%)`,
+        }}
+      />
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+}
+
 /** A single luxury service row. Expands on hover/focus; dims siblings via CSS. */
 function ServiceRow({
   item,
