@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { assetUrl } from "@/lib/asset-url";
 import logo from "@/assets/bb-logo-full.png.asset.json";
 
 const nav = [
@@ -36,7 +37,7 @@ export function Header() {
       <div className="flex items-center justify-between gap-6">
         <Link to="/" className="group flex items-center" aria-label="Brick & Blooms, home">
           <img
-            src={logo.url}
+            src={assetUrl(logo)}
             alt="Brick & Blooms — a new way of living"
             width={1184}
             height={571}

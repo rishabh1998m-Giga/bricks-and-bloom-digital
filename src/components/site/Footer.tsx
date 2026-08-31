@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { studio } from "@/lib/site-data";
+import { assetUrl } from "@/lib/asset-url";
 import logo from "@/assets/bb-logo-full.png.asset.json";
 
 export function Footer() {
@@ -10,7 +11,7 @@ export function Footer() {
           <p className="meta text-muted-foreground">Architecture &amp; Landscape</p>
           <div className="mt-6 inline-flex">
             <img
-              src={logo.url}
+              src={assetUrl(logo)}
               alt="Brick & Blooms — a new way of living"
               width={1184}
               height={571}

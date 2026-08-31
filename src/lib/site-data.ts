@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/asset-url";
 import hero from "@/assets/hero-legacy.webp.asset.json";
 import p01 from "@/assets/project-01.jpg";
 import p02 from "@/assets/project-02.jpg";
@@ -72,7 +73,7 @@ import m02 from "@/assets/method-02.jpg";
 import m03 from "@/assets/method-03.jpg";
 import m04 from "@/assets/method-04.jpg";
 
-export const heroImage = hero.url;
+export const heroImage = assetUrl(hero);
 
 export type Category = "Architecture" | "Landscape" | "Interior";
 
@@ -100,7 +101,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Architecture",
     discipline: "Architecture / Landscape",
-    image: legacyMain.url,
+    image: assetUrl(legacyMain),
     intro:
       "A brewery and courtyard built as one landscape — arched concrete, still water and planting that spills over every edge.",
     body: [
@@ -109,10 +110,10 @@ export const projects: Project[] = [
     ],
     materials: ["Board-formed concrete", "Weathering steel", "Cascading planting"],
     gallery: [
-      { src: legacy2.url, caption: "Arched plinth and reflecting water body", span: "full" },
-      { src: legacy3.url, caption: "Terrace seating under the planted edge", span: "half" },
-      { src: legacy4.url, caption: "Weathering-steel screen with climbers", span: "half" },
-      { src: legacy6.url, caption: "Entry court and fountains", span: "full" },
+      { src: assetUrl(legacy2), caption: "Arched plinth and reflecting water body", span: "full" },
+      { src: assetUrl(legacy3), caption: "Terrace seating under the planted edge", span: "half" },
+      { src: assetUrl(legacy4), caption: "Weathering-steel screen with climbers", span: "half" },
+      { src: assetUrl(legacy6), caption: "Entry court and fountains", span: "full" },
     ],
   },
 
@@ -124,7 +125,7 @@ export const projects: Project[] = [
     year: "2023",
     category: "Landscape",
     discipline: "Landscape / Interior",
-    image: emb1.url,
+    image: assetUrl(emb1),
     intro:
       "A narrow city terrace rebuilt as a green room — stone-and-turf paving, layered planting and a laser-cut screen lit from behind.",
     body: [
@@ -133,12 +134,12 @@ export const projects: Project[] = [
     ],
     materials: ["Kota and stone paving", "Corten screen", "Layered tropical planting"],
     gallery: [
-      { src: emb2.url, caption: "The stone-and-turf walk at dusk", span: "full" },
-      { src: emb3.url, caption: "Lounge under the lit pergola", span: "half" },
-      { src: emb7.url, caption: "Backlit corten screen and water bowl", span: "half" },
-      { src: emb4.url, caption: "Deck and bench beneath the frame", span: "full" },
-      { src: emb5.url, caption: "Seating against the planted edge", span: "half" },
-      { src: emb6.url, caption: "Paving rhythm and planters", span: "half" },
+      { src: assetUrl(emb2), caption: "The stone-and-turf walk at dusk", span: "full" },
+      { src: assetUrl(emb3), caption: "Lounge under the lit pergola", span: "half" },
+      { src: assetUrl(emb7), caption: "Backlit corten screen and water bowl", span: "half" },
+      { src: assetUrl(emb4), caption: "Deck and bench beneath the frame", span: "full" },
+      { src: assetUrl(emb5), caption: "Seating against the planted edge", span: "half" },
+      { src: assetUrl(emb6), caption: "Paving rhythm and planters", span: "half" },
     ],
   },
   {
@@ -149,7 +150,7 @@ export const projects: Project[] = [
     year: "2023",
     category: "Landscape",
     discipline: "Landscape / Architecture",
-    image: ctn2.url,
+    image: assetUrl(ctn2),
     intro:
       "A perforated weathering-steel court where light, gravel and dense tropical planting turn a service gap into the quietest room of the house.",
     body: [
@@ -158,9 +159,9 @@ export const projects: Project[] = [
     ],
     materials: ["Perforated corten screen", "Basalt gravel & stone", "Layered tropical planting"],
     gallery: [
-      { src: ctn1.url, caption: "Perforated corten wall under the skylight", span: "full" },
-      { src: ctn3.url, caption: "Frangipani and moss bed against textured stone", span: "half" },
-      { src: ctn4.url, caption: "Shaded lounge on the planted deck", span: "half" },
+      { src: assetUrl(ctn1), caption: "Perforated corten wall under the skylight", span: "full" },
+      { src: assetUrl(ctn3), caption: "Frangipani and moss bed against textured stone", span: "half" },
+      { src: assetUrl(ctn4), caption: "Shaded lounge on the planted deck", span: "half" },
     ],
   },
   {
@@ -171,7 +172,7 @@ export const projects: Project[] = [
     year: "2022",
     category: "Landscape",
     discipline: "Landscape / Interior",
-    image: kav1.url,
+    image: assetUrl(kav1),
     intro:
       "A private courtyard garden of gravel, turf-jointed stone and dense tropical planting, tuned to read as well at night as at noon.",
     body: [
@@ -180,10 +181,10 @@ export const projects: Project[] = [
     ],
     materials: ["Rose gravel & stone", "Turf-jointed paving", "Layered tropical planting"],
     gallery: [
-      { src: kav2.url, caption: "Stepping stones set into turf", span: "full" },
-      { src: kav3.url, caption: "Bench beneath the wrought-iron screens", span: "half" },
-      { src: kav4.url, caption: "Stone-clad porch and gravel walk", span: "half" },
-      { src: kav5.url, caption: "The courtyard after dark", span: "full" },
+      { src: assetUrl(kav2), caption: "Stepping stones set into turf", span: "full" },
+      { src: assetUrl(kav3), caption: "Bench beneath the wrought-iron screens", span: "half" },
+      { src: assetUrl(kav4), caption: "Stone-clad porch and gravel walk", span: "half" },
+      { src: assetUrl(kav5), caption: "The courtyard after dark", span: "full" },
     ],
   },
   {
@@ -194,7 +195,7 @@ export const projects: Project[] = [
     year: "2025",
     category: "Landscape",
     discipline: "Landscape / Interior",
-    image: pl1.url,
+    image: assetUrl(pl1),
     intro:
       "Balconies, entrances and lobbies planted in bespoke vessels — a green threshold layered across every edge of the house.",
     body: [
@@ -203,10 +204,10 @@ export const projects: Project[] = [
     ],
     materials: ["Steel trough planters", "Carved terracotta & bronze vessels", "Tropical foliage"],
     gallery: [
-      { src: pl2.url, caption: "Bird of paradise against the glass balustrade", span: "full" },
-      { src: pl3.url, caption: "Carved terracotta pots at the glazed edge", span: "half" },
-      { src: pl4.url, caption: "Matte black urn on travertine", span: "half" },
-      { src: pl5.url, caption: "Bronze bowl and fern at the stair", span: "full" },
+      { src: assetUrl(pl2), caption: "Bird of paradise against the glass balustrade", span: "full" },
+      { src: assetUrl(pl3), caption: "Carved terracotta pots at the glazed edge", span: "half" },
+      { src: assetUrl(pl4), caption: "Matte black urn on travertine", span: "half" },
+      { src: assetUrl(pl5), caption: "Bronze bowl and fern at the stair", span: "full" },
     ],
   },
 ];
@@ -237,7 +238,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Terrace Garden",
         description:
           "Rooftops and balconies rebuilt as usable ground — load, drainage and soil depth resolved first.\nPlanting chosen to hold its shape through the hottest months.",
-        image: svcTerrace.url,
+        image: assetUrl(svcTerrace),
         alt: "Rooftop terrace garden with raised planters and warm paving",
       },
       {
@@ -245,7 +246,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Vertical Garden",
         description:
           "Living walls engineered around irrigation, drainage and light before a single plant is set.\nSpecies layered so the wall reads dense from the first week.",
-        image: svcVertical.url,
+        image: assetUrl(svcVertical),
         alt: "Dense living wall of ferns and tropical foliage on a concrete facade",
       },
       {
@@ -253,7 +254,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Villa Landscaping",
         description:
           "Private grounds designed as one continuous ground plane from gate to threshold.\nLawn, path and canopy tuned to how the house is actually used.",
-        image: svcVilla.url,
+        image: assetUrl(svcVilla),
         alt: "Villa garden with stepping-stone path, lawn and palms at golden hour",
       },
       {
@@ -261,7 +262,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Pergola & Fabrication",
         description:
           "Shade structures, screens and bespoke metalwork detailed for weather and time.\nFabricated in our own workshop and set on site by our team.",
-        image: svcPergola.url,
+        image: assetUrl(svcPergola),
         alt: "Timber pergola casting shadow patterns over a stone deck with climbers",
       },
       {
@@ -269,7 +270,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Luxury Landscapes",
         description:
           "Large private estates where every level, edge and sightline is drawn.\nMaterials specified to age well rather than photograph well.",
-        image: svcLuxury.url,
+        image: assetUrl(svcLuxury),
         alt: "Luxury landscaped courtyard with sculpted planting and stone terraces",
       },
       {
@@ -277,7 +278,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Swimming Pools",
         description:
           "Pools set into the landscape rather than dropped onto it — coping, deck and planting as one detail.\nFiltration and lighting planned with the structure.",
-        image: svcPools.url,
+        image: assetUrl(svcPools),
         alt: "Still dark-lined swimming pool beside a stone villa terrace",
       },
       {
@@ -285,7 +286,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Water Fountains & Ponds",
         description:
           "Moving and still water designed for sound, reflection and cooling.\nPumps, liners and aquatic planting balanced for low maintenance.",
-        image: svcWater.url,
+        image: assetUrl(svcWater),
         alt: "Stone fountain and lily pond in a shaded garden courtyard",
       },
       {
@@ -293,7 +294,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Commercial Landscaping",
         description:
           "Campuses, hotels and workplaces where the landscape carries heavy daily use.\nDetailed for durability, phasing and long service life.",
-        image: svcCommercial.url,
+        image: assetUrl(svcCommercial),
         alt: "Corporate campus plaza with structured planting beds and stone paving",
       },
       {
@@ -301,7 +302,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Landscape Irrigation",
         description:
           "Drip and sprinkler systems zoned to soil, aspect and plant type.\nAutomated controls that cut water use without stressing the garden.",
-        image: svcIrrigation.url,
+        image: assetUrl(svcIrrigation),
         alt: "Drip irrigation line and sprinkler head among mulch and groundcover",
       },
       {
@@ -309,7 +310,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Softscape",
         description:
           "Soil, turf, shrubs and trees — the living half of the drawing.\nPlanting palettes built from species that belong to the site.",
-        image: svcSoftscape.url,
+        image: assetUrl(svcSoftscape),
         alt: "Layered planting of ornamental grasses, ferns and flowering shrubs",
       },
       {
@@ -317,7 +318,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Hardscape",
         description:
           "Paving, steps, walls and edges cut and laid to a set-out drawing.\nStone, concrete and gravel chosen for grip, wear and warmth.",
-        image: svcHardscape.url,
+        image: assetUrl(svcHardscape),
         alt: "Stone paving, steps and a low retaining wall meeting gravel and planting",
       },
       {
@@ -325,7 +326,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Moss Wall",
         description:
           "Preserved moss panels that bring texture and quiet indoors with no irrigation.\nCut to the wall, framed or edge-to-edge.",
-        image: svcMoss.url,
+        image: assetUrl(svcMoss),
         alt: "Preserved moss wall panel mounted on a warm interior wall",
       },
     ],
@@ -340,7 +341,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Garden Maintenance",
         description:
           "Scheduled pruning, feeding, pest control and seasonal replanting.\nThe same team that built the garden keeps it.",
-        image: svcMaintenance.url,
+        image: assetUrl(svcMaintenance),
         alt: "Garden tools resting beside a clipped hedge and mown lawn",
       },
       {
@@ -348,7 +349,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Office Plant Rental",
         description:
           "Curated indoor planting supplied, placed and rotated on contract.\nWatering and replacement handled entirely by us.",
-        image: svcOffice.url,
+        image: assetUrl(svcOffice),
         alt: "Modern office lobby with large potted indoor plants in daylight",
       },
       {
@@ -356,7 +357,7 @@ export const serviceGroups: ServiceGroup[] = [
         title: "FRP Planters",
         description:
           "Lightweight fibreglass planters in bespoke sizes, finishes and colours.\nBuilt for terraces and rooftops where weight matters.",
-        image: svcPlanters.url,
+        image: assetUrl(svcPlanters),
         alt: "Row of large fibreglass planters in terracotta and stone finishes",
       },
     ],
