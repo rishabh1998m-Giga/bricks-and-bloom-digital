@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Outside the Lovable sandbox (e.g. Hostinger's Node 22 builder) the default
+  // target is a Cloudflare Worker bundle, which crashes under plain Node with
+  // "__exportAll is not a function". Pin the Node server target so `npm run build`
+  // emits a runnable Node app at .output/server/index.mjs.
+  // Inside Lovable this option is ignored — the sandbox always builds Cloudflare.
+  nitro: { preset: "node-server" },
 });
