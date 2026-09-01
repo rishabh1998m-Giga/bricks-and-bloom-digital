@@ -14,6 +14,8 @@
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
   --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
 
+  --animate-whatsapp-pulse: whatsapp-pulse 2.5s ease-in-out infinite;
+
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
