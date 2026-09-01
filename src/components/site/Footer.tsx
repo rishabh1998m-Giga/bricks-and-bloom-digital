@@ -39,13 +39,19 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-3">
             <span className="meta text-muted-foreground">Studio</span>
+            <address className="not-italic text-sm leading-relaxed text-muted-foreground">
+              Brick &amp; Blooms
+              <br />
+              Bengaluru, Karnataka
+              <br />
+              India
+            </address>
             <a href={`mailto:${studio.email}`} className="link-draw text-sm">
               {studio.email}
             </a>
             <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer" className="link-draw text-sm">
               {studio.phone}
             </a>
-            <span className="text-sm text-muted-foreground">{studio.location}</span>
           </div>
         </div>
       </div>
