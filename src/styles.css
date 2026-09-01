@@ -119,6 +119,18 @@
   }
 }
 
+/* subtle floating pulse for the WhatsApp CTA */
+@keyframes whatsapp-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 4px 10px rgba(37, 211, 102, 0.35));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 6px 16px rgba(37, 211, 102, 0.5));
+  }
+}
+
 /* ---------- editorial primitives ---------- */
 
 @utility display {
