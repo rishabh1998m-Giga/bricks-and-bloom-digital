@@ -14,6 +14,8 @@
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
   --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
 
+  --animate-whatsapp-pulse: whatsapp-pulse 2.5s ease-in-out infinite;
+
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
@@ -116,6 +118,18 @@
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
+  }
+}
+
+/* subtle floating pulse for the WhatsApp CTA */
+@keyframes whatsapp-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 4px 10px rgba(37, 211, 102, 0.35));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 6px 16px rgba(37, 211, 102, 0.5));
   }
 }
 
