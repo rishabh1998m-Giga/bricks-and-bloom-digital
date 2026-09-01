@@ -42,7 +42,11 @@ export function Footer() {
             <address className="not-italic text-sm leading-relaxed text-muted-foreground">
               Brick &amp; Blooms
               <br />
-              Bengaluru, Karnataka
+              Kaveri Nagar, Banagirinagara
+              <br />
+              Banashankari 3rd Stage, Banashankari
+              <br />
+              Bengaluru, Karnataka 560070
               <br />
               India
             </address>
@@ -57,9 +61,7 @@ export function Footer() {
       </div>
 
       <div className="rule-t mt-20 flex flex-wrap items-center justify-between gap-4 pt-6">
-        <span className="meta text-muted-foreground">
-          © {new Date().getFullYear()} {studio.name}
-        </span>
+        <span className="meta text-muted-foreground">© 2026 {studio.name}</span>
         <div className="flex gap-8">
           {studio.socials.map((s) => (
             <a key={s.label} href={s.href} className="meta link-draw text-muted-foreground hover:text-foreground">
