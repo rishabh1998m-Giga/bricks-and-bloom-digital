@@ -5,24 +5,24 @@ import logo from "@/assets/bb-logo-full.png.asset.json";
 
 export function Footer() {
   return (
-    <footer className="edge rule-t pt-20 pb-10">
-      <div className="grid gap-16 md:grid-cols-[1fr_auto]">
+    <footer className="edge rule-t pt-12 pb-8 md:pt-20 md:pb-10">
+      <div className="grid gap-10 md:grid-cols-[1fr_auto] md:gap-16">
         <div>
           <p className="meta text-muted-foreground">Architecture &amp; Landscape</p>
-          <div className="mt-6 inline-flex">
+          <div className="mt-4 inline-flex md:mt-6">
             <img
               src={assetUrl(logo)}
               alt="Brick & Blooms — a new way of living"
               width={1184}
               height={571}
               loading="lazy"
-              className="h-16 w-auto md:h-20"
+              className="h-14 w-auto md:h-20"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-12 gap-y-10 md:grid-cols-2 md:pt-16">
-          <div className="flex flex-col gap-3">
+        <div className="grid grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] gap-x-7 gap-y-8 max-[359px]:grid-cols-1 md:grid-cols-2 md:gap-x-12 md:gap-y-10 md:pt-16">
+          <div className="flex min-w-0 flex-col gap-3">
             <span className="meta text-muted-foreground">Index</span>
             <Link to="/work" className="link-draw text-sm">
               Work
@@ -39,7 +39,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-3">
             <span className="meta text-muted-foreground">Studio</span>
-            <address className="not-italic text-sm leading-relaxed text-muted-foreground">
+            <address className="break-words not-italic text-sm leading-relaxed text-muted-foreground">
               Brick &amp; Blooms
               <br />
               Kaveri Nagar, Banagirinagara
@@ -50,7 +50,7 @@ export function Footer() {
               <br />
               India
             </address>
-            <a href={`mailto:${studio.email}`} className="link-draw text-sm">
+            <a href={`mailto:${studio.email}`} className="break-all text-sm underline decoration-border underline-offset-4 transition-colors hover:text-accent">
               {studio.email}
             </a>
             <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer" className="link-draw text-sm">
@@ -60,9 +60,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="rule-t mt-20 flex flex-wrap items-center justify-between gap-4 pt-6">
+      <div className="rule-t mt-12 grid gap-5 pt-5 sm:flex sm:flex-wrap sm:items-center sm:justify-between md:mt-20 md:pt-6">
         <span className="meta text-muted-foreground">© 2026 {studio.name}</span>
-        <div className="flex gap-8">
+        <div className="flex flex-wrap gap-x-6 gap-y-3 md:gap-8">
           {studio.socials.map((s) => (
             <a key={s.label} href={s.href} className="meta link-draw text-muted-foreground hover:text-foreground">
               {s.label}

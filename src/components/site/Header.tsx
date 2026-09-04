@@ -34,8 +34,8 @@ export function Header() {
         backdropFilter: condensed ? "blur(6px)" : "none",
       }}
     >
-      <div className="flex items-center justify-between gap-6">
-        <Link to="/" className="group flex items-center" aria-label="Brick & Blooms, home">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:justify-between sm:gap-6">
+        <Link to="/" className="group flex min-w-0 items-center" aria-label="Brick & Blooms, home">
           <img
             src={assetUrl(logo)}
             alt="Brick & Blooms — a new way of living"
@@ -63,7 +63,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="meta text-[0.82rem] tracking-[0.14em] text-foreground sm:hidden"
+          className="meta inline-flex min-h-11 shrink-0 items-center px-1 text-[0.82rem] tracking-[0.14em] text-foreground sm:hidden"
           aria-expanded={open}
         >
           {open ? "Close" : "Menu"}

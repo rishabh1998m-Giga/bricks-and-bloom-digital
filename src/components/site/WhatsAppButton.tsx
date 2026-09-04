@@ -9,7 +9,7 @@ export function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label="Chat with Brick & Blooms on WhatsApp"
       data-cursor="WhatsApp"
-      className="group fixed bottom-5 right-5 z-[90] flex h-14 w-14 items-center justify-center rounded-full bg-transparent transition-all duration-300 animate-whatsapp-pulse hover:scale-110 md:bottom-8 md:right-8 md:h-16 md:w-16"
+      className="group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-[90] flex h-14 w-14 items-center justify-center rounded-full bg-transparent transition-all duration-300 animate-whatsapp-pulse hover:scale-110 md:bottom-8 md:right-8 md:h-16 md:w-16"
     >
       <svg
         viewBox="0 0 24 24"

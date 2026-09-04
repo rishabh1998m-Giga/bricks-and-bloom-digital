@@ -56,22 +56,22 @@ export function Hero() {
 
         {/* hero title — layered editorial lockup */}
         <div
-          className="pointer-events-none absolute inset-0 flex items-end pb-[17.5rem] sm:pb-[15rem] md:items-center md:pb-0"
+          className="pointer-events-none absolute inset-0 flex items-end pb-[17rem] min-[370px]:pb-[16rem] sm:pb-[15rem] md:items-center md:pb-0"
           style={{
             opacity: 1 - progress * 1.5,
             transform: `translate3d(0, ${-typeShift * 0.35}px, 0)`,
           }}
         >
           <div className="edge w-full">
-            <p className="meta mb-4 flex items-center gap-3 text-foreground/70 md:mb-6">
-              <span className="inline-block h-px w-8 bg-accent" />
+            <p className="meta mb-3 flex items-center gap-2.5 text-foreground/80 min-[370px]:mb-4 md:mb-6 md:gap-3">
+              <span className="inline-block h-px w-6 bg-accent md:w-8" />
               Landscape &amp; architecture studio
             </p>
             <h1 className="display text-balance text-foreground [text-shadow:0_2px_28px_color-mix(in_oklab,var(--ink)_75%,transparent)]">
               <span
                 className="block"
                 style={{
-                  fontSize: "clamp(2.75rem, 8vw + 1rem, 5.75rem)",
+                  fontSize: "clamp(2.4rem, 8vw + 0.45rem, 5.75rem)",
                   lineHeight: 1.02,
                   transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
                 }}
@@ -81,9 +81,9 @@ export function Hero() {
               <span
                 className="block italic"
                 style={{
-                  fontSize: "clamp(2.25rem, 6.6vw + 0.9rem, 4.9rem)",
+                  fontSize: "clamp(2.05rem, 6.6vw + 0.55rem, 4.9rem)",
                   lineHeight: 1.05,
-                  marginLeft: "clamp(1rem, 9vw, 9rem)",
+                  marginLeft: "clamp(0.75rem, 7vw, 9rem)",
                   transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
                 }}
               >
@@ -98,15 +98,15 @@ export function Hero() {
           className="edge absolute inset-x-0 bottom-0 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:pb-8"
           style={{ opacity: 1 - progress * 1.6 }}
         >
-          <div className="grid grid-cols-2 gap-3 pb-4 sm:flex sm:flex-wrap sm:items-center sm:gap-4 sm:pb-5">
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+          <div className="grid grid-cols-2 gap-2.5 pb-3.5 sm:flex sm:flex-wrap sm:items-center sm:gap-4 sm:pb-5">
+            <Button asChild variant="outline" size="lg" className="min-h-12 w-full px-2 text-[0.8rem] min-[370px]:text-sm sm:w-auto sm:px-6">
               <Link to="/work">Our Work</Link>
             </Button>
-            <Button asChild variant="default" size="lg" className="w-full sm:w-auto">
+            <Button asChild variant="default" size="lg" className="min-h-12 w-full px-2 text-[0.8rem] min-[370px]:text-sm sm:w-auto sm:px-6">
               <Link to="/contact">Book Appointment</Link>
             </Button>
           </div>
-          <div className="rule-t flex flex-wrap items-end justify-between gap-x-6 gap-y-2 pt-4 sm:pt-5">
+          <div className="rule-t grid grid-cols-[minmax(0,1fr)_auto] items-end gap-x-6 gap-y-2 pt-3.5 sm:flex sm:flex-wrap sm:justify-between sm:pt-5">
             <p className="meta max-w-[34ch] text-foreground/90">
               Architecture, landscape and the ground between them.
             </p>

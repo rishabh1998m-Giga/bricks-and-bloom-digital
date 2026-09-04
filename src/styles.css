@@ -74,7 +74,7 @@
   --secondary: oklch(0.26 0.01 62);
   --secondary-foreground: oklch(0.93 0.012 84);
   --muted: oklch(0.26 0.01 62);
-  --muted-foreground: oklch(0.66 0.014 74);
+  --muted-foreground: oklch(0.72 0.014 74);
   --accent: oklch(0.58 0.115 45);
   --accent-foreground: oklch(0.17 0.008 62);
   --destructive: oklch(0.55 0.19 27);
@@ -183,13 +183,13 @@
 /* phones: shorter, denser rhythm — vh-based padding gets airy on tall screens */
 @media (width < 48rem) {
   .section-y {
-    padding-block: 2.75rem;
+    padding-block: 2.5rem;
   }
   .section-y-lg {
-    padding-block: 3.25rem;
+    padding-block: 3rem;
   }
   .section-t {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
 }
 
