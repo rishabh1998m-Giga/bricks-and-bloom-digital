@@ -21,7 +21,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] gap-x-7 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-10 md:pt-16">
+        <div className="grid grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] gap-x-7 gap-y-8 max-[359px]:grid-cols-1 md:grid-cols-2 md:gap-x-12 md:gap-y-10 md:pt-16">
           <div className="flex min-w-0 flex-col gap-3">
             <span className="meta text-muted-foreground">Index</span>
             <Link to="/work" className="link-draw text-sm">
