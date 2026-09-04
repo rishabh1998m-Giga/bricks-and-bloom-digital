@@ -72,16 +72,16 @@ export function HowWeWork() {
       onBlurCapture={() => setPaused(false)}
     >
       <RevealScope threshold={0.12}>
-        <div className="rule-t pt-5">
+        <div className="rule-t pt-4 md:pt-5">
           <p className="meta text-muted-foreground">How We Work</p>
         </div>
 
-        <header className="mt-6 mb-7 md:mt-10 md:mb-12">
-          <h2 className="display text-[clamp(2.45rem,5.4vw,4.4rem)] leading-[0.98] md:leading-[0.86]">
+        <header className="mt-5 mb-6 md:mt-10 md:mb-12">
+          <h2 className="display text-[clamp(2.2rem,10vw,4.4rem)] leading-[0.98] md:leading-[0.86]">
             How We Work
           </h2>
           <p className="body-copy mt-3 max-w-[52ch] text-muted-foreground md:mt-4 md:text-[1.15rem]">
-            A Seamless Journey From Vision To Reality
+            A seamless journey from vision to reality
           </p>
         </header>
 
@@ -119,7 +119,7 @@ export function HowWeWork() {
                       isActive ? "bg-accent" : "bg-transparent"
                     }`}
                   />
-                  <div className="flex items-baseline gap-4 pl-4 pr-2 md:gap-6 md:pl-6">
+                  <div className="grid grid-cols-[auto_minmax(0,1fr)] items-baseline gap-4 pl-4 pr-2 md:gap-6 md:pl-6">
                     <span
                       className={`meta text-xs tabular-nums transition-colors duration-300 md:text-sm ${
                         isActive ? "text-accent" : "text-muted-foreground"
@@ -128,7 +128,7 @@ export function HowWeWork() {
                       {s.index}
                     </span>
                     <span
-                      className={`display leading-none tracking-[-0.02em] transition-all duration-500 ${
+                      className={`display min-w-0 leading-none transition-all duration-500 ${
                         isActive
                           ? "text-foreground text-[clamp(1.7rem,3.6vw,2.6rem)]"
                           : "text-muted-foreground group-hover:text-foreground text-[clamp(1.45rem,3vw,2.1rem)]"
@@ -143,7 +143,7 @@ export function HowWeWork() {
           </div>
 
           {/* Detail panel */}
-          <div className="relative min-h-[17.5rem] overflow-hidden rounded-2xl border border-border/60 bg-card/60 p-6 pb-12 backdrop-blur-sm md:min-h-[22rem] md:p-10 md:pb-14">
+          <div className="relative min-h-[18rem] overflow-hidden rounded-sm border border-border/60 bg-card/60 p-5 pb-14 backdrop-blur-sm min-[370px]:p-6 min-[370px]:pb-14 md:min-h-[22rem] md:p-10 md:pb-14">
             {/* oversized ghost numeral */}
             <span
               aria-hidden="true"
@@ -162,7 +162,7 @@ export function HowWeWork() {
               style={{ animation: "hww-in 600ms cubic-bezier(0.22,1,0.36,1) both" }}
             >
               <p className="meta text-accent">{step.caption}</p>
-              <h3 className="display mt-2.5 text-[clamp(2rem,3.8vw,2.9rem)] leading-[1.02] tracking-[-0.025em]">
+              <h3 className="display mt-2.5 text-[clamp(1.9rem,8vw,2.9rem)] leading-[1.02]">
                 {step.title}
               </h3>
               <p className="body-copy mt-3.5 max-w-[54ch] text-muted-foreground md:mt-5">
@@ -181,23 +181,27 @@ export function HowWeWork() {
               </ul>
             </div>
 
-            <div className="absolute inset-x-6 bottom-5 flex items-center gap-3 md:inset-x-10 md:bottom-6">
+            <div className="absolute inset-x-4 bottom-1 flex items-center gap-1.5 min-[370px]:inset-x-6 md:inset-x-10 md:bottom-1 md:gap-3">
               {howWeWork.map((s, i) => (
                 <button
                   key={s.index}
                   type="button"
                   aria-label={`Go to step ${s.index} ${s.title}`}
                   onClick={() => select(i)}
-                  className={`h-1 flex-1 overflow-hidden rounded-full transition-colors duration-300 ${
-                    i === active ? "bg-border" : "bg-border/40 hover:bg-border"
-                  }`}
+                  className="group/step flex h-11 flex-1 items-center"
                 >
                   <span
+                    className={`block h-1 w-full overflow-hidden rounded-full transition-colors duration-300 ${
+                      i === active ? "bg-border" : "bg-border/40 group-hover/step:bg-border"
+                  }`}
+                  >
+                    <span
                     className="block h-full bg-accent transition-[width] duration-100 ease-linear"
                     style={{
                       width: i === active ? `${progress * 100}%` : i < active ? "100%" : "0%",
                     }}
-                  />
+                    />
+                  </span>
                 </button>
               ))}
             </div>

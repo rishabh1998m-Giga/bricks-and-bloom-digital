@@ -38,13 +38,13 @@ export function FeaturedWork() {
     <section aria-label="Selected work">
       <div className="edge section-t">
         <RevealScope threshold={0.4}>
-          <div className="rule-t flex flex-wrap items-end justify-between gap-6 pt-5">
+          <div className="rule-t grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 pt-4 md:flex md:flex-wrap md:justify-between md:gap-6 md:pt-5">
             <p className="meta text-muted-foreground">Selected work</p>
             <Link to="/work" className="meta link-draw">
               Full archive ({projects.length})
             </Link>
           </div>
-          <h2 className="display mt-6 text-[clamp(2.45rem,5.8vw,5.25rem)] leading-[0.95] md:mt-8 md:leading-[0.86]">
+          <h2 className="display mt-5 text-[clamp(2.15rem,10vw,5.25rem)] leading-[0.98] md:mt-8 md:leading-[0.86]">
             <Line delay={0} drift={-60}>
               Built to last,
             </Line>
@@ -76,9 +76,9 @@ export function FeaturedWork() {
       </div>
 
       {/* touch: swipe rail */}
-      <div className="no-scrollbar mt-7 flex snap-x snap-mandatory gap-5 overflow-x-auto px-[clamp(1.25rem,4vw,4.5rem)] pb-4 md:hidden">
+      <div className="no-scrollbar mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[clamp(1.25rem,4vw,4.5rem)] pb-4 md:hidden">
         {projects.map((p) => (
-          <div key={p.slug} className="w-[78vw] shrink-0 snap-start">
+          <div key={p.slug} className="w-[82vw] max-w-[22rem] shrink-0 snap-start">
             <ProjectCard project={p} />
           </div>
         ))}

@@ -6,7 +6,7 @@ export function ContactCta() {
   return (
     <section className="edge section-y-lg" aria-label="Start a project">
       <RevealScope threshold={0.3}>
-        <h2 className="display text-[clamp(2.6rem,8vw,7rem)] leading-[0.95] md:leading-[0.86]">
+        <h2 className="display text-[clamp(2.25rem,11vw,7rem)] leading-[0.98] md:leading-[0.86]">
           <Line delay={0} drift={-70}>
             Have a site?
           </Line>
@@ -15,11 +15,11 @@ export function ContactCta() {
           </Line>
         </h2>
 
-        <div className="mt-7 flex flex-wrap items-end justify-between gap-6 md:mt-12 md:gap-8">
+        <div className="mt-6 grid gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end md:mt-12 md:gap-8">
           <Link
             to="/contact"
             data-cursor="Write to us"
-            className="display link-draw text-[clamp(1.5rem,2.8vw,2.4rem)] italic"
+            className="display link-draw w-fit text-[clamp(1.5rem,7vw,2.4rem)] italic"
           >
             Start a conversation →
           </Link>
