@@ -16,7 +16,8 @@ export function HowWeWork() {
     if (!el) return;
     const io = new IntersectionObserver(
       (entries) => setInView(!!entries[0]?.isIntersecting),
-      { threshold: 0.25 },
+      // tall section on small screens never reaches a 25% ratio — any overlap counts
+      { threshold: 0, rootMargin: "-10% 0px -10% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
