@@ -106,13 +106,9 @@ export function Hero() {
               <Link to="/contact">Book Appointment</Link>
             </Button>
           </div>
-          <div className="rule-t grid grid-cols-[minmax(0,1fr)_auto] items-end gap-x-6 gap-y-2 pt-3.5 sm:flex sm:flex-wrap sm:justify-between sm:pt-5">
+          <div className="rule-t pt-3.5 sm:pt-5">
             <p className="meta max-w-[34ch] text-foreground/90">
               Architecture, landscape and the ground between them.
-            </p>
-
-            <p className="meta hidden max-w-[30ch] text-right text-foreground/75 md:block">
-              Structure holds. Planting moves. We design the joint.
             </p>
           </div>
         </div>

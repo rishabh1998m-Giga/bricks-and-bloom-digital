@@ -1,10 +1,12 @@
 import { studio } from "@/lib/site-data";
 
+const whatsappHref = `${studio.whatsapp}?text=${encodeURIComponent(studio.whatsappMessage)}`;
+
 /** Persistent floating WhatsApp entry point, visible on every route and scroll position. */
 export function WhatsAppButton() {
   return (
     <a
-      href={studio.whatsapp}
+      href={whatsappHref}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Brick & Blooms on WhatsApp"
