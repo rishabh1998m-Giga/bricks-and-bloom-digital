@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { studio, services } from "@/lib/site-data";
+import { studio } from "@/lib/site-data";
 import { RevealScope, Line } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
@@ -22,8 +21,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
+const whatsappHref = `${studio.whatsapp}?text=${encodeURIComponent(studio.whatsappMessage)}`;
+
 function ContactPage() {
-  const [discipline, setDiscipline] = useState(services[0]?.title ?? "");
 
   return (
     <div className="edge pt-[clamp(8rem,26vh,16rem)] pb-[clamp(4.5rem,12vh,11rem)]">
@@ -43,7 +43,7 @@ function ContactPage() {
             e.preventDefault();
             const form = e.currentTarget;
             const data = new FormData(form);
-            const subject = `Enquiry — ${discipline}`;
+            const subject = "Enquiry — Brick & Blooms";
             const body = `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nSite: ${data.get("site")}\n\n${data.get("message")}`;
             window.location.href = `mailto:${studio.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           }}
@@ -53,28 +53,8 @@ function ContactPage() {
           <Field name="email" label="Email" type="email" required />
           <Field name="site" label="Where is the site?" />
 
-          <fieldset>
-            <legend className="meta text-muted-foreground">Discipline</legend>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {services.map((s) => (
-                <button
-                  key={s.title}
-                  type="button"
-                  onClick={() => setDiscipline(s.title)}
-                  className="meta border px-4 py-2 transition-colors"
-                  style={{
-                    borderColor: discipline === s.title ? "var(--clay)" : "var(--border)",
-                    color: discipline === s.title ? "var(--clay)" : undefined,
-                  }}
-                >
-                  {s.title}
-                </button>
-              ))}
-            </div>
-          </fieldset>
-
           <label className="block">
-            <span className="meta text-muted-foreground">Tell us about the project</span>
+            <span className="meta text-muted-foreground">About your project</span>
             <textarea
               name="message"
               rows={5}
@@ -103,7 +83,7 @@ function ContactPage() {
               <a href={`mailto:${studio.email}`} className="link-draw self-start">
                 {studio.email}
               </a>
-              <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer" className="link-draw self-start">
+              <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="link-draw self-start">
                 {studio.phone}
               </a>
             </p>
