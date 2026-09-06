@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { studio, services } from "@/lib/site-data";
+import { studio } from "@/lib/site-data";
 import { RevealScope, Line } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
@@ -22,8 +21,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
+const whatsappHref = `${studio.whatsapp}?text=${encodeURIComponent(studio.whatsappMessage)}`;
+
 function ContactPage() {
-  const [discipline, setDiscipline] = useState(services[0]?.title ?? "");
 
   return (
     <div className="edge pt-[clamp(8rem,26vh,16rem)] pb-[clamp(4.5rem,12vh,11rem)]">
