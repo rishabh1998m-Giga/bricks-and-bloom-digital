@@ -60,6 +60,7 @@ export const studio = {
   email: "Hello@brickandblooms.com",
   phone: "76768 40060",
   whatsapp: "https://wa.me/917676840060",
+  whatsappMessage: "Hello Brick & Blooms, I'd like to explore a project with you.",
   location: "Bengaluru, India",
   socials: [
     { label: "Instagram", href: "#" },

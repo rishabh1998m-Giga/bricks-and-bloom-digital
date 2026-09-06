@@ -3,6 +3,8 @@ import { studio } from "@/lib/site-data";
 import { assetUrl } from "@/lib/asset-url";
 import logo from "@/assets/bb-logo-full.png.asset.json";
 
+const whatsappHref = `${studio.whatsapp}?text=${encodeURIComponent(studio.whatsappMessage)}`;
+
 export function Footer() {
   return (
     <footer className="edge rule-t pt-12 pb-8 md:pt-20 md:pb-10">
@@ -53,7 +55,7 @@ export function Footer() {
             <a href={`mailto:${studio.email}`} className="break-all text-sm underline decoration-border underline-offset-4 transition-colors hover:text-accent">
               {studio.email}
             </a>
-            <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer" className="link-draw text-sm">
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="link-draw text-sm">
               {studio.phone}
             </a>
           </div>
