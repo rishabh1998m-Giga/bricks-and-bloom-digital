@@ -83,7 +83,7 @@ function ContactPage() {
               <a href={`mailto:${studio.email}`} className="link-draw self-start">
                 {studio.email}
               </a>
-              <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer" className="link-draw self-start">
+              <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="link-draw self-start">
                 {studio.phone}
               </a>
             </p>
