@@ -43,7 +43,7 @@ function ContactPage() {
             e.preventDefault();
             const form = e.currentTarget;
             const data = new FormData(form);
-            const subject = `Enquiry — ${discipline}`;
+            const subject = "Enquiry — Brick & Blooms";
             const body = `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nSite: ${data.get("site")}\n\n${data.get("message")}`;
             window.location.href = `mailto:${studio.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           }}
@@ -53,28 +53,8 @@ function ContactPage() {
           <Field name="email" label="Email" type="email" required />
           <Field name="site" label="Where is the site?" />
 
-          <fieldset>
-            <legend className="meta text-muted-foreground">Discipline</legend>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {services.map((s) => (
-                <button
-                  key={s.title}
-                  type="button"
-                  onClick={() => setDiscipline(s.title)}
-                  className="meta border px-4 py-2 transition-colors"
-                  style={{
-                    borderColor: discipline === s.title ? "var(--clay)" : "var(--border)",
-                    color: discipline === s.title ? "var(--clay)" : undefined,
-                  }}
-                >
-                  {s.title}
-                </button>
-              ))}
-            </div>
-          </fieldset>
-
           <label className="block">
-            <span className="meta text-muted-foreground">Tell us about the project</span>
+            <span className="meta text-muted-foreground">About your project</span>
             <textarea
               name="message"
               rows={5}
