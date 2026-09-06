@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
-const STEPS = Array.from({ length: 21 }, (_, i) => i / 20);
-
 /**
- * Marks an element with data-revealed while it is in view, and clears the flag
- * once it leaves — so the animation replays on every entry, scrolling up or
- * down, and after a refresh mid-page.
+ * Marks an element with data-revealed while it is vertically in view, and
+ * clears the flag once it leaves — so the animation replays on every entry,
+ * scrolling up or down, and after a refresh mid-page.
+ *
+ * Uses plain rect math (not IntersectionObserver's intersectionRect) so that
+ * elements clipped horizontally — e.g. cards parked off-canvas in the
+ * horizontal work rail on mobile — still reveal correctly.
  */
 export function useReveal<T extends HTMLElement>(threshold = 0.2) {
   const ref = useRef<T | null>(null);
@@ -15,27 +17,50 @@ export function useReveal<T extends HTMLElement>(threshold = 0.2) {
     if (!el) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced || typeof IntersectionObserver === "undefined") {
+    if (reduced) {
       el.setAttribute("data-revealed", "true");
       return;
     }
 
-    const set = (on: boolean) => el.setAttribute("data-revealed", on ? "true" : "false");
+    let frame = 0;
+    let last: boolean | null = null;
 
-    const evaluate = (entry: IntersectionObserverEntry) => {
-      const elHeight = entry.boundingClientRect.height || el.offsetHeight || 1;
-      // Effective trigger distance: never ask for more than a fifth of the
-      // viewport, so tall sections still fire on small screens.
-      const need = Math.min(elHeight * threshold, window.innerHeight * 0.18, elHeight * 0.9);
-      set(entry.isIntersecting && entry.intersectionRect.height >= need);
+    const evaluate = () => {
+      frame = 0;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const height = rect.height || el.offsetHeight || 1;
+      const visible = Math.min(rect.bottom, vh) - Math.max(rect.top, 0);
+      // Small screens need a gentle trigger: never demand more than ~14% of
+      // the viewport, and never more than the element itself can offer.
+      const need = Math.max(1, Math.min(height * threshold, vh * 0.14, height * 0.85));
+      const on = visible >= need;
+      if (on !== last) {
+        last = on;
+        el.setAttribute("data-revealed", on ? "true" : "false");
+      }
     };
 
-    const io = new IntersectionObserver((entries) => entries.forEach(evaluate), {
-      threshold: STEPS,
-      rootMargin: "0px 0px -6% 0px",
-    });
-    io.observe(el);
-    return () => io.disconnect();
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(evaluate);
+    };
+
+    evaluate();
+    const t = window.setTimeout(evaluate, 250);
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    window.addEventListener("orientationchange", schedule);
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(schedule) : null;
+    ro?.observe(el);
+
+    return () => {
+      window.clearTimeout(t);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      window.removeEventListener("orientationchange", schedule);
+      ro?.disconnect();
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, [threshold]);
 
   return ref;
