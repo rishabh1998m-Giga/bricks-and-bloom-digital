@@ -71,13 +71,13 @@ export function Hero() {
             <h1 className="display text-balance text-foreground [text-shadow:0_2px_28px_color-mix(in_oklab,var(--ink)_75%,transparent)]">
               <Line
                 delay={80}
-                className="w-fit text-[clamp(2.4rem,8vw+0.45rem,5.75rem)] leading-[1.02]"
+                className="w-fit text-[clamp(2.4rem,calc(8vw+0.45rem),5.75rem)] leading-[1.02]"
               >
                 New Way
               </Line>
               <Line
                 delay={520}
-                className="ml-[clamp(0.75rem,7vw,9rem)] w-fit text-[clamp(2.05rem,6.6vw+0.55rem,4.9rem)] leading-[1.05] italic"
+                className="ml-[clamp(0.75rem,7vw,9rem)] w-fit text-[clamp(2.05rem,calc(6.6vw+0.55rem),4.9rem)] leading-[1.05] italic"
               >
                 of Living
               </Line>
