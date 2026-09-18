@@ -41,8 +41,11 @@ export function Header() {
             alt="Brick & Blooms — a new way of living"
             width={1184}
             height={571}
-            className="w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] transition-[height] duration-700"
-            style={{ height: condensed ? "3rem" : "4rem" }}
+            className="w-auto transition-[height,filter] duration-700"
+            style={{
+              height: condensed ? "3rem" : "4rem",
+              filter: "brightness(1.28) drop-shadow(0 2px 10px rgb(0 0 0 / 0.55)) drop-shadow(0 0 8px rgb(255 255 255 / 0.08))",
+            }}
           />
         </Link>
 
