@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
+import { Line, RevealScope } from "@/components/site/Reveal";
 import { heroImage } from "@/lib/site-data";
 import { usePinProgress, usePointerField } from "@/lib/motion";
 
@@ -62,35 +63,26 @@ export function Hero() {
             transform: `translate3d(0, ${-typeShift * 0.35}px, 0)`,
           }}
         >
-          <div className="edge w-full">
+          <RevealScope className="edge w-full" threshold={0.05}>
             <p className="meta mb-3 flex items-center gap-2.5 text-foreground/80 min-[370px]:mb-4 md:mb-6 md:gap-3">
               <span className="inline-block h-px w-6 bg-accent md:w-8" />
               Landscape &amp; architecture studio
             </p>
             <h1 className="display text-balance text-foreground [text-shadow:0_2px_28px_color-mix(in_oklab,var(--ink)_75%,transparent)]">
-              <span
-                className="block"
-                style={{
-                  fontSize: "clamp(2.4rem, 8vw + 0.45rem, 5.75rem)",
-                  lineHeight: 1.02,
-                  transform: `translate3d(${pointer.x * 6}px, 0, 0)`,
-                }}
+              <Line
+                delay={80}
+                className="w-fit text-[clamp(2.4rem,calc(8vw+0.45rem),5.75rem)] leading-[1.02]"
               >
                 New Way
-              </span>
-              <span
-                className="block italic"
-                style={{
-                  fontSize: "clamp(2.05rem, 6.6vw + 0.55rem, 4.9rem)",
-                  lineHeight: 1.05,
-                  marginLeft: "clamp(0.75rem, 7vw, 9rem)",
-                  transform: `translate3d(${pointer.x * -10}px, 0, 0)`,
-                }}
+              </Line>
+              <Line
+                delay={520}
+                className="ml-[clamp(0.75rem,7vw,9rem)] w-fit text-[clamp(2.05rem,calc(6.6vw+0.55rem),4.9rem)] leading-[1.05] italic"
               >
                 of Living
-              </span>
+              </Line>
             </h1>
-          </div>
+          </RevealScope>
         </div>
 
         {/* precise information, small against the monument */}

@@ -242,22 +242,47 @@
   transform: scale(1);
 }
 
-/* line-by-line typographic entrance */
+/* line-by-line masked title draw with a travelling cursor */
 .line-mask {
+  position: relative;
   overflow: hidden;
   display: block;
 }
 .line-mask > span {
   display: block;
-  transform: translateY(105%) translateX(var(--drift, 0px));
-  transition:
-    transform 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 1.05s ease;
+  clip-path: inset(0 100% 0 0);
+  opacity: 1;
+  will-change: clip-path;
+}
+.line-mask::after {
+  content: "";
+  position: absolute;
+  top: 0.08em;
+  bottom: 0.1em;
+  left: 0;
+  width: 2px;
+  background: currentColor;
   opacity: 0;
+  pointer-events: none;
+  will-change: left, opacity;
 }
 [data-revealed="true"] .line-mask > span {
-  transform: translateY(0) translateX(0);
-  opacity: 1;
+  animation: line-draw 1.05s cubic-bezier(0.76, 0, 0.24, 1) var(--line-delay, 0ms) both;
+}
+[data-revealed="true"] .line-mask::after {
+  animation: line-cursor 1.05s cubic-bezier(0.76, 0, 0.24, 1) var(--line-delay, 0ms) both;
+}
+
+@keyframes line-draw {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes line-cursor {
+  0% { left: 0; opacity: 1; }
+  82% { opacity: 1; }
+  99% { left: calc(100% - 2px); opacity: 1; }
+  100% { left: calc(100% - 2px); opacity: 0; }
 }
 
 /* metadata fade-in */
