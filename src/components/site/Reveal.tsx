@@ -78,8 +78,11 @@ export function Line({
   className?: string;
 }) {
   return (
-    <span className={cn("line-mask", className)}>
-      <span style={{ transitionDelay: `${delay}ms`, ["--drift" as string]: `${drift}px` }}>{children}</span>
+    <span
+      className={cn("line-mask", className)}
+      style={{ ["--line-delay" as string]: `${delay}ms`, ["--drift" as string]: `${drift}px` }}
+    >
+      <span>{children}</span>
     </span>
   );
 }
